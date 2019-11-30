@@ -14,6 +14,7 @@
 		479EFD80238D912D00B2EC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */; };
 		479EFD8B238D912D00B2EC10 /* ThomasianJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD8A238D912D00B2EC10 /* ThomasianJourneyTests.swift */; };
 		479EFD96238D912D00B2EC10 /* ThomasianJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */; };
+		479EFDA4238D9CFE00B2EC10 /* GradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFDA3238D9CFE00B2EC10 /* GradientImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		479EFD91238D912D00B2EC10 /* ThomasianJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasianJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasianJourneyUITests.swift; sourceTree = "<group>"; };
 		479EFD97238D912D00B2EC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479EFDA3238D9CFE00B2EC10 /* GradientImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientImageView.swift; path = ../../../../../../Users/charmagne/Downloads/GradientView_Swift3/GradientView_Swift3/GradientImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		479EFD74238D912700B2EC10 /* ThomasianJourney */ = {
 			isa = PBXGroup;
 			children = (
+				479EFDA3238D9CFE00B2EC10 /* GradientImageView.swift */,
 				479EFD75238D912700B2EC10 /* AppDelegate.swift */,
 				479EFD77238D912700B2EC10 /* ViewController.swift */,
 				479EFD79238D912700B2EC10 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
+				479EFDA4238D9CFE00B2EC10 /* GradientImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
