@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -101,7 +101,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="qBT-Y3-tqf" kind="presentation" id="p8o-Me-KNn"/>
+                                            <segue destination="qBT-Y3-tqf" kind="show" id="LMx-cI-0b8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are practicing Single sign-on authentication. One account per device is allowed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTS-Jv-Kwk">
@@ -139,20 +139,21 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="oFj-Ym-Pix"/>
                     <connections>
                         <outlet property="doRoundedButton" destination="DwO-gM-Mi5" id="MVz-IO-1i3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="130.88455772113943"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Uqa-nx-guZ">
             <objects>
                 <viewController id="qBT-Y3-tqf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xvs-q2-8mh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="VERIFY YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-3P-MiT">
@@ -162,16 +163,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-ba-uR9">
-                                <rect key="frame" x="20" y="190.5" width="335" height="106.5"/>
+                                <rect key="frame" x="20" y="190.5" width="335" height="126.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Sending verification code..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="DbW-Ps-vz2">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="82.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait for the verification code. This will only take a few seconds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-6m-Sz2">
-                                        <rect key="frame" x="0.0" y="65.5" width="335" height="41"/>
+                                        <rect key="frame" x="0.0" y="85.5" width="335" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -196,7 +197,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="894-pv-cFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="131"/>
+            <point key="canvasLocation" x="1764" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nQT-0w-QCH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="j5O-qF-927" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jg3-NE-y21">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="taw-hA-Vaf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9d-wl-HGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="130.88455772113943"/>
         </scene>
     </scenes>
     <resources>
