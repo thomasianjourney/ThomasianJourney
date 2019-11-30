@@ -17,7 +17,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
@@ -133,6 +133,11 @@
                             <constraint firstItem="FCA-Hw-Hhy" firstAttribute="leading" secondItem="Swr-bw-Mn4" secondAttribute="leading" id="zxe-bH-0JX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Swr-bw-Mn4"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RqR-FV-b9O"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="doRoundedButton" destination="DwO-gM-Mi5" id="MVz-IO-1i3"/>
