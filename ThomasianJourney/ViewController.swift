@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var TopBackground: UIImageView!
     
+    @IBOutlet weak var doRoundedButton: UIButton!
     var gradientLayer: CAGradientLayer!
     
-    func createGradientLayer() {
+    /*func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = self.view.bounds
@@ -28,11 +29,12 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createGradientLayer()
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        doRoundedButton.layer.cornerRadius = 20
     }
     
 }
