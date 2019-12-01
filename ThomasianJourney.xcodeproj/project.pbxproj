@@ -31,6 +31,7 @@
 		741E25B523929B6B00BFA8F7 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A323929B6A00BFA8F7 /* Poppins-Regular.ttf */; };
 		741E25B623929B6B00BFA8F7 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */; };
 		741E25B723929B6B00BFA8F7 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */; };
+		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		741E25A323929B6A00BFA8F7 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				479EFD75238D912700B2EC10 /* AppDelegate.swift */,
 				479EFD77238D912700B2EC10 /* ViewController.swift */,
 				479EFD79238D912700B2EC10 /* Main.storyboard */,
+				74329EF52393564300CBEDAE /* SMPinView.swift */,
 				479EFD7C238D912D00B2EC10 /* Assets.xcassets */,
 				479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */,
 				74FBDD34239257A000EF8717 /* Fonts */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
+				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
