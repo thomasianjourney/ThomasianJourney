@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var doRoundedButton: UIButton!
     
-    
     var gradientLayer: CAGradientLayer!
     
     /*func createGradientLayer() {
