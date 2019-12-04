@@ -31,10 +31,15 @@
 		741E25B523929B6B00BFA8F7 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A323929B6A00BFA8F7 /* Poppins-Regular.ttf */; };
 		741E25B623929B6B00BFA8F7 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */; };
 		741E25B723929B6B00BFA8F7 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */; };
+		742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79912397AF7C000676ED /* RegisterFirst.swift */; };
+		742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79932397AFC7000676ED /* RegisterFirstLoading.swift */; };
+		742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79952397AFEF000676ED /* RegisterSecond.swift */; };
+		742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79972397B0A4000676ED /* RegisterSecondLoading.swift */; };
+		742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79992397B0CE000676ED /* RegisterSuccess.swift */; };
+		742B799C2397B19F000676ED /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799B2397B19F000676ED /* MainPage.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
-		74E64F802396672C006D0BBA /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7F2396672C006D0BBA /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +90,15 @@
 		741E25A323929B6A00BFA8F7 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		742B79912397AF7C000676ED /* RegisterFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirst.swift; sourceTree = "<group>"; };
+		742B79932397AFC7000676ED /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
+		742B79952397AFEF000676ED /* RegisterSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecond.swift; sourceTree = "<group>"; };
+		742B79972397B0A4000676ED /* RegisterSecondLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecondLoading.swift; sourceTree = "<group>"; };
+		742B79992397B0CE000676ED /* RegisterSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccess.swift; sourceTree = "<group>"; };
+		742B799B2397B19F000676ED /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
 		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
-		74E64F7F2396672C006D0BBA /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +159,12 @@
 				74FBDD34239257A000EF8717 /* Fonts */,
 				479EFD81238D912D00B2EC10 /* Info.plist */,
 				74E64F7D2396639A006D0BBA /* ApplyGif.swift */,
-				74E64F7F2396672C006D0BBA /* MainPageViewController.swift */,
+				742B79912397AF7C000676ED /* RegisterFirst.swift */,
+				742B79932397AFC7000676ED /* RegisterFirstLoading.swift */,
+				742B79952397AFEF000676ED /* RegisterSecond.swift */,
+				742B79972397B0A4000676ED /* RegisterSecondLoading.swift */,
+				742B79992397B0CE000676ED /* RegisterSuccess.swift */,
+				742B799B2397B19F000676ED /* MainPage.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -348,10 +363,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E64F802396672C006D0BBA /* MainPageViewController.swift in Sources */,
+				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
+				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
+				742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */,
 				74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */,
+				742B799C2397B19F000676ED /* MainPage.swift in Sources */,
+				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
+				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,23 +1,18 @@
 //
-//  MainPageViewController.swift
+//  RegisterFirst.swift
 //  ThomasianJourney
 //
-//  Created by Josh De Castro on 12/3/19.
+//  Created by Josh De Castro on 12/4/19.
 //  Copyright © 2019 Capstone Project. All rights reserved.
 //
 
 import UIKit
 
-class MainPageViewController: UIViewController {
+class RegisterFirst: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let jeremyGif = UIImage.gifImageWithName("tjmov")
-        let gifImage = UIImageView(image: jeremyGif)
-        gifImage.frame = CGRect(x: 0.0, y: 20.0, width: self.view.frame.size.width, height: 250)
-        view.addSubview(gifImage)
-        
+
         // Do any additional setup after loading the view.
     }
     
