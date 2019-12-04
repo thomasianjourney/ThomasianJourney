@@ -37,6 +37,9 @@
 		742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79972397B0A4000676ED /* RegisterSecondLoading.swift */; };
 		742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79992397B0CE000676ED /* RegisterSuccess.swift */; };
 		742B799C2397B19F000676ED /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799B2397B19F000676ED /* MainPage.swift */; };
+		742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799D2397DBB4000676ED /* NoEventsTab.swift */; };
+		742B79A02397DEA1000676ED /* GPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799F2397DEA1000676ED /* GPSController.swift */; };
+		742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A12397E419000676ED /* MenuPortfolio.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
@@ -96,6 +99,9 @@
 		742B79972397B0A4000676ED /* RegisterSecondLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecondLoading.swift; sourceTree = "<group>"; };
 		742B79992397B0CE000676ED /* RegisterSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccess.swift; sourceTree = "<group>"; };
 		742B799B2397B19F000676ED /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		742B799D2397DBB4000676ED /* NoEventsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEventsTab.swift; sourceTree = "<group>"; };
+		742B799F2397DEA1000676ED /* GPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSController.swift; sourceTree = "<group>"; };
+		742B79A12397E419000676ED /* MenuPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPortfolio.swift; sourceTree = "<group>"; };
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
 		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 				742B79972397B0A4000676ED /* RegisterSecondLoading.swift */,
 				742B79992397B0CE000676ED /* RegisterSuccess.swift */,
 				742B799B2397B19F000676ED /* MainPage.swift */,
+				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
+				742B799F2397DEA1000676ED /* GPSController.swift */,
+				742B79A12397E419000676ED /* MenuPortfolio.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -363,9 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
+				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
+				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
 				742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */,
 				74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */,
 				742B799C2397B19F000676ED /* MainPage.swift in Sources */,
