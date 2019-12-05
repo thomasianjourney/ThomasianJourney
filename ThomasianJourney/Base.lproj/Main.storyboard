@@ -374,7 +374,7 @@
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0eJ-Jk-h1m" kind="show" id="eSr-a9-jO3"/>
+                                    <action selector="proceedTapped:" destination="2Me-2N-xOP" eventType="touchUpInside" id="X7a-G9-kzb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -405,6 +405,9 @@
                         <viewLayoutGuide key="safeArea" id="8iw-yX-6d5"/>
                     </view>
                     <navigationItem key="navigationItem" id="iWD-BF-yTO"/>
+                    <connections>
+                        <outlet property="proceedButton" destination="gQv-Uv-hZ5" id="vbo-uW-wjb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4X-uw-YGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,14 +418,14 @@
             <objects>
                 <viewController id="0eJ-Jk-h1m" customClass="RegisterSecond" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVT-mn-si9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="rmY-Zl-1KO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-1y-Wr8">
-                                <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-7t-NBT">
@@ -477,9 +480,6 @@
                                                 <state key="normal" title="CANCEL">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="roZ-qx-Vdu"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kan-iI-BjD">
                                                 <rect key="frame" x="207.5" y="0.0" width="127.5" height="48"/>
@@ -488,9 +488,6 @@
                                                 <state key="normal" title="VERIFY">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="vag-n5-YDi" kind="show" id="Rgr-Is-0DL"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -530,16 +527,16 @@
         <!--Register Second Loading-->
         <scene sceneID="XfN-GM-1xS">
             <objects>
-                <viewController id="vag-n5-YDi" customClass="RegisterSecondLoading" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerSL" id="vag-n5-YDi" customClass="RegisterSecondLoading" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Uz-im-Ik1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="w8R-yX-Wx9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ujd-83-QtI">
-                                <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="BDE-Qt-r1J">
@@ -576,7 +573,7 @@
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2oY-MC-Xvs" kind="show" id="VXl-2a-Hs3"/>
+                                    <action selector="proceedTapped:" destination="vag-n5-YDi" eventType="touchUpInside" id="99u-6p-AR5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -607,6 +604,9 @@
                         <viewLayoutGuide key="safeArea" id="GmG-2e-ZHm"/>
                     </view>
                     <navigationItem key="navigationItem" id="QO5-4f-oPH"/>
+                    <connections>
+                        <outlet property="proceedButton" destination="pkS-W5-mme" id="iXw-hM-g1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivk-ow-OYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,16 +615,16 @@
         <!--Register Success-->
         <scene sceneID="9yS-CC-SfE">
             <objects>
-                <viewController id="2oY-MC-Xvs" customClass="RegisterSuccess" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerSuccess" id="2oY-MC-Xvs" customClass="RegisterSuccess" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHv-pk-foq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-Jw-HFX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="upx-wF-qJc">
-                                <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dLM-ej-LAD">
@@ -666,7 +666,7 @@
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jeb-lc-OJM" kind="show" id="c1U-nu-2MJ"/>
+                                            <action selector="continueTapped:" destination="2oY-MC-Xvs" eventType="touchUpInside" id="gge-tk-U9F"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -695,6 +695,9 @@
                         <viewLayoutGuide key="safeArea" id="iIh-uw-ugf"/>
                     </view>
                     <navigationItem key="navigationItem" id="hOX-bV-Bri"/>
+                    <connections>
+                        <outlet property="continueButton" destination="lCA-AG-SXo" id="xQL-Xy-YYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3e7-Kk-iEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,16 +706,16 @@
         <!--Main Page-->
         <scene sceneID="sh1-Pb-gGk">
             <objects>
-                <viewController id="jeb-lc-OJM" customClass="MainPage" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainPage" id="jeb-lc-OJM" customClass="MainPage" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3k-27-BBh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-LJ-FsW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykY-YG-pPj" userLabel="gifImage">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="226.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
                                 <rect key="frame" x="20" y="190" width="335" height="28"/>
@@ -721,7 +724,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AQe-tJ-iWN" userLabel="StudentDetailsView">
-                                <rect key="frame" x="20" y="241.5" width="335" height="72"/>
+                                <rect key="frame" x="20" y="248.5" width="335" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-ch-PnQ">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
@@ -766,7 +769,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BLx-pN-fqa" userLabel="ViewIcons">
-                                <rect key="frame" x="30" y="333.5" width="315" height="100"/>
+                                <rect key="frame" x="30" y="340.5" width="315" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ub-Sb-z9U">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="100"/>
@@ -808,7 +811,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Stream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-BX-Esp">
-                                <rect key="frame" x="20" y="458.5" width="335" height="28"/>
+                                <rect key="frame" x="20" y="465.5" width="335" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -917,7 +920,4 @@
         <image name="tiger_rar" width="175" height="163"/>
         <image name="tjicon" width="100" height="100"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="taw-hA-Vaf"/>
-    </inferredMetricsTieBreakers>
 </document>

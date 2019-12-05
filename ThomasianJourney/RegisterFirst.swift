@@ -59,7 +59,7 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         if error != nil {
             
             // There's something wrong with the fields, show error message error
-            showToast(controller: self, message: error!, seconds: 3)
+            self.showToast(controller: self, message: error!, seconds: 2)
         }
         
         else {
@@ -74,7 +74,7 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
                 if err != nil {
                     
                     // There was an error creating the user
-                    self.showToast(controller: self, message: "Error Creating User", seconds: 3)
+                    self.showToast(controller: self, message: "Error Creating User", seconds: 2)
                 }
                 
                 else {
@@ -86,7 +86,7 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
                         
                         if error != nil {
                             // Show error message
-                            self.showToast(controller: self, message: "Error saving data", seconds: 3)
+                            self.showToast(controller: self, message: "Error saving data", seconds: 2)
                         }
                     }
                     

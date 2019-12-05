@@ -7,24 +7,43 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class RegisterFirstLoading: UIViewController {
-
+    
+    @IBOutlet weak var proceedButton: UIButton!
+    
+    let user = Auth.auth().currentUser
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        user!.reload { (error) in
+            switch self.user!.isEmailVerified {
+            case true:
+                print("User's email is verified")
+            case false:
+                
+                self.user!.sendEmailVerification { (error) in
+                    
+                    guard let error = error else {
+                        return print("User Email Verification sent")
+                    }
+                    
+                    //self.handleError(error: error)
+                }
+                
+                print("verify it now")
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func proceedTapped(_ sender: Any) {
+        let registerSecondLoading =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+        
+        view.window?.rootViewController = registerSecondLoading
+        view.window?.makeKeyAndVisible()    
     }
-    */
-
 }
