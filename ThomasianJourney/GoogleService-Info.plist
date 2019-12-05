@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1062382304667-usd77aotm1eba9i0a1mkp0sdb70aopa0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1062382304667-usd77aotm1eba9i0a1mkp0sdb70aopa0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDPyLfOGL7A7n0cDfSWx6KTEs4w8hiNcFM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1062382304667</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.capstone.ThomasianJourney</string>
+	<key>PROJECT_ID</key>
+	<string>thomasianjourneyios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>thomasianjourneyios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1062382304667:ios:90db0de1a1b40cd49db53e</string>
+	<key>DATABASE_URL</key>
+	<string>https://thomasianjourneyios.firebaseio.com</string>
+</dict>
+</plist>
