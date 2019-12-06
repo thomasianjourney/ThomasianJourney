@@ -16,6 +16,8 @@ struct Constants {
         static let registerSecondLoading = "registerSL"
         static let registerSuccess = "registerSuccess"
         static let mainPage = "mainPage"
+        static let dummyRegister = "dummyRegister"
+        static let registerFirst = "registerFirst"
     }
     
     

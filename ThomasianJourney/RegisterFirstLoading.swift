@@ -37,17 +37,17 @@ class RegisterFirstLoading: UIViewController {
                     //self.handleError(error: error)
                 }
                 
-                print("verify it now")
+                //print("verify it now")
             }
         }
     }
     
     func transitionToLoading() {
         
-        let registerSecondLoading =
-                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+        let dummyRegister =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.dummyRegister) as? DummyRegister
         
-                view.window?.rootViewController = registerSecondLoading
+                view.window?.rootViewController = dummyRegister
                 view.window?.makeKeyAndVisible()
     }
     

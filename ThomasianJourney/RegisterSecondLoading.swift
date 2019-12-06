@@ -22,20 +22,25 @@ class RegisterSecondLoading: UIViewController {
         user!.reload { (error) in
             switch user!.isEmailVerified {
             case true:
-                print("Email is verified")
+                //print("Email is verified")
+                let registerSuccess =
+                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
+                
+                self.view.window?.rootViewController = registerSuccess
+                self.view.window?.makeKeyAndVisible()
             case false:
                 self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
             }
         }
     }
     
-    @IBAction func proceedTapped(_ sender: Any) {
-        let registerSuccess =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
-        
-        view.window?.rootViewController = registerSuccess
-        view.window?.makeKeyAndVisible()
-    }
+//    @IBAction func proceedTapped(_ sender: Any) {
+//        let registerSuccess =
+//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
+//
+//        view.window?.rootViewController = registerSuccess
+//        view.window?.makeKeyAndVisible()
+//    }
     
     func showToast(controller: UIViewController, message : String, seconds: Double) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
