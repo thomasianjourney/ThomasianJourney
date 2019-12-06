@@ -12,7 +12,7 @@ import Firebase
 
 class RegisterFirstLoading: UIViewController {
     
-    @IBOutlet weak var proceedButton: UIButton!
+    //@IBOutlet weak var proceedButton: UIButton!
     
     let user = Auth.auth().currentUser
     
@@ -26,10 +26,13 @@ class RegisterFirstLoading: UIViewController {
             case false:
                 
                 self.user!.sendEmailVerification { (error) in
-                    
+                                        
                     guard let error = error else {
+                        self.transitionToLoading()
                         return print("User Email Verification sent")
                     }
+                    
+                    print(error.localizedDescription)
                     
                     //self.handleError(error: error)
                 }
@@ -39,11 +42,20 @@ class RegisterFirstLoading: UIViewController {
         }
     }
     
-    @IBAction func proceedTapped(_ sender: Any) {
-        let registerSecondLoading =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+    func transitionToLoading() {
         
-        view.window?.rootViewController = registerSecondLoading
-        view.window?.makeKeyAndVisible()    
+        let registerSecondLoading =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+        
+                view.window?.rootViewController = registerSecondLoading
+                view.window?.makeKeyAndVisible()
     }
+    
+//    @IBAction func proceedTapped(_ sender: Any) {
+//        let registerSecondLoading =
+//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+//
+//        view.window?.rootViewController = registerSecondLoading
+//        view.window?.makeKeyAndVisible()
+//    }
 }
