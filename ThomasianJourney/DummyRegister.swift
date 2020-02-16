@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class DummyRegister: UIViewController {
 
@@ -19,30 +19,30 @@ class DummyRegister: UIViewController {
     
     @IBOutlet weak var emailLabel: UIButton!
     
-    let user = Auth.auth().currentUser
+//    let user = Auth.auth().currentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            let useremail = user!.email
-            self.LinkSent.text = "An e-mail with the verification link has been sent to \(useremail ?? "")"
-        }
+//        Auth.auth().addStateDidChangeListener { (auth, user) in
+//            let useremail = user!.email
+//            self.LinkSent.text = "An e-mail with the verification link has been sent to \(useremail ?? "")"
+//        }
     }
     
     @IBAction func proceedTapped(_ sender: Any) {
-        user!.reload {(error) in
-            switch self.user!.isEmailVerified {
-            case true:
-                let registerSecondLoading =
-                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
-                
-                        self.view.window?.rootViewController = registerSecondLoading
-                        self.view.window?.makeKeyAndVisible()
-            case false:
-                self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
-            }
-        }
+//        user!.reload {(error) in
+//            switch self.user!.isEmailVerified {
+//            case true:
+//                let registerSecondLoading =
+//                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
+//
+//                        self.view.window?.rootViewController = registerSecondLoading
+//                        self.view.window?.makeKeyAndVisible()
+//            case false:
+//                self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
+//            }
+//        }
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -55,11 +55,11 @@ class DummyRegister: UIViewController {
     }
     
     @IBAction func emailTapped(_ sender: Any) {
-        user!.reload { (error) in
-            self.user!.sendEmailVerification(completion: { (error) in
-                self.showToast(controller: self, message: "New Email Verification link has been sent to your email.", seconds: 2)
-            })
-        }
+//        user!.reload { (error) in
+//            self.user!.sendEmailVerification(completion: { (error) in
+//                self.showToast(controller: self, message: "New Email Verification link has been sent to your email.", seconds: 2)
+//            })
+//        }
         
     }
     

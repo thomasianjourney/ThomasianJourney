@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FirebaseAuth
-import Firebase
+//import FirebaseAuth
+//import Firebase
 
 class RegisterSecondLoading: UIViewController {
     
@@ -17,21 +17,21 @@ class RegisterSecondLoading: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = Auth.auth().currentUser
-        
-        user!.reload { (error) in
-            switch user!.isEmailVerified {
-            case true:
-                //print("Email is verified")
-                let registerSuccess =
-                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
-                
-                self.view.window?.rootViewController = registerSuccess
-                self.view.window?.makeKeyAndVisible()
-            case false:
-                self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
-            }
-        }
+//        let user = Auth.auth().currentUser
+//        
+//        user!.reload { (error) in
+//            switch user!.isEmailVerified {
+//            case true:
+//                //print("Email is verified")
+//                let registerSuccess =
+//                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
+//                
+//                self.view.window?.rootViewController = registerSuccess
+//                self.view.window?.makeKeyAndVisible()
+//            case false:
+//                self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
+//            }
+//        }
     }
     
 //    @IBAction func proceedTapped(_ sender: Any) {

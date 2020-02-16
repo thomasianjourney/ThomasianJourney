@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FirebaseAuth
-import Firebase
+//import FirebaseAuth
+//import Firebase
 
 class RegisterFirst: UIViewController, UITextFieldDelegate {
 
@@ -69,30 +69,50 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
             let mobilenumberauth = mobilenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Create the user
-            Auth.auth().createUser(withEmail: emailauth, password: mobilenumberauth) { (res, err) in
-                // Check for errors
-                if err != nil {
-                    
-                    // There was an error creating the user
-                    self.showToast(controller: self, message: "Error Creating User", seconds: 2)
-                }
-                
-                else {
-                    
-                    // User was created successfully, now store the first name and last name
-                    let db = Firestore.firestore()
-                    
-                    db.collection("Users").addDocument(data: ["Email":emailauth, "MobileNumber":mobilenumberauth, "uid":res!.user.uid]) { (error) in
-                        
-                        if error != nil {
-                            // Show error message
-                            self.showToast(controller: self, message: "Error saving data", seconds: 2)
-                        }
-                    }
-                    
-                    self.transitionToLoading()
-                }
+            
+            let preferences = UserDefaults.standard
+
+            preferences.set(emailauth, forKey: "useremail")
+            preferences.set(mobilenumberauth, forKey: "usernumber")
+
+            //  Save to disk
+            let didSave = preferences.synchronize()
+
+            if !didSave {
+                //  Couldn't save (I've never seen this happen in real world testing)
+                print ("Shared preferences could not save.")
+                self.showToast(controller: self, message: "Error Creating User", seconds: 2)
             }
+
+            else {
+                self.transitionToLoading()
+                print ("Shared preferences saved.")
+            }
+            
+//            Auth.auth().createUser(withEmail: emailauth, password: mobilenumberauth) { (res, err) in
+//                // Check for errors
+//                if err != nil {
+//
+//                    // There was an error creating the user
+//                    self.showToast(controller: self, message: "Error Creating User", seconds: 2)
+//                }
+//
+//                else {
+//
+//                    // User was created successfully, now store the first name and last name
+//                    let db = Firestore.firestore()
+//
+//                    db.collection("Users").addDocument(data: ["Email":emailauth, "MobileNumber":mobilenumberauth, "uid":res!.user.uid]) { (error) in
+//
+//                        if error != nil {
+//                            // Show error message
+//                            self.showToast(controller: self, message: "Error saving data", seconds: 2)
+//                        }
+//                    }
+//
+                    self.transitionToLoading()
+//                }
+//            }
         }
     }
     
