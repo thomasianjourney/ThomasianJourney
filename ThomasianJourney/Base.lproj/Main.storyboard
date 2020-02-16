@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -444,22 +444,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABl-Qe-k41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3265" y="878"/>
-        </scene>
-        <!--View Calendar-->
-        <scene sceneID="EUf-SJ-Ja3">
-            <objects>
-                <viewController storyboardIdentifier="viewCalendar" id="WqW-NN-oUJ" customClass="ViewCalendar" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sGR-0m-eRQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="YEN-0R-uVx"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7Sn-sO-P9e"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NQD-ol-Xh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4812" y="878"/>
         </scene>
         <!--Register First Loading-->
         <scene sceneID="uMd-Ne-lCb">
@@ -941,20 +925,12 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFA-9r-krz">
-                                <rect key="frame" x="130" y="549" width="115" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="VRr-yr-aff"/>
-                                    <constraint firstAttribute="height" constant="38" id="bO0-tD-HM7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                <state key="normal" title="View Calendar">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="viewCalendarTapped:" destination="jeb-lc-OJM" eventType="touchUpInside" id="QC2-Uo-YZa"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Stream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-BX-Esp">
+                                <rect key="frame" x="20" y="465.5" width="335" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -963,8 +939,8 @@
                             <constraint firstItem="BLx-pN-fqa" firstAttribute="leading" secondItem="D3k-27-BBh" secondAttribute="leading" constant="30" id="8zG-8r-tAv"/>
                             <constraint firstItem="ykY-YG-pPj" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" id="9up-TP-vx1"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="20" id="C4t-tm-9MU"/>
-                            <constraint firstItem="uFA-9r-krz" firstAttribute="top" secondItem="BLx-pN-fqa" secondAttribute="bottom" constant="108.5" id="E80-k1-ezT"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="centerX" secondItem="D3k-27-BBh" secondAttribute="centerX" id="Lyw-sU-tMc"/>
+                            <constraint firstItem="hSS-y4-e3x" firstAttribute="trailing" secondItem="AQe-tJ-iWN" secondAttribute="trailing" constant="20" id="NIM-LS-Kkz"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="top" secondItem="ykY-YG-pPj" secondAttribute="bottom" constant="15" id="ODl-t2-c7A"/>
                             <constraint firstAttribute="trailing" secondItem="BLx-pN-fqa" secondAttribute="trailing" constant="30" id="Pkk-Wq-mAy"/>
                             <constraint firstItem="Lf0-s3-Re1" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="20" id="R7f-Yw-IyA"/>
@@ -973,15 +949,15 @@
                             <constraint firstItem="hT1-LJ-FsW" firstAttribute="top" secondItem="D3k-27-BBh" secondAttribute="top" id="WZe-X6-lpb"/>
                             <constraint firstItem="BLx-pN-fqa" firstAttribute="top" secondItem="AQe-tJ-iWN" secondAttribute="bottom" constant="20" id="Z3C-eQ-PIZ"/>
                             <constraint firstAttribute="trailing" secondItem="hT1-LJ-FsW" secondAttribute="trailing" id="ZRY-h0-eRb"/>
-                            <constraint firstItem="hSS-y4-e3x" firstAttribute="trailing" secondItem="uFA-9r-krz" secondAttribute="trailing" constant="130" id="cin-iQ-4Fh"/>
+                            <constraint firstItem="cGS-BX-Esp" firstAttribute="top" secondItem="BLx-pN-fqa" secondAttribute="bottom" constant="25" id="cG9-Wr-lZn"/>
+                            <constraint firstItem="cGS-BX-Esp" firstAttribute="centerX" secondItem="D3k-27-BBh" secondAttribute="centerX" id="dJb-Z0-AtM"/>
                             <constraint firstItem="hT1-LJ-FsW" firstAttribute="centerX" secondItem="D3k-27-BBh" secondAttribute="centerX" id="eZ0-Hg-aOO"/>
-                            <constraint firstItem="uFA-9r-krz" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="130" id="efy-Qk-QnI"/>
                             <constraint firstItem="BLx-pN-fqa" firstAttribute="centerX" secondItem="D3k-27-BBh" secondAttribute="centerX" id="mvc-Mi-ONy"/>
                             <constraint firstItem="ykY-YG-pPj" firstAttribute="height" secondItem="D3k-27-BBh" secondAttribute="height" multiplier="0.35" id="pmT-C4-rYQ"/>
-                            <constraint firstItem="hSS-y4-e3x" firstAttribute="bottom" secondItem="uFA-9r-krz" secondAttribute="bottom" constant="80" id="qHp-WW-o4G"/>
                             <constraint firstItem="Lf0-s3-Re1" firstAttribute="top" secondItem="hSS-y4-e3x" secondAttribute="top" constant="190" id="rjK-nk-q64"/>
                             <constraint firstItem="ykY-YG-pPj" firstAttribute="width" secondItem="D3k-27-BBh" secondAttribute="width" id="rs5-De-wTW"/>
                             <constraint firstItem="hT1-LJ-FsW" firstAttribute="leading" secondItem="D3k-27-BBh" secondAttribute="leading" id="ubM-ZU-upq"/>
+                            <constraint firstItem="cGS-BX-Esp" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="20" id="ygv-LK-bwJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSS-y4-e3x"/>
                     </view>
@@ -989,7 +965,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jr-Vg-5ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4812" y="130.88455772113943"/>
+            <point key="canvasLocation" x="4812" y="131"/>
         </scene>
         <!--No Events Tab-->
         <scene sceneID="hJu-f8-WUv">

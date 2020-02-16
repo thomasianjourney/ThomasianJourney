@@ -18,7 +18,6 @@ struct Constants {
         static let mainPage = "mainPage"
         static let dummyRegister = "dummyRegister"
         static let registerFirst = "registerFirst"
-        static let viewCalendar = "viewCalendar"
     }
     
     
