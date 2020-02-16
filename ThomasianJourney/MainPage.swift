@@ -16,7 +16,10 @@ class MainPage: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func viewCalendarTapped(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

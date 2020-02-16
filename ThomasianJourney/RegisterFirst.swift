@@ -20,8 +20,17 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let Tap:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        
+        view.addGestureRecognizer(Tap)
+ 
 
         mobilenumber.delegate = self
+    }
+    
+    @objc func DismissKeyboard() {
+        view.endEditing(true)
     }
     
     func validateFields() -> String? {
