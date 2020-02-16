@@ -2,13 +2,11 @@
 //  RegisterFirstLoading.swift
 //  ThomasianJourney
 //
-//  Created by Josh De Castro on 12/4/19.
-//  Copyright © 2019 Capstone Project. All rights reserved.
+//  Created by Charmagne Adonis on 2/16/20.
+//  Copyright © 2020 Capstone Project. All rights reserved.
 //
 
 import UIKit
-//import FirebaseAuth
-//import Firebase
 
 struct Connection: Decodable {
     let status: String
@@ -71,6 +69,22 @@ class RegisterFirstLoading: UIViewController {
                         
                         let connection = try JSONDecoder().decode(Connection.self, from: data)
                         print (connection.message)
+                        
+                        if connection.message.contains("already exists") {
+                            self.showToast(controller: self, message: "Account already exists.", seconds: 2)
+                        }
+                        
+                        if connection.message.contains("entered Wrong Email/Password") {
+                            self.showToast(controller: self, message: "Invalid Email Address.", seconds: 2)
+                        }
+                        
+                        if connection.message.contains("not entered an Email/Password") {
+                            self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 2)
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.transitionToLoading()
+                        }
                     }
                    
                     catch {
@@ -109,18 +123,22 @@ class RegisterFirstLoading: UIViewController {
     
     func transitionToLoading() {
         
-        let dummyRegister =
-                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.dummyRegister) as? DummyRegister
+        let registerSecond =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecond) as? RegisterSecond
         
-                view.window?.rootViewController = dummyRegister
+                view.window?.rootViewController = registerSecond
                 view.window?.makeKeyAndVisible()
     }
     
-//    @IBAction func proceedTapped(_ sender: Any) {
-//        let registerSecondLoading =
-//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecondLoading) as? RegisterSecondLoading
-//
-//        view.window?.rootViewController = registerSecondLoading
-//        view.window?.makeKeyAndVisible()
-//    }
+    func showToast(controller: UIViewController, message : String, seconds: Double) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = .black
+        alert.view.alpha = 0.5
+        alert.view.layer.cornerRadius = 15
+        
+        controller.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            alert.dismiss(animated: true)
+        }
+    }
 }

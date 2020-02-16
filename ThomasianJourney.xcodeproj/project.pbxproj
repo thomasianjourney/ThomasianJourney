@@ -10,6 +10,7 @@
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		4759E154239AAAC000B4AF01 /* DummyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759E153239AAAC000B4AF01 /* DummyRegister.swift */; };
+		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
 		479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD75238D912700B2EC10 /* AppDelegate.swift */; };
 		479EFD78238D912700B2EC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD77238D912700B2EC10 /* ViewController.swift */; };
 		479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD79238D912700B2EC10 /* Main.storyboard */; };
@@ -35,7 +36,6 @@
 		741E25B623929B6B00BFA8F7 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */; };
 		741E25B723929B6B00BFA8F7 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */; };
 		742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79912397AF7C000676ED /* RegisterFirst.swift */; };
-		742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79932397AFC7000676ED /* RegisterFirstLoading.swift */; };
 		742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79952397AFEF000676ED /* RegisterSecond.swift */; };
 		742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79972397B0A4000676ED /* RegisterSecondLoading.swift */; };
 		742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79992397B0CE000676ED /* RegisterSuccess.swift */; };
@@ -74,6 +74,7 @@
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4759E153239AAAC000B4AF01 /* DummyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRegister.swift; sourceTree = "<group>"; };
+		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
 		479EFD72238D912700B2EC10 /* ThomasianJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThomasianJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EFD75238D912700B2EC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479EFD77238D912700B2EC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		741E25A423929B6A00BFA8F7 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		741E25A523929B6B00BFA8F7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		742B79912397AF7C000676ED /* RegisterFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirst.swift; sourceTree = "<group>"; };
-		742B79932397AFC7000676ED /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
 		742B79952397AFEF000676ED /* RegisterSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecond.swift; sourceTree = "<group>"; };
 		742B79972397B0A4000676ED /* RegisterSecondLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecondLoading.swift; sourceTree = "<group>"; };
 		742B79992397B0CE000676ED /* RegisterSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccess.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				479EFD81238D912D00B2EC10 /* Info.plist */,
 				74E64F7D2396639A006D0BBA /* ApplyGif.swift */,
 				742B79912397AF7C000676ED /* RegisterFirst.swift */,
-				742B79932397AFC7000676ED /* RegisterFirstLoading.swift */,
+				476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */,
 				4759E153239AAAC000B4AF01 /* DummyRegister.swift */,
 				742B79952397AFEF000676ED /* RegisterSecond.swift */,
 				742B79972397B0A4000676ED /* RegisterSecondLoading.swift */,
@@ -421,10 +421,10 @@
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
 				4706CD042398A2320009364D /* Constants.swift in Sources */,
+				476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */,
 				746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
 				746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */,
-				742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */,
 				74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */,
 				742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */,
 				742B799C2397B19F000676ED /* MainPage.swift in Sources */,

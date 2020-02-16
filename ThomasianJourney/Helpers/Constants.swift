@@ -13,6 +13,7 @@ struct Constants {
     struct Storyboard {
         
         static let registerFirstLoading = "registerFL"
+        static let registerSecond = "registerSecond"
         static let registerSecondLoading = "registerSL"
         static let registerSuccess = "registerSuccess"
         static let mainPage = "mainPage"
