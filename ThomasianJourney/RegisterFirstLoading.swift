@@ -71,19 +71,24 @@ class RegisterFirstLoading: UIViewController {
                         print (connection.message)
                         
                         if connection.message.contains("already exists") {
-                            self.showToast(controller: self, message: "Account already exists.", seconds: 2)
+                            self.showToast(controller: self, message: "Account already exists.", seconds: 3)
+                            DispatchQueue.main.async {
+                                self.transitionToLoading()
+                            }
                         }
                         
                         if connection.message.contains("entered Wrong Email/Password") {
-                            self.showToast(controller: self, message: "Invalid Email Address.", seconds: 2)
+                            self.showToast(controller: self, message: "Invalid Email Address.", seconds: 3)
+                            DispatchQueue.main.async {
+                                self.transitionToLoading()
+                            }
                         }
                         
                         if connection.message.contains("not entered an Email/Password") {
-                            self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 2)
-                        }
-                        
-                        DispatchQueue.main.async {
-                            self.transitionToLoading()
+                            self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 3)
+                            DispatchQueue.main.async {
+                                self.transitionToLoading()
+                            }
                         }
                     }
                    
@@ -131,14 +136,16 @@ class RegisterFirstLoading: UIViewController {
     }
     
     func showToast(controller: UIViewController, message : String, seconds: Double) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = .black
-        alert.view.alpha = 0.5
-        alert.view.layer.cornerRadius = 15
-        
-        controller.present(alert, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
-            alert.dismiss(animated: true)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = .black
+            alert.view.alpha = 0.5
+            alert.view.layer.cornerRadius = 15
+            
+            controller.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+            }
         }
     }
 }

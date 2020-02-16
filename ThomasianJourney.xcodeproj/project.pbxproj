@@ -606,7 +606,7 @@
 		479EFD9B238D912E00B2EC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J43F92K3ZP;
 				INFOPLIST_FILE = ThomasianJourney/Info.plist;
@@ -625,7 +625,7 @@
 		479EFD9C238D912E00B2EC10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J43F92K3ZP;
 				INFOPLIST_FILE = ThomasianJourney/Info.plist;
