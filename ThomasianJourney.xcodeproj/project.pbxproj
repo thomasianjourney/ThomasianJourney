@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,10 @@
 		742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A12397E419000676ED /* MenuPortfolio.swift */; };
 		742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A32397ED04000676ED /* ScanSuccess.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
+		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
+		746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8A23F93AFE0061CA48 /* MonthView.swift */; };
+		746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */; };
+		746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C9023F93D9D0061CA48 /* CalendarView.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
 /* End PBXBuildFile section */
@@ -111,6 +115,10 @@
 		742B79A12397E419000676ED /* MenuPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPortfolio.swift; sourceTree = "<group>"; };
 		742B79A32397ED04000676ED /* ScanSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSuccess.swift; sourceTree = "<group>"; };
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
+		746B1C8823F939090061CA48 /* ViewCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCalendar.swift; sourceTree = "<group>"; };
+		746B1C8A23F93AFE0061CA48 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		746B1C9023F93D9D0061CA48 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
 		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +210,10 @@
 				742B79A12397E419000676ED /* MenuPortfolio.swift */,
 				742B79A32397ED04000676ED /* ScanSuccess.swift */,
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
+				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
+				746B1C8A23F93AFE0061CA48 /* MonthView.swift */,
+				746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */,
+				746B1C9023F93D9D0061CA48 /* CalendarView.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -403,11 +415,15 @@
 			files = (
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
+				746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */,
+				746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */,
 				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
 				4706CD042398A2320009364D /* Constants.swift in Sources */,
+				746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
+				746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */,
 				742B79942397AFC7000676ED /* RegisterFirstLoading.swift in Sources */,
 				74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */,
 				742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */,
