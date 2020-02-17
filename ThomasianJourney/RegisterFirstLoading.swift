@@ -24,12 +24,8 @@ class RegisterFirstLoading: UIViewController {
         
         let preferences = UserDefaults.standard
 
-        if preferences.string(forKey: "useremail") == nil {
-            print ("User Email did not save.")
-        }
-
-        if preferences.string(forKey: "usernumber") == nil {
-            print ("User Number did not save.")
+        if preferences.string(forKey: "useremail") == nil || preferences.string(forKey: "usernumber") == nil {
+            print ("User Email/Number did not save.")
         }
 
         else {
@@ -56,8 +52,9 @@ class RegisterFirstLoading: UIViewController {
                data, response, error in
                 
                 if error != nil{
-                print("Connection Error: \(String(describing: error))")
-                   return;
+                    print("Connection Error: \(String(describing: error))")
+                    self.showToast(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
+                    return;
                 
                 }
             
@@ -66,29 +63,33 @@ class RegisterFirstLoading: UIViewController {
                     guard let data = data else { return }
                    
                     do {
-                        
                         let connection = try JSONDecoder().decode(Connection.self, from: data)
+                        print (connection)
                         print (connection.message)
                         
                         if connection.message.contains("already exists") {
                             self.showToast(controller: self, message: "Account already exists.", seconds: 3)
-                            DispatchQueue.main.async {
-                                self.transitionToLoading()
-                            }
+//                            DispatchQueue.main.async {
+//                                self.transitionToLoading()
+//                            }
                         }
                         
                         if connection.message.contains("entered Wrong Email/Password") {
                             self.showToast(controller: self, message: "Invalid Email Address.", seconds: 3)
-                            DispatchQueue.main.async {
-                                self.transitionToLoading()
-                            }
+//                            DispatchQueue.main.async {
+//                                self.transitionToLoading()
+//                            }
                         }
                         
                         if connection.message.contains("not entered an Email/Password") {
                             self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 3)
-                            DispatchQueue.main.async {
-                                self.transitionToLoading()
-                            }
+//                            DispatchQueue.main.async {
+//                                self.transitionToLoading()
+//                            }
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.transitionToLoading()
                         }
                     }
                    

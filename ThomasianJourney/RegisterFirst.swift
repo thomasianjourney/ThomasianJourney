@@ -25,7 +25,6 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         
         view.addGestureRecognizer(Tap)
  
-
         mobilenumber.delegate = self
     }
     
@@ -43,17 +42,15 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         }
         
         let cleanedEmail = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        //let cleanedMobileNumber = mobilenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if isEmailValid(cleanedEmail) == false || cleanedEmail.contains("@ust.edu.ph") == false {
             // Invalid email format
             return "Please make sure you have typed a valid @ust.edu.ph email."
         }
         
-//        if textField(mobilenumber, shouldChangeCharactersIn: NSRange, replacementString: " ") == true {
-//            // Make sure only numbers are typed
-//            return "Please make sure you have typed a valid mobile number."
-//        }
+        if mobilenumber.text!.count != 11 {
+            return "Please make sure you have typed a valid mobile number."
+        }
         
         return nil
         
@@ -139,12 +136,27 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         return emailTest.evaluate(with: email)
     }
     
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//
+//        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+//        let compSepByCharInSet = string.components(separatedBy: aSet)
+//        let numberFiltered = compSepByCharInSet.joined(separator: "")
+//        return string == numberFiltered
+//    }
+    
+    // Use this if you have a UITextField
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // get the current text, or use an empty string if that failed
+        let currentText = textField.text ?? ""
 
-        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        return string == numberFiltered
+        // attempt to read the range they are trying to change, or exit if we can't
+        guard let stringRange = Range(range, in: currentText) else { return false }
+
+        // add their new text to the existing text
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        // make sure the result is under 11 characters
+        return updatedText.count <= 11
     }
     
     func showToast(controller: UIViewController, message : String, seconds: Double) {

@@ -603,6 +603,9 @@
                                         <state key="normal" title="Didn't get an email?">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resendCodeButton:" destination="0eJ-Jk-h1m" eventType="touchUpInside" id="ImQ-J4-Wqv"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="HUh-uM-tqp">
                                         <rect key="frame" x="0.0" y="240" width="335" height="48"/>
@@ -614,6 +617,9 @@
                                                 <state key="normal" title="CANCEL">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cancelButton:" destination="0eJ-Jk-h1m" eventType="touchUpInside" id="ang-yH-2gB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kan-iI-BjD">
                                                 <rect key="frame" x="207.5" y="0.0" width="127.5" height="48"/>
@@ -622,6 +628,9 @@
                                                 <state key="normal" title="VERIFY">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="verifyButton:" destination="0eJ-Jk-h1m" eventType="touchUpInside" id="U53-hO-ySJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -653,6 +662,9 @@
                         <viewLayoutGuide key="safeArea" id="l02-YB-v1x"/>
                     </view>
                     <navigationItem key="navigationItem" id="fNZ-Az-xti"/>
+                    <connections>
+                        <outlet property="verifyCode" destination="ffQ-uc-Ept" id="o8O-Cx-2Ti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4M-rW-4ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
