@@ -17,7 +17,11 @@ class MainPage: UIViewController {
     }
     
     @IBAction func viewCalendarTapped(_ sender: UIButton) {
+        let viewCalendar =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.viewCalendar) as? ViewCalendar
         
+        view.window?.rootViewController = viewCalendar
+        view.window?.makeKeyAndVisible()
     }
     
     /*
