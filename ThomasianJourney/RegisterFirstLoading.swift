@@ -11,6 +11,7 @@ import UIKit
 struct Connection: Decodable {
     let status: String
     let message: String
+    let data: String
 }
 
 class RegisterFirstLoading: UIViewController {
