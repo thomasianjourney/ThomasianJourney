@@ -7,8 +7,28 @@
 //
 
 import UIKit
-//import FirebaseAuth
-//import Firebase
+
+struct NewConnection: Decodable {
+    let status: String
+    let message: String
+    let data: NewDataContents
+}
+
+struct NewDataContents: Decodable {
+    let numbercode: String
+    let studentsId: String
+    let studregEmail: String
+    let studregmobileNum: String
+    let studentDetails: StudentDataContents
+}
+
+struct StudentDataContents: Decodable {
+    let studentName: String
+    let studentEmail: String
+    let studentPoints: String
+    let studentCollegeId: String
+    let studentYearLevelId: String
+}
 
 class RegisterSecondLoading: UIViewController {
     
@@ -21,7 +41,9 @@ class RegisterSecondLoading: UIViewController {
         //let verifyCode = NSKeyedUnarchiver.unarchiveObject(with: decoded as! Data)
         let preferences = UserDefaults.standard
         let verifyCode = preferences.string(forKey: "verifyCode")
-        //print (verifyCode)
+        let studentid = preferences.string(forKey: "userid")
+        print (verifyCode ?? "No Verify Code Saved")
+        print (studentid ?? "No Student ID Saved")
 
         if verifyCode == nil {
             print ("Verification Code did not save.")
@@ -37,7 +59,8 @@ class RegisterSecondLoading: UIViewController {
             request.httpMethod = "POST"
             
             //creating the post parameter by concatenating the keys and values from text field
-            let postData = "numbercode="+verifyCode!;
+            let postData = "numbercode="+verifyCode!+"&studentsId="+studentid!;
+            //let postData = "numbercode="+verifyCode!;
 
             //adding the parameters to request body
             request.httpBody = postData.data(using: String.Encoding.utf8)
@@ -59,26 +82,29 @@ class RegisterSecondLoading: UIViewController {
                      
                     do {
                           
-                        let connection = try JSONDecoder().decode(Connection.self, from: data)
+                        let connection = try JSONDecoder().decode(NewConnection.self, from: data)
+                        print (connection)
                         print (connection.message)
                           
                         if connection.message.contains("not found") {
                             self.showToast(controller: self, message: "Please request for a new verification code", seconds: 3)
+                            print(error ?? "")
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
                         }
                         
                         if connection.message.contains("login successful.") {
+                            print("Login Successful")
                             DispatchQueue.main.async {
                                 self.transitionToMain()
                             }
                         }
                         
                         // remove when Register is fixed
-                        DispatchQueue.main.async {
-                            self.transitionToMain()
-                        }
+//                        DispatchQueue.main.async {
+//                            self.transitionToMain()
+//                        }
                     }
                      
                     catch {

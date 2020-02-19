@@ -11,7 +11,13 @@ import UIKit
 struct Connection: Decodable {
     let status: String
     let message: String
-    let data: String
+    let data: DataContents
+}
+
+struct DataContents: Decodable {
+    let studregEmail: String
+    let studregmobileNum: String
+    let studregId: String
 }
 
 class RegisterFirstLoading: UIViewController {
@@ -65,8 +71,9 @@ class RegisterFirstLoading: UIViewController {
                    
                     do {
                         let connection = try JSONDecoder().decode(Connection.self, from: data)
-                        print (connection)
-                        print (connection.message)
+                        //print (connection)
+                        //print (connection.data.studregId)
+                        preferences.set(connection.data.studregId, forKey: "userid")
                         
                         if connection.message.contains("already exists") {
                             self.showToast(controller: self, message: "Account already exists.", seconds: 3)
