@@ -11,11 +11,27 @@ import UIKit
 class RegisterSecond: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var verifyCode: UITextField!
+        
+    @IBOutlet weak var verificationLabel: UILabel!
+    
+    let preferences = UserDefaults.standard
+    
+    var isReadyToResend = true;
+    var emailRequestStart = 300000;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //verifyCode.delegate = self
+        
+        if preferences.string(forKey: "useremail") == nil {
+            print ("User Email did not save.")
+        }
+
+        else {
+            let email = preferences.string(forKey: "useremail")
+            verificationLabel.text = "\(email ?? "")"
+        }
         
         let Tap:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
         
@@ -31,7 +47,6 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
         
         else {
             //let encodedData = NSKeyedArchiver.archivedData(withRootObject: verifyCode ??  "")
-            let preferences = UserDefaults.standard
             //preferences.set(encodedData, forKey: "verifyCode")
 
             preferences.set(verifyCode.text, forKey: "verifyCode")
@@ -41,13 +56,13 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
 
             if !didSave {
                 //  Couldn't save (I've never seen this happen in real world testing)
-                print ("Verification Code could not save.")
+                //print ("Verification Code could not save.")
                 self.showToast(controller: self, message: "Error Creating User", seconds: 2)
             }
 
             else {
                 self.transitionToLoading()
-                print ("Verification Code saved.")
+                //print ("Verification Code saved.")
             }
         }
         
@@ -58,6 +73,14 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func resendCodeButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Resend Verification Code", message: "A verification code will be sent to your e-mail account.", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action) in
+            print ("Will resend code now.")
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
     
     @objc func DismissKeyboard() {

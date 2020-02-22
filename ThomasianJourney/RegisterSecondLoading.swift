@@ -83,8 +83,8 @@ class RegisterSecondLoading: UIViewController {
                     do {
                           
                         let connection = try JSONDecoder().decode(NewConnection.self, from: data)
-                        print (connection)
-                        print (connection.message)
+                        //print (connection)
+                        //print (connection.message)
                           
                         if connection.message.contains("not found") {
                             self.showToast(controller: self, message: "Please request for a new verification code", seconds: 3)
@@ -144,10 +144,10 @@ class RegisterSecondLoading: UIViewController {
     
     func transitionToMain() {
         
-        let mainPage =
-                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.mainPage) as? MainPage
+        let registerSuccess =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
         
-                view.window?.rootViewController = mainPage
+                view.window?.rootViewController = registerSuccess
                 view.window?.makeKeyAndVisible()
     }
     

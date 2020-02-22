@@ -39,7 +39,7 @@ class RegisterFirstLoading: UIViewController {
             let email = preferences.string(forKey: "useremail")
             let mobilenumber = preferences.string(forKey: "usernumber")
 
-            print ("Shared Preferences from Loading: \(email ?? "") and \(mobilenumber ?? "")")
+            //print ("Shared Preferences from Loading: \(email ?? "") and \(mobilenumber ?? "")")
             
             //creating URLRequest
             let url = URL(string: "https://thomasianjourney.website/register/registerUser")!

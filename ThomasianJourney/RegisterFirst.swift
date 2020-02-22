@@ -86,13 +86,13 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
 
             if !didSave {
                 //  Couldn't save (I've never seen this happen in real world testing)
-                print ("Shared preferences could not save.")
+                //print ("Shared preferences could not save.")
                 self.showToast(controller: self, message: "Error Creating User", seconds: 2)
             }
 
             else {
                 self.transitionToLoading()
-                print ("Shared preferences saved.")
+                //print ("Shared preferences saved.")
             }
             
 //            Auth.auth().createUser(withEmail: emailauth, password: mobilenumberauth) { (res, err) in
