@@ -7,10 +7,6 @@ target 'ThomasianJourney' do
 
   # Pods for ThomasianJourney
 
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
   pod 'lottie-ios'
 
   target 'ThomasianJourneyTests' do
