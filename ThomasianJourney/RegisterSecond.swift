@@ -17,7 +17,10 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     let preferences = UserDefaults.standard
     
     var isReadyToResend = true;
-    var emailRequestStart = 300000;
+    //var emailRequestStart = 3000000000
+    //let uptimeNanoseconds: UInt64 = 0
+    //let when = (DispatchTime.now() + 0)
+    var start = DispatchTime.now()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,18 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
         
         view.addGestureRecognizer(Tap)
         // Do any additional setup after loading the view.
+        
+        Timer.scheduledTimer(withTimeInterval: 300.0, repeats: true) { (Timer) in
+            //print ("60 seconds.")
+            self.isReadyToResend = true
+            self.start = DispatchTime.now()
+        }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+//            self.isReadyToResend = true
+//            self.start = DispatchTime.now()
+//            print(self.isReadyToResend)
+//        }
     }
     
     @IBAction func verifyButton(_ sender: Any) {
@@ -55,7 +70,6 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
             let didSave = preferences.synchronize()
 
             if !didSave {
-                //  Couldn't save (I've never seen this happen in real world testing)
                 //print ("Verification Code could not save.")
                 self.showToast(controller: self, message: "Error Creating User", seconds: 2)
             }
@@ -73,33 +87,34 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func resendCodeButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Resend Verification Code", message: "A verification code will be sent to your e-mail account.", preferredStyle: .alert)
+        let end = DispatchTime.now()
+        let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
+        let timeInterval = Double(nanoTime) / 1_000_000_000 // Technically could overflow for long running tests
 
-        alert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action) in
-            print ("Will resend code now.")
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        //print("Nano Time: \(nanoTime) \nTime Interval: \(timeInterval)")
+        
+        if isReadyToResend == true || timeInterval >= 300 {
+            isReadyToResend = false
+            
+            let alert = UIAlertController(title: "Resend Verification Code", message: "A verification code will be sent to your e-mail account.", preferredStyle: .alert)
 
-        self.present(alert, animated: true)
+            alert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action) in
+                //print ("Will resend code now.")
+                
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+            self.present(alert, animated: true)
+        }
+        
+        else {
+            self.showToast(controller: self, message: "Please wait another five minutes before requesting another verification code", seconds: 2)
+        }
     }
     
     @objc func DismissKeyboard() {
         view.endEditing(true)
     }
-    
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        // get the current text, or use an empty string if that failed
-//        let currentText = textField.text ?? ""
-//
-//        // attempt to read the range they are trying to change, or exit if we can't
-//        guard let stringRange = Range(range, in: currentText) else { return false }
-//
-//        // add their new text to the existing text
-//        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-//
-//        // make sure the result is under 6 characters
-//        return updatedText.count <= 6
-//    }
     
     func transitionToFirst() {
         
