@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 struct NewConnection: Decodable {
     let status: String
@@ -34,9 +35,17 @@ class RegisterSecondLoading: UIViewController {
     
     @IBOutlet weak var proceedButton: UIButton!
     
+    @IBOutlet var animationView: AnimationView!
+    
+    func playAnimation(){
+        animationView.animation = Animation.named("load")
+        animationView.loopMode = .loop
+        animationView.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playAnimation()
         //let decoded  = UserDefaults.standard.object(forKey: "verifyCode")
         //let verifyCode = NSKeyedUnarchiver.unarchiveObject(with: decoded as! Data)
         let preferences = UserDefaults.standard

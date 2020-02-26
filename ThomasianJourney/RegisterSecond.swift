@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class RegisterSecond: UIViewController, UITextFieldDelegate {
 
@@ -14,14 +15,22 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
         
     @IBOutlet weak var verificationLabel: UILabel!
     
+    @IBOutlet var animationView: AnimationView!
+    
     let preferences = UserDefaults.standard
     
     var isReadyToResend = true;
     var emailRequestStart = 300000;
     
+    func playAnimation() {
+        animationView.animation = Animation.named("mail")
+        animationView.loopMode = .loop
+        animationView.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playAnimation()
         //verifyCode.delegate = self
         
         if preferences.string(forKey: "useremail") == nil {

@@ -11,6 +11,7 @@ target 'ThomasianJourney' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'lottie-ios'
 
   target 'ThomasianJourneyTests' do
     inherit! :search_paths
