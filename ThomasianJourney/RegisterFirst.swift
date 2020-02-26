@@ -38,7 +38,7 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         
         if email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || mobilenumber.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
-            return "Please fill in all the fields."
+            return "Email and Mobile Number cannot be empty."
         }
         
         let cleanedEmail = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -94,28 +94,6 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
                 self.transitionToLoading()
                 //print ("Shared preferences saved.")
             }
-            
-//            Auth.auth().createUser(withEmail: emailauth, password: mobilenumberauth) { (res, err) in
-//                // Check for errors
-//                if err != nil {
-//
-//                    // There was an error creating the user
-//                    self.showToast(controller: self, message: "Error Creating User", seconds: 2)
-//                }
-//
-//                else {
-//
-//                    // User was created successfully, now store the first name and last name
-//                    let db = Firestore.firestore()
-//
-//                    db.collection("Users").addDocument(data: ["Email":emailauth, "MobileNumber":mobilenumberauth, "uid":res!.user.uid]) { (error) in
-//
-//                        if error != nil {
-//                            // Show error message
-//                            self.showToast(controller: self, message: "Error saving data", seconds: 2)
-//                        }
-//                    }
-//
                     self.transitionToLoading()
 //                }
 //            }

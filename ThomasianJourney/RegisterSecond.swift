@@ -20,14 +20,10 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     let preferences = UserDefaults.standard
     
     var isReadyToResend = true;
-    //var emailRequestStart = 3000000000
-    //let uptimeNanoseconds: UInt64 = 0
-    //let when = (DispatchTime.now() + 0)
     var start = DispatchTime.now()
     
     func playAnimation() {
         animationView.animation = Animation.named("mail")
-        animationView.loopMode = .loop
         animationView.play()
     }
     
@@ -55,12 +51,6 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
             self.isReadyToResend = true
             self.start = DispatchTime.now()
         }
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
-//            self.isReadyToResend = true
-//            self.start = DispatchTime.now()
-//            print(self.isReadyToResend)
-//        }
     }
     
     @IBAction func verifyButton(_ sender: Any) {
@@ -109,15 +99,87 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
 
             alert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action) in
                 //print ("Will resend code now.")
-                
+                if self.preferences.string(forKey: "useremail") == nil || self.preferences.string(forKey: "usernumber") == nil {
+                            print ("User Email/Number did not save.")
+                }
+
+                else {
+                    let email = self.preferences.string(forKey: "useremail")
+                    let mobilenumber = self.preferences.string(forKey: "usernumber")
+                    
+                    //print ("Email: \(email ?? "") Mobile Number: \(mobilenumber ?? "")")
+
+                    let url = URL(string: "https://thomasianjourney.website/register/registerUser")!
+
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "POST"
+                          
+                    let postData = "emailAddress="+email!+"&mobileNumber="+mobilenumber!;
+
+                    request.httpBody = postData.data(using: String.Encoding.utf8)
+                            
+                    let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+                                
+                        if error != nil{
+                            print("Connection Error: \(String(describing: error))")
+                            self.showToast(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
+                            return;
+                        }
+                            
+                        else {
+//                            DispatchQueue.main.async {
+//                                self.transitionToLoading()
+//                            }
+                            
+                            guard let data = data else { return }
+                                               
+                            do {
+                                let connection = try JSONDecoder().decode(Connection.self, from: data)
+                                //print (connection)
+                                //print (connection.data.studregId)
+                                //preferences.set(connection.data.studregId, forKey: "userid")
+                                
+                                if connection.message.contains("already exists") {
+                                    self.showToast(controller: self, message: "Account already exists.", seconds: 3)
+        //                            DispatchQueue.main.async {
+        //                                self.transitionToLoading()
+        //                            }
+                                }
+                                
+                                if connection.message.contains("entered Wrong Email/Password") {
+                                    self.showToast(controller: self, message: "Invalid Email Address.", seconds: 3)
+        //                            DispatchQueue.main.async {
+        //                                self.transitionToLoading()
+        //                            }
+                                }
+                                
+                                if connection.message.contains("not entered an Email/Password") {
+                                    self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 3)
+        //                            DispatchQueue.main.async {
+        //                                self.transitionToLoading()
+        //                            }
+                                }
+                            }
+                            
+                            catch {
+                               print(error)
+                            }
+                            
+                            self.showToast(controller: self, message: "New verification sent. Please wait for a few minutes before requesting again", seconds: 3)
+                        }
+                    }
+                    
+                    task.resume()
+                }
             }))
+            
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
             self.present(alert, animated: true)
         }
         
         else {
-            self.showToast(controller: self, message: "Please wait another five minutes before requesting another verification code", seconds: 2)
+            self.showToast(controller: self, message: "Please wait another five minutes before requesting another verification code", seconds: 3)
         }
     }
     
