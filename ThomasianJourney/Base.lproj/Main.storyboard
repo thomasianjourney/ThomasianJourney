@@ -1047,6 +1047,9 @@
                         <viewLayoutGuide key="safeArea" id="hSS-y4-e3x"/>
                     </view>
                     <navigationItem key="navigationItem" id="wTz-EK-a4j"/>
+                    <connections>
+                        <outlet property="gifView" destination="ykY-YG-pPj" id="hQj-II-1iv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jr-Vg-5ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
