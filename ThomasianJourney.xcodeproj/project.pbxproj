@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C82EC90472B225BF783511B /* Pods_ThomasianJourneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4E856E3EA29EAB5C9486B6 /* Pods_ThomasianJourneyTests.framework */; };
+		18972DE07537F69A71656A23 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */; };
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
@@ -53,14 +53,14 @@
 		742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A12397E419000676ED /* MenuPortfolio.swift */; };
 		742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A32397ED04000676ED /* ScanSuccess.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
+		7442D5A31EE63043A4BE1AF8 /* libPods-ThomasianJourney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */; };
 		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
 		746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8A23F93AFE0061CA48 /* MonthView.swift */; };
 		746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */; };
 		746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C9023F93D9D0061CA48 /* CalendarView.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
-		9635FB200A96DDFBCC8B4A4B /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0647A52C4A54765D8B21DFF4 /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework */; };
-		99FE013BE0E48946453E3696 /* Pods_ThomasianJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BBC3955295B92446A5FD05 /* Pods_ThomasianJourney.framework */; };
+		B2856D911F85A6B47D2F8BCB /* libPods-ThomasianJourneyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0647A52C4A54765D8B21DFF4 /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThomasianJourney_ThomasianJourneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11860D81B7FBC687E3F6E9CC /* Pods-ThomasianJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney.debug.xcconfig"; sourceTree = "<group>"; };
+		30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourneyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 		479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasianJourneyUITests.swift; sourceTree = "<group>"; };
 		479EFD97238D912D00B2EC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62972D48E01F9698DE7C1434 /* Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		741E259423929B6600BFA8F7 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		741E259623929B6600BFA8F7 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -272,9 +273,8 @@
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
 		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
 		87AA7F1831A0CA404C0B05C0 /* Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7BBC3955295B92446A5FD05 /* Pods_ThomasianJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThomasianJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney-ThomasianJourneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4891E372D65EA991D9D2C8 /* Pods-ThomasianJourneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourneyTests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourneyTests/Pods-ThomasianJourneyTests.release.xcconfig"; sourceTree = "<group>"; };
-		DB4E856E3EA29EAB5C9486B6 /* Pods_ThomasianJourneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThomasianJourneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5164B806280FE806D288282 /* Pods-ThomasianJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney.release.xcconfig"; sourceTree = "<group>"; };
 		FCB6FEAF2FFF963E93E71487 /* Pods-ThomasianJourneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourneyTests.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourneyTests/Pods-ThomasianJourneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,7 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FE013BE0E48946453E3696 /* Pods_ThomasianJourney.framework in Frameworks */,
+				7442D5A31EE63043A4BE1AF8 /* libPods-ThomasianJourney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C82EC90472B225BF783511B /* Pods_ThomasianJourneyTests.framework in Frameworks */,
+				B2856D911F85A6B47D2F8BCB /* libPods-ThomasianJourneyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9635FB200A96DDFBCC8B4A4B /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework in Frameworks */,
+				18972DE07537F69A71656A23 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,9 +414,9 @@
 			children = (
 				74AEDCAA2406116800F4283B /* lottie-ios */,
 				74AEDCA62406112100F4283B /* Lottie.framework */,
-				B7BBC3955295B92446A5FD05 /* Pods_ThomasianJourney.framework */,
-				0647A52C4A54765D8B21DFF4 /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework */,
-				DB4E856E3EA29EAB5C9486B6 /* Pods_ThomasianJourneyTests.framework */,
+				6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */,
+				AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */,
+				30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -961,7 +961,6 @@
 				479EFD6E238D912700B2EC10 /* Sources */,
 				479EFD6F238D912700B2EC10 /* Frameworks */,
 				479EFD70238D912700B2EC10 /* Resources */,
-				64869F3B2F15668F7F885AAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -999,7 +998,6 @@
 				479EFD8D238D912D00B2EC10 /* Sources */,
 				479EFD8E238D912D00B2EC10 /* Frameworks */,
 				479EFD8F238D912D00B2EC10 /* Resources */,
-				501B253994D5ACB92484C3C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1132,40 +1130,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		501B253994D5ACB92484C3C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64869F3B2F15668F7F885AAC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		754C0200FDE5CABBC01F9F11 /* [CP] Check Pods Manifest.lock */ = {
