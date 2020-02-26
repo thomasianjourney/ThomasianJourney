@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 struct Connection: Decodable {
     let status: String
@@ -25,9 +26,17 @@ class RegisterFirstLoading: UIViewController {
     //@IBOutlet weak var proceedButton: UIButton!
     
 //    let user = Auth.auth().currentUser
+    @IBOutlet var animationView: AnimationView!
+    
+    func playAnimation(){
+        animationView.animation = Animation.named("loading")
+        animationView.loopMode = .loop
+        animationView.play()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playAnimation()
         
         let preferences = UserDefaults.standard
 

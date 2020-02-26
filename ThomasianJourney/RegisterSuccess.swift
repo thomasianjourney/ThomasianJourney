@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Lottie
 
 class RegisterSuccess: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBOutlet var animationView: AnimationView!
+    
+    func playAnimation () {
+        animationView.animation = Animation.named("check")
+        animationView.loopMode = .loop
+        animationView.play()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        playAnimation()
         // Do any additional setup after loading the view.
     }
     
