@@ -11,6 +11,14 @@
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
+		4797BEC224063C720012A222 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC024063C710012A222 /* reload.json */; };
+		4797BEC324063C720012A222 /* scansuc.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC124063C720012A222 /* scansuc.json */; };
+		4797BEC524063C960012A222 /* qr.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC424063C960012A222 /* qr.json */; };
+		4797BEC924063CB60012A222 /* mail.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC624063CB60012A222 /* mail.json */; };
+		4797BECA24063CB60012A222 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC724063CB60012A222 /* loading.json */; };
+		4797BECB24063CB60012A222 /* notif.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC824063CB60012A222 /* notif.json */; };
+		4797BECE24063D260012A222 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BECC24063D260012A222 /* check.json */; };
+		4797BECF24063D260012A222 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BECD24063D260012A222 /* load.json */; };
 		479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD75238D912700B2EC10 /* AppDelegate.swift */; };
 		479EFD78238D912700B2EC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD77238D912700B2EC10 /* ViewController.swift */; };
 		479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD79238D912700B2EC10 /* Main.storyboard */; };
@@ -49,14 +57,6 @@
 		746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8A23F93AFE0061CA48 /* MonthView.swift */; };
 		746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */; };
 		746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C9023F93D9D0061CA48 /* CalendarView.swift */; };
-		74E467F124063973005B4931 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467E924063972005B4931 /* reload.json */; };
-		74E467F224063973005B4931 /* qr.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467EA24063972005B4931 /* qr.json */; };
-		74E467F324063973005B4931 /* notif.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467EB24063972005B4931 /* notif.json */; };
-		74E467F424063973005B4931 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467EC24063972005B4931 /* load.json */; };
-		74E467F524063973005B4931 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467ED24063972005B4931 /* check.json */; };
-		74E467F624063973005B4931 /* mail.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467EE24063972005B4931 /* mail.json */; };
-		74E467F724063973005B4931 /* scansuc.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467EF24063973005B4931 /* scansuc.json */; };
-		74E467F824063973005B4931 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E467F024063973005B4931 /* loading.json */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
 		9635FB200A96DDFBCC8B4A4B /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0647A52C4A54765D8B21DFF4 /* Pods_ThomasianJourney_ThomasianJourneyUITests.framework */; };
@@ -86,6 +86,14 @@
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
+		4797BEC024063C710012A222 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reload.json; sourceTree = "<group>"; };
+		4797BEC124063C720012A222 /* scansuc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scansuc.json; sourceTree = "<group>"; };
+		4797BEC424063C960012A222 /* qr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qr.json; sourceTree = "<group>"; };
+		4797BEC624063CB60012A222 /* mail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mail.json; sourceTree = "<group>"; };
+		4797BEC724063CB60012A222 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		4797BEC824063CB60012A222 /* notif.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notif.json; sourceTree = "<group>"; };
+		4797BECC24063D260012A222 /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		4797BECD24063D260012A222 /* load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = load.json; sourceTree = "<group>"; };
 		479EFD72238D912700B2EC10 /* ThomasianJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThomasianJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EFD75238D912700B2EC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479EFD77238D912700B2EC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -261,14 +269,6 @@
 		74AEDD552406116800F4283B /* Interpolatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
 		74AEDD562406116800F4283B /* KeyframeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeExtensions.swift; sourceTree = "<group>"; };
 		74AEDD582406116800F4283B /* AnimationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContext.swift; sourceTree = "<group>"; };
-		74E467E924063972005B4931 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = reload.json; path = ../../../Downloads/reload.json; sourceTree = "<group>"; };
-		74E467EA24063972005B4931 /* qr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = qr.json; path = ../../../Downloads/qr.json; sourceTree = "<group>"; };
-		74E467EB24063972005B4931 /* notif.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = notif.json; path = ../../../Downloads/notif.json; sourceTree = "<group>"; };
-		74E467EC24063972005B4931 /* load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = load.json; path = ../../../Downloads/load.json; sourceTree = "<group>"; };
-		74E467ED24063972005B4931 /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = check.json; path = ../../../Downloads/check.json; sourceTree = "<group>"; };
-		74E467EE24063972005B4931 /* mail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mail.json; path = ../../../Downloads/mail.json; sourceTree = "<group>"; };
-		74E467EF24063973005B4931 /* scansuc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scansuc.json; path = ../../../Downloads/scansuc.json; sourceTree = "<group>"; };
-		74E467F024063973005B4931 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loading.json; path = ../../../Downloads/loading.json; sourceTree = "<group>"; };
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
 		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
 		87AA7F1831A0CA404C0B05C0 /* Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -353,14 +353,14 @@
 		479EFD74238D912700B2EC10 /* ThomasianJourney */ = {
 			isa = PBXGroup;
 			children = (
-				74E467ED24063972005B4931 /* check.json */,
-				74E467EC24063972005B4931 /* load.json */,
-				74E467F024063973005B4931 /* loading.json */,
-				74E467EE24063972005B4931 /* mail.json */,
-				74E467EB24063972005B4931 /* notif.json */,
-				74E467EA24063972005B4931 /* qr.json */,
-				74E467E924063972005B4931 /* reload.json */,
-				74E467EF24063973005B4931 /* scansuc.json */,
+				4797BECC24063D260012A222 /* check.json */,
+				4797BECD24063D260012A222 /* load.json */,
+				4797BEC724063CB60012A222 /* loading.json */,
+				4797BEC624063CB60012A222 /* mail.json */,
+				4797BEC824063CB60012A222 /* notif.json */,
+				4797BEC424063C960012A222 /* qr.json */,
+				4797BEC024063C710012A222 /* reload.json */,
+				4797BEC124063C720012A222 /* scansuc.json */,
 				74E64F7B23966390006D0BBA /* tjmov.gif */,
 				479EFD75238D912700B2EC10 /* AppDelegate.swift */,
 				479EFD77238D912700B2EC10 /* ViewController.swift */,
@@ -1064,32 +1064,32 @@
 			files = (
 				741E25B023929B6B00BFA8F7 /* Poppins-Bold.ttf in Resources */,
 				741E25AD23929B6B00BFA8F7 /* Poppins-ExtraLight.ttf in Resources */,
+				4797BECE24063D260012A222 /* check.json in Resources */,
 				74E64F7C23966390006D0BBA /* tjmov.gif in Resources */,
 				479EFD80238D912D00B2EC10 /* LaunchScreen.storyboard in Resources */,
+				4797BEC324063C720012A222 /* scansuc.json in Resources */,
 				741E25AE23929B6B00BFA8F7 /* Poppins-Thin.ttf in Resources */,
+				4797BECF24063D260012A222 /* load.json in Resources */,
+				4797BECA24063CB60012A222 /* loading.json in Resources */,
+				4797BEC224063C720012A222 /* reload.json in Resources */,
 				479EFD7D238D912D00B2EC10 /* Assets.xcassets in Resources */,
-				74E467F324063973005B4931 /* notif.json in Resources */,
 				741E25A723929B6B00BFA8F7 /* Poppins-LightItalic.ttf in Resources */,
 				741E25A623929B6B00BFA8F7 /* Poppins-Light.ttf in Resources */,
-				74E467F524063973005B4931 /* check.json in Resources */,
 				479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */,
+				4797BEC924063CB60012A222 /* mail.json in Resources */,
 				741E25B223929B6B00BFA8F7 /* Poppins-BlackItalic.ttf in Resources */,
-				74E467F624063973005B4931 /* mail.json in Resources */,
 				741E25A823929B6B00BFA8F7 /* Poppins-SemiBoldItalic.ttf in Resources */,
-				74E467F824063973005B4931 /* loading.json in Resources */,
+				4797BECB24063CB60012A222 /* notif.json in Resources */,
 				741E25B323929B6B00BFA8F7 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				741E25B623929B6B00BFA8F7 /* Poppins-BoldItalic.ttf in Resources */,
-				74E467F124063973005B4931 /* reload.json in Resources */,
 				741E25AA23929B6B00BFA8F7 /* Poppins-ExtraBoldItalic.ttf in Resources */,
-				74E467F724063973005B4931 /* scansuc.json in Resources */,
 				741E25AF23929B6B00BFA8F7 /* Poppins-Italic.ttf in Resources */,
 				741E25B123929B6B00BFA8F7 /* Poppins-Medium.ttf in Resources */,
 				741E25B723929B6B00BFA8F7 /* Poppins-MediumItalic.ttf in Resources */,
-				74E467F224063973005B4931 /* qr.json in Resources */,
+				4797BEC524063C960012A222 /* qr.json in Resources */,
 				741E25B523929B6B00BFA8F7 /* Poppins-Regular.ttf in Resources */,
 				741E25A923929B6B00BFA8F7 /* Poppins-ExtraBold.ttf in Resources */,
 				4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */,
-				74E467F424063973005B4931 /* load.json in Resources */,
 				741E25AB23929B6B00BFA8F7 /* Poppins-ThinItalic.ttf in Resources */,
 				741E25B423929B6B00BFA8F7 /* Poppins-SemiBold.ttf in Resources */,
 			);
