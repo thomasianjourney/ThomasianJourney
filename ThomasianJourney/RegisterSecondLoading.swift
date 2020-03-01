@@ -46,19 +46,34 @@ class RegisterSecondLoading: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         playAnimation()
-        //let decoded  = UserDefaults.standard.object(forKey: "verifyCode")
-        //let verifyCode = NSKeyedUnarchiver.unarchiveObject(with: decoded as! Data)
+        
         let preferences = UserDefaults.standard
-        let verifyCode = preferences.string(forKey: "verifyCode")
-        let studentid = preferences.string(forKey: "userid")
-        print (verifyCode ?? "No Verify Code Saved")
-        print (studentid ?? "No Student ID Saved")
 
-        if verifyCode == nil {
-            print ("Verification Code did not save.")
+        if preferences.string(forKey: "useremail") == nil {
+            showToastSecond(controller: self, message: "Student Email is empty.", seconds: 3)
+        }
+        
+        else if preferences.string(forKey: "usernumber") == nil {
+            showToastSecond(controller: self, message: "Student Mobile is empty.", seconds: 3)
+        }
+        
+        else if preferences.string(forKey: "verifyCode") == nil {
+            showToastSecond(controller: self, message: "Number code is empty.", seconds: 3)
+        }
+        
+        else if preferences.string(forKey: "userid") == nil {
+            showToastSecond(controller: self, message: "Student ID is empty.", seconds: 3)
+        }
+            
+        else if preferences.string(forKey: "useremail") == nil && preferences.string(forKey: "usernumber") == nil && preferences.string(forKey: "verifyCode") == nil && preferences.string(forKey: "userid") == nil {
+            showToastSecond(controller: self, message: "Data is empty.", seconds: 3)
         }
 
         else {
+            //let email = preferences.string(forKey: "useremail")
+            //let mobile = preferences.string(forKey: "usernumber")
+            let verifyCode = preferences.string(forKey: "verifyCode")
+            let studentid = preferences.string(forKey: "userid")
         
             //creating URLRequest
             let url = URL(string: "https://thomasianjourney.website/register/checkCode")!
@@ -96,15 +111,14 @@ class RegisterSecondLoading: UIViewController {
                         //print (connection.message)
                           
                         if connection.message.contains("not found") {
-                            self.showToast(controller: self, message: "Please request for a new verification code", seconds: 3)
-                            print(error ?? "")
+                            self.showToastSecond(controller: self, message: "Code is incorrect.", seconds: 3)
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
                         }
                         
                         if connection.message.contains("login successful.") {
-                            print("Login Successful")
+                            //print("Login Successful")
                             DispatchQueue.main.async {
                                 self.transitionToMain()
                             }
@@ -117,7 +131,8 @@ class RegisterSecondLoading: UIViewController {
                     }
                      
                     catch {
-                        print(error)
+                        //print(error)
+                        self.showToastSecond(controller: self, message: "Code is incorrect.", seconds: 3)
                     }
                   
                 }
@@ -126,30 +141,7 @@ class RegisterSecondLoading: UIViewController {
             //executing the task
             task.resume()
         }
-//        let user = Auth.auth().currentUser
-//        
-//        user!.reload { (error) in
-//            switch user!.isEmailVerified {
-//            case true:
-//                //print("Email is verified")
-//                let registerSuccess =
-//                    self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
-//                
-//                self.view.window?.rootViewController = registerSuccess
-//                self.view.window?.makeKeyAndVisible()
-//            case false:
-//                self.showToast(controller: self, message: "Please make sure you have have clicked on the verification link in your email", seconds: 2)
-//            }
-//        }
     }
-    
-//    @IBAction func proceedTapped(_ sender: Any) {
-//        let registerSuccess =
-//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
-//
-//        view.window?.rootViewController = registerSuccess
-//        view.window?.makeKeyAndVisible()
-//    }
     
     func transitionToMain() {
         
@@ -157,6 +149,14 @@ class RegisterSecondLoading: UIViewController {
                 storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSuccess) as? RegisterSuccess
         
                 view.window?.rootViewController = registerSuccess
+                view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToSecond() {
+        let registerSecond =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerSecond) as? RegisterSecond
+        
+                view.window?.rootViewController = registerSecond
                 view.window?.makeKeyAndVisible()
     }
     
@@ -170,6 +170,21 @@ class RegisterSecondLoading: UIViewController {
             controller.present(alert, animated: true)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
                 alert.dismiss(animated: true)
+            }
+        }
+    }
+    
+    func showToastSecond(controller: UIViewController, message : String, seconds: Double) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = .black
+            alert.view.alpha = 0.5
+            alert.view.layer.cornerRadius = 15
+            
+            controller.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+                self.transitionToSecond()
             }
         }
     }

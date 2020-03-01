@@ -28,7 +28,7 @@ class RegisterFirstLoading: UIViewController {
     @IBOutlet var animationView: AnimationView!
     
     func playAnimation(){
-        animationView.animation = Animation.named("loading")
+        animationView.animation = Animation.named("load")
         animationView.loopMode = .loop
         animationView.play()
     }

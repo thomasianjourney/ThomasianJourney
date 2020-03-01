@@ -55,14 +55,15 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     
     @IBAction func verifyButton(_ sender: Any) {
         
+        if verifyCode.text! == "" {
+            self.showToast(controller: self, message: "Code is empty.", seconds: 3)
+        }
+        
         if verifyCode.text!.count != 6 {
-            self.showToast(controller: self, message: "Please make sure you have properly typed the verification code.", seconds: 2)
+            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
         }
         
         else {
-            //let encodedData = NSKeyedArchiver.archivedData(withRootObject: verifyCode ??  "")
-            //preferences.set(encodedData, forKey: "verifyCode")
-
             preferences.set(verifyCode.text, forKey: "verifyCode")
 
             //  Save to disk
@@ -70,7 +71,7 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
 
             if !didSave {
                 //print ("Verification Code could not save.")
-                self.showToast(controller: self, message: "Error Creating User", seconds: 2)
+                self.showToast(controller: self, message: "Error Creating User", seconds: 3)
             }
 
             else {
@@ -98,9 +99,11 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Resend Verification Code", message: "A verification code will be sent to your e-mail account.", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action) in
+                
                 //print ("Will resend code now.")
                 if self.preferences.string(forKey: "useremail") == nil || self.preferences.string(forKey: "usernumber") == nil {
-                            print ("User Email/Number did not save.")
+                    print ("User Email/Number did not save.")
+                    self.showToast(controller: self, message: "Error Creating User", seconds: 3)
                 }
 
                 else {
@@ -121,7 +124,7 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
                     let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
                                 
                         if error != nil{
-                            print("Connection Error: \(String(describing: error))")
+                            //print("Connection Error: \(String(describing: error))")
                             self.showToast(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
                             return;
                         }
@@ -130,40 +133,19 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
 //                            DispatchQueue.main.async {
 //                                self.transitionToLoading()
 //                            }
-                            
-                            guard let data = data else { return }
-                                               
-                            do {
-                                let connection = try JSONDecoder().decode(Connection.self, from: data)
-                                //print (connection)
-                                //print (connection.data.studregId)
-                                //preferences.set(connection.data.studregId, forKey: "userid")
-                                
-                                if connection.message.contains("already exists") {
-                                    self.showToast(controller: self, message: "Account already exists.", seconds: 3)
-        //                            DispatchQueue.main.async {
-        //                                self.transitionToLoading()
-        //                            }
-                                }
-                                
-                                if connection.message.contains("entered Wrong Email/Password") {
-                                    self.showToast(controller: self, message: "Invalid Email Address.", seconds: 3)
-        //                            DispatchQueue.main.async {
-        //                                self.transitionToLoading()
-        //                            }
-                                }
-                                
-                                if connection.message.contains("not entered an Email/Password") {
-                                    self.showToast(controller: self, message: "Incomplete Data Entered.", seconds: 3)
-        //                            DispatchQueue.main.async {
-        //                                self.transitionToLoading()
-        //                            }
-                                }
-                            }
-                            
-                            catch {
-                               print(error)
-                            }
+//
+//                            guard let data = data else { return }
+//
+//                            do {
+//                                let connection = try JSONDecoder().decode(Connection.self, from: data)
+//                                print (connection)
+//                                print (connection.data.studregId)
+//                                preferences.set(connection.data.studregId, forKey: "userid")
+//                            }
+//
+//                            catch {
+//                               print(error)
+//                            }
                             
                             self.showToast(controller: self, message: "New verification sent. Please wait for a few minutes before requesting again", seconds: 3)
                         }

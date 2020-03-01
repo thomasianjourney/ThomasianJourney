@@ -17,7 +17,6 @@ class RegisterSuccess: UIViewController {
     
     func playAnimation () {
         animationView.animation = Animation.named("check")
-        animationView.loopMode = .loop
         animationView.play()
     }
     override func viewDidLoad() {
