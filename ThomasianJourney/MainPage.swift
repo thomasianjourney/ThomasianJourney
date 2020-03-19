@@ -11,10 +11,10 @@ import UIKit
 class MainPage: UIViewController {
 
     @IBOutlet var gifView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        gifView.loadGif(name: "tjmov")
     }
     
     @IBAction func viewCalendarTapped(_ sender: UIButton) {

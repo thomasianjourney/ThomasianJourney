@@ -20,6 +20,7 @@ struct Constants {
         static let dummyRegister = "dummyRegister"
         static let registerFirst = "registerFirst"
         static let viewCalendar = "viewCalendar"
+        static let mainActivity = "DummyMainActivity"
     }
     
     

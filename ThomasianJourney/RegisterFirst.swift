@@ -21,11 +21,23 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //transitionToLoading()
+        
         let Tap:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
         
         view.addGestureRecognizer(Tap)
  
         mobilenumber.delegate = self
+        
+        let preferences = UserDefaults.standard
+        
+        //print ("Check Empty Email and Number: \(preferences.string(forKey: "useremail")) \(preferences.string(forKey: "usernumber"))")
+        
+        if preferences.string(forKey: "useremail") != nil || preferences.string(forKey: "usernumber") != nil {
+            transitionToMain()
+        }
+        
+        //self.transitionToMain()
     }
     
     @objc func DismissKeyboard() {
@@ -158,5 +170,14 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         
         view.window?.rootViewController = registerFirstLoading
         view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToMain() {
+        
+        let mainPage =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.mainPage) as? MainPage
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = mainPage
+        appDelegate.window?.makeKeyAndVisible()
     }
 }

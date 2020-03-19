@@ -94,8 +94,6 @@ class RegisterFirstLoading: UIViewController {
 //                            }
 //                        }
                         
-                        
-                        
                         if connection.message.contains("entered Wrong Email/Password") {
                             self.showToastFirst(controller: self, message: "Email Not Found.", seconds: 3)
 //                            DispatchQueue.main.async {

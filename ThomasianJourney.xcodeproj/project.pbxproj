@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18972DE07537F69A71656A23 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */; };
+		2013DDCE99E8EBA95E8A7BF4 /* libPods-ThomasianJourney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDFBA78D3D50930F524AC67 /* libPods-ThomasianJourney.a */; };
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
+		4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712BD132423823F00A631CD /* UIImage+Gif.swift */; };
+		47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284A9B24232AFB00DA7422 /* MainActivity.swift */; };
 		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
 		4797BEC224063C720012A222 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC024063C710012A222 /* reload.json */; };
 		4797BEC324063C720012A222 /* scansuc.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC124063C720012A222 /* scansuc.json */; };
@@ -26,6 +28,7 @@
 		479EFD80238D912D00B2EC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */; };
 		479EFD8B238D912D00B2EC10 /* ThomasianJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD8A238D912D00B2EC10 /* ThomasianJourneyTests.swift */; };
 		479EFD96238D912D00B2EC10 /* ThomasianJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */; };
+		6C1848A475E1589CC7BE3278 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9CF7DCBF6EC8781F950CF7 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */; };
 		741E25A623929B6B00BFA8F7 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259423929B6600BFA8F7 /* Poppins-Light.ttf */; };
 		741E25A723929B6B00BFA8F7 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */; };
 		741E25A823929B6B00BFA8F7 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259623929B6600BFA8F7 /* Poppins-SemiBoldItalic.ttf */; };
@@ -53,14 +56,12 @@
 		742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A12397E419000676ED /* MenuPortfolio.swift */; };
 		742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A32397ED04000676ED /* ScanSuccess.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
-		7442D5A31EE63043A4BE1AF8 /* libPods-ThomasianJourney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */; };
 		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
 		746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8A23F93AFE0061CA48 /* MonthView.swift */; };
 		746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8E23F93D7F0061CA48 /* WeekdaysView.swift */; };
 		746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C9023F93D9D0061CA48 /* CalendarView.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
-		74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E64F7D2396639A006D0BBA /* ApplyGif.swift */; };
-		B2856D911F85A6B47D2F8BCB /* libPods-ThomasianJourneyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */; };
+		EEFD3602883BDB712F5F608F /* libPods-ThomasianJourneyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247D7C01268D573ED97FE188 /* libPods-ThomasianJourneyTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +83,12 @@
 
 /* Begin PBXFileReference section */
 		11860D81B7FBC687E3F6E9CC /* Pods-ThomasianJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney.debug.xcconfig"; sourceTree = "<group>"; };
-		30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourneyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		247D7C01268D573ED97FE188 /* libPods-ThomasianJourneyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourneyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9CF7DCBF6EC8781F950CF7 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney-ThomasianJourneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4712BD132423823F00A631CD /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		47284A9B24232AFB00DA7422 /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
 		4797BEC024063C710012A222 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reload.json; sourceTree = "<group>"; };
 		4797BEC124063C720012A222 /* scansuc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scansuc.json; sourceTree = "<group>"; };
@@ -108,7 +112,6 @@
 		479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasianJourneyUITests.swift; sourceTree = "<group>"; };
 		479EFD97238D912D00B2EC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62972D48E01F9698DE7C1434 /* Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		741E259423929B6600BFA8F7 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		741E259623929B6600BFA8F7 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -271,9 +274,8 @@
 		74AEDD562406116800F4283B /* KeyframeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeExtensions.swift; sourceTree = "<group>"; };
 		74AEDD582406116800F4283B /* AnimationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContext.swift; sourceTree = "<group>"; };
 		74E64F7B23966390006D0BBA /* tjmov.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tjmov.gif; sourceTree = "<group>"; };
-		74E64F7D2396639A006D0BBA /* ApplyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyGif.swift; sourceTree = "<group>"; };
 		87AA7F1831A0CA404C0B05C0 /* Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney-ThomasianJourneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDFBA78D3D50930F524AC67 /* libPods-ThomasianJourney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThomasianJourney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4891E372D65EA991D9D2C8 /* Pods-ThomasianJourneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourneyTests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourneyTests/Pods-ThomasianJourneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5164B806280FE806D288282 /* Pods-ThomasianJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney/Pods-ThomasianJourney.release.xcconfig"; sourceTree = "<group>"; };
 		FCB6FEAF2FFF963E93E71487 /* Pods-ThomasianJourneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourneyTests.debug.xcconfig"; path = "Target Support Files/Pods-ThomasianJourneyTests/Pods-ThomasianJourneyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,7 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7442D5A31EE63043A4BE1AF8 /* libPods-ThomasianJourney.a in Frameworks */,
+				2013DDCE99E8EBA95E8A7BF4 /* libPods-ThomasianJourney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2856D911F85A6B47D2F8BCB /* libPods-ThomasianJourneyTests.a in Frameworks */,
+				EEFD3602883BDB712F5F608F /* libPods-ThomasianJourneyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18972DE07537F69A71656A23 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */,
+				6C1848A475E1589CC7BE3278 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +355,8 @@
 		479EFD74238D912700B2EC10 /* ThomasianJourney */ = {
 			isa = PBXGroup;
 			children = (
+				4706CD022398A2050009364D /* Helpers */,
+				74FBDD34239257A000EF8717 /* Fonts */,
 				4797BECC24063D260012A222 /* check.json */,
 				4797BECD24063D260012A222 /* load.json */,
 				4797BEC724063CB60012A222 /* loading.json */,
@@ -368,16 +372,15 @@
 				74329EF52393564300CBEDAE /* SMPinView.swift */,
 				479EFD7C238D912D00B2EC10 /* Assets.xcassets */,
 				479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */,
-				4706CD022398A2050009364D /* Helpers */,
-				74FBDD34239257A000EF8717 /* Fonts */,
 				479EFD81238D912D00B2EC10 /* Info.plist */,
-				74E64F7D2396639A006D0BBA /* ApplyGif.swift */,
+				4712BD132423823F00A631CD /* UIImage+Gif.swift */,
 				742B79912397AF7C000676ED /* RegisterFirst.swift */,
 				476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */,
 				742B79952397AFEF000676ED /* RegisterSecond.swift */,
 				742B79972397B0A4000676ED /* RegisterSecondLoading.swift */,
 				742B79992397B0CE000676ED /* RegisterSuccess.swift */,
 				742B799B2397B19F000676ED /* MainPage.swift */,
+				47284A9B24232AFB00DA7422 /* MainActivity.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				742B799F2397DEA1000676ED /* GPSController.swift */,
 				742B79A12397E419000676ED /* MenuPortfolio.swift */,
@@ -414,9 +417,9 @@
 			children = (
 				74AEDCAA2406116800F4283B /* lottie-ios */,
 				74AEDCA62406112100F4283B /* Lottie.framework */,
-				6CC8E5BD9996274F4CAD4F74 /* libPods-ThomasianJourney.a */,
-				AB56B9A0919F6E9A956CA795 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */,
-				30C1917E7179EC1CFCF917E8 /* libPods-ThomasianJourneyTests.a */,
+				BBDFBA78D3D50930F524AC67 /* libPods-ThomasianJourney.a */,
+				2C9CF7DCBF6EC8781F950CF7 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */,
+				247D7C01268D573ED97FE188 /* libPods-ThomasianJourneyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1186,6 +1189,7 @@
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
 				746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */,
+				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
 				746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */,
 				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
@@ -1195,12 +1199,12 @@
 				746B1C8B23F93AFE0061CA48 /* MonthView.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
 				746B1C9123F93D9D0061CA48 /* CalendarView.swift in Sources */,
-				74E64F7E2396639A006D0BBA /* ApplyGif.swift in Sources */,
 				742B79A42397ED04000676ED /* ScanSuccess.swift in Sources */,
 				742B799C2397B19F000676ED /* MainPage.swift in Sources */,
 				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
 				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
+				4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1385,7 +1389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.capstone.ThomasianJourney;
+				PRODUCT_BUNDLE_IDENTIFIER = com.capstone.ThomasianJourney3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1405,7 +1409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.capstone.ThomasianJourney;
+				PRODUCT_BUNDLE_IDENTIFIER = com.capstone.ThomasianJourney3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
