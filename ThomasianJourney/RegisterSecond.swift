@@ -103,7 +103,7 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
                 //print ("Will resend code now.")
                 if self.preferences.string(forKey: "useremail") == nil || self.preferences.string(forKey: "usernumber") == nil {
                     print ("User Email/Number did not save.")
-                    self.showToast(controller: self, message: "Error Creating User", seconds: 3)
+                    self.showToastFirst(controller: self, message: "Error Creating User", seconds: 3)
                 }
 
                 else {
@@ -125,7 +125,7 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
                                 
                         if error != nil{
                             //print("Connection Error: \(String(describing: error))")
-                            self.showToast(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
+                            self.showToastFirst(controller: self, message: "Request timeout, please try again.", seconds: 3)
                             return;
                         }
                             
@@ -197,6 +197,21 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
             controller.present(alert, animated: true)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
                 alert.dismiss(animated: true)
+            }
+        }
+    }
+    
+    func showToastFirst(controller: UIViewController, message : String, seconds: Double) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = .black
+            alert.view.alpha = 0.5
+            alert.view.layer.cornerRadius = 15
+            
+            controller.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+                self.transitionToFirst()
             }
         }
     }

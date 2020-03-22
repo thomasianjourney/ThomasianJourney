@@ -72,7 +72,7 @@ class RegisterFirstLoading: UIViewController {
                 
                 if error != nil{
                     print("Connection Error: \(String(describing: error))")
-                    self.showToastFirst(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
+                    self.showToastFirst(controller: self, message: "Request timeout, please try again.", seconds: 3)
                     return;
                 
                 }
@@ -87,25 +87,16 @@ class RegisterFirstLoading: UIViewController {
                         //print (connection.data.studregId)
                         preferences.set(connection.data.studregId, forKey: "userid")
                         
-//                        if connection.message.contains("already exists") {
-//                            self.showToast(controller: self, message: "Account already exists.", seconds: 3)
-//                            DispatchQueue.main.async {
-//                                self.transitionToFirst()
-//                            }
-//                        }
+                        if connection.message.contains("already exists") {
+                            self.showToastFirstInner(controller: self, message: "Account already exists", seconds: 3)
+                        }
                         
                         if connection.message.contains("entered Wrong Email/Password") {
-                            self.showToastFirst(controller: self, message: "Email Not Found.", seconds: 3)
-//                            DispatchQueue.main.async {
-//                                self.transitionToFirst()
-//                            }
+                            self.showToastFirstInner(controller: self, message: "Email Not Found.", seconds: 3)
                         }
                         
                         else if connection.message.contains("not entered an Email/Password") {
-                            self.showToastFirst(controller: self, message: "Incomplete Data Entered.", seconds: 3)
-//                            DispatchQueue.main.async {
-//                                self.transitionToFirst()
-//                            }
+                            self.showToastFirstInner(controller: self, message: "Incomplete data found. Please try again", seconds: 3)
                         }
                         
                         else {
@@ -148,6 +139,14 @@ class RegisterFirstLoading: UIViewController {
                 view.window?.makeKeyAndVisible()
     }
     
+    func transitionToFirstInner() {
+        let registerFirst =
+                storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerFirst) as? RegisterFirst
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = registerFirst
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
     func showToastFirst(controller: UIViewController, message : String, seconds: Double) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -174,6 +173,24 @@ class RegisterFirstLoading: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
                 alert.dismiss(animated: true)
                 self.transitionToLoading()
+            }
+        }
+    }
+    
+    func showToastFirstInner(controller: UIViewController, message : String, seconds: Double) {
+        
+        DispatchQueue.main.async {
+       
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = .black
+            alert.view.alpha = 0.5
+            alert.view.layer.cornerRadius = 15
+            controller.present(alert, animated: true)
+
+            self.transitionToFirstInner()
+                    
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
             }
         }
     }

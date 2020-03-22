@@ -28,16 +28,6 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(Tap)
  
         mobilenumber.delegate = self
-        
-        let preferences = UserDefaults.standard
-        
-        //print ("Check Empty Email and Number: \(preferences.string(forKey: "useremail")) \(preferences.string(forKey: "usernumber"))")
-        
-        if preferences.string(forKey: "useremail") != nil || preferences.string(forKey: "usernumber") != nil {
-            transitionToMain()
-        }
-        
-        //self.transitionToMain()
     }
     
     @objc func DismissKeyboard() {
@@ -60,8 +50,12 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
             return "Please make sure you have typed a valid @ust.edu.ph email."
         }
         
-        if mobilenumber.text!.count != 11 {
+        else if mobilenumber.text!.count != 11 {
             return "Please make sure you have typed a valid mobile number."
+        }
+        
+        else if (isEmailValid(cleanedEmail) == false || cleanedEmail.contains("@ust.edu.ph") == false) && (mobilenumber.text!.count != 11) {
+            return "Please make sure you have typed a valid @ust.edu.ph email and mobile number."
         }
         
         return nil
@@ -170,14 +164,5 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
         
         view.window?.rootViewController = registerFirstLoading
         view.window?.makeKeyAndVisible()
-    }
-    
-    func transitionToMain() {
-        
-        let mainPage =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.mainPage) as? MainPage
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = mainPage
-        appDelegate.window?.makeKeyAndVisible()
     }
 }

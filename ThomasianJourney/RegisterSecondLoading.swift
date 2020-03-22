@@ -95,7 +95,7 @@ class RegisterSecondLoading: UIViewController {
                   
                 if error != nil{
                     print("Connection Error: \(String(describing: error))")
-                    self.showToast(controller: self, message: "Connection Error. Please make sure you are connected to the internet. ", seconds: 3)
+                    self.showToastSecond(controller: self, message: "Error, please try again.", seconds: 3)
                     return;
                   
                 }
@@ -119,6 +119,12 @@ class RegisterSecondLoading: UIViewController {
                         
                         if connection.message.contains("login successful.") {
                             //print("Login Successful")
+                        
+                            preferences.set(connection.data.studentDetails.studentName, forKey: "studName")
+                        preferences.set(connection.data.studentDetails.studentCollegeId, forKey: "collegeID")
+                        preferences.set(connection.data.studentDetails.studentYearLevelId, forKey: "yearID")
+                            preferences.set(connection.data.studentDetails.studentPoints, forKey: "studPoints")
+                            
                             DispatchQueue.main.async {
                                 self.transitionToMain()
                             }
