@@ -8,6 +8,31 @@
 
 import UIKit
 
+struct MainData: Decodable {
+    let status: String
+    let message: String
+    let data: StudentData
+}
+
+struct StudentData: Decodable {
+    let studentsId: String
+    let studregEmail: String
+    let studregmobileNum: String
+    let studregName: String
+    let studNumber: String
+    let studPoints: String
+    let yearlevelId: String
+}
+
+extension Date {
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self).capitalized
+        // or use capitalized(with: locale) if you want
+    }
+}
+
 class MainPage: UIViewController {
 
     @IBOutlet var gifView: UIImageView!
@@ -17,6 +42,8 @@ class MainPage: UIViewController {
     @IBOutlet var points: UILabel!
     
     @IBOutlet var currentDate: UILabel!
+    
+    @IBOutlet var welcome: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +89,9 @@ class MainPage: UIViewController {
                      
                     do {
                           
-                        let connection = try JSONDecoder().decode(NewConnection.self, from: data)
+                        let connection = try JSONDecoder().decode(MainData.self, from: data)
                         //print (connection)
-                        //print (connection.message)
+                        
                           
                         if connection.message.contains("not found") {
                             self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
@@ -74,16 +101,20 @@ class MainPage: UIViewController {
                         }
                         
                         if connection.message.contains("login successful.") {
-                            //print("Login Successful")
-                        
-                            preferences.set(connection.data.studentDetails.studentName, forKey: "studName")
-                        preferences.set(connection.data.studentDetails.studentCollegeId, forKey: "collegeID")
-                        preferences.set(connection.data.studentDetails.studentYearLevelId, forKey: "yearID")
-                            preferences.set(connection.data.studentDetails.studentPoints, forKey: "studPoints")
                             
-//                            DispatchQueue.main.async {
-//                                self.transitionToMain()
-//                            }
+                            let currentdate = Date()
+                            
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "dd MMMM yyyy"
+                            
+                            let datestring = formatter.string(from: currentdate)
+
+                            DispatchQueue.main.async {
+                                self.welcome.text = "Welcome, \(connection.data.studregName)!"
+                                self.studNo.text = "\(connection.data.studNumber)"
+                                self.points.text = "\(connection.data.studPoints)"
+                                self.currentDate.text = "\(Date().dayOfWeek() ?? ""), \(datestring)"
+                            }
                         }
                     }
                      

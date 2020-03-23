@@ -6,7 +6,7 @@ target 'ThomasianJourney' do
   # use_frameworks!
 
   # Pods for ThomasianJourney
-
+  use_modular_headers!
   pod 'lottie-ios',:modular_headers => true  
 
   target 'ThomasianJourneyTests' do
