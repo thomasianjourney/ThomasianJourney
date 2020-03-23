@@ -161,5 +161,13 @@ class MainPage: UIViewController {
             alert.dismiss(animated: true)
         }
     }
+    
+    @IBAction func showEvents(_ sender: Any) {
+        let mainActivity =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.mainActivity) as? MainActivity
+        
+        view.window?.rootViewController = mainActivity
+        view.window?.makeKeyAndVisible()
+    }
 
 }
