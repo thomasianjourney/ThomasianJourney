@@ -21,6 +21,7 @@ struct Constants {
         static let registerFirst = "registerFirst"
         static let viewCalendar = "viewCalendar"
         static let mainActivity = "mainActivity"
+        static let tabViewEvents = "tabViewEvents"
     }
     
     

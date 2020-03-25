@@ -12,6 +12,8 @@
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712BD132423823F00A631CD /* UIImage+Gif.swift */; };
 		47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284A9B24232AFB00DA7422 /* MainActivity.swift */; };
+		4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7552428D4C20009BC12 /* UpcomingTab.swift */; };
+		4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7572428D4DA0009BC12 /* AttendedTab.swift */; };
 		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
 		4797BEC224063C720012A222 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC024063C710012A222 /* reload.json */; };
 		4797BEC324063C720012A222 /* scansuc.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC124063C720012A222 /* scansuc.json */; };
@@ -28,6 +30,7 @@
 		479EFD80238D912D00B2EC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */; };
 		479EFD8B238D912D00B2EC10 /* ThomasianJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD8A238D912D00B2EC10 /* ThomasianJourneyTests.swift */; };
 		479EFD96238D912D00B2EC10 /* ThomasianJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */; };
+		47FABC24242A219500B7DC6F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FABC23242A219400B7DC6F /* EventCell.swift */; };
 		6C1848A475E1589CC7BE3278 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9CF7DCBF6EC8781F950CF7 /* libPods-ThomasianJourney-ThomasianJourneyUITests.a */; };
 		741E25A623929B6B00BFA8F7 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259423929B6600BFA8F7 /* Poppins-Light.ttf */; };
 		741E25A723929B6B00BFA8F7 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */; };
@@ -89,6 +92,8 @@
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4712BD132423823F00A631CD /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		47284A9B24232AFB00DA7422 /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
+		4735C7552428D4C20009BC12 /* UpcomingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTab.swift; sourceTree = "<group>"; };
+		4735C7572428D4DA0009BC12 /* AttendedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendedTab.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
 		4797BEC024063C710012A222 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reload.json; sourceTree = "<group>"; };
 		4797BEC124063C720012A222 /* scansuc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scansuc.json; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		479EFD91238D912D00B2EC10 /* ThomasianJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasianJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EFD95238D912D00B2EC10 /* ThomasianJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasianJourneyUITests.swift; sourceTree = "<group>"; };
 		479EFD97238D912D00B2EC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FABC23242A219400B7DC6F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		62972D48E01F9698DE7C1434 /* Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		741E259423929B6600BFA8F7 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -381,6 +387,9 @@
 				742B79992397B0CE000676ED /* RegisterSuccess.swift */,
 				742B799B2397B19F000676ED /* MainPage.swift */,
 				47284A9B24232AFB00DA7422 /* MainActivity.swift */,
+				47FABC23242A219400B7DC6F /* EventCell.swift */,
+				4735C7552428D4C20009BC12 /* UpcomingTab.swift */,
+				4735C7572428D4DA0009BC12 /* AttendedTab.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				742B799F2397DEA1000676ED /* GPSController.swift */,
 				742B79A12397E419000676ED /* MenuPortfolio.swift */,
@@ -1187,8 +1196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
+				4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
 				746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */,
+				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
 				746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */,
 				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
@@ -1204,6 +1215,7 @@
 				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
 				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
+				47FABC24242A219500B7DC6F /* EventCell.swift in Sources */,
 				4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
 			);
