@@ -253,7 +253,7 @@
                                 <rect key="frame" x="0.0" y="150" width="375" height="517"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xAx-fY-0qZ">
-                                        <rect key="frame" x="35" y="120" width="305" height="276"/>
+                                        <rect key="frame" x="35" y="120" width="305" height="286"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Nxh-4t-ZjX">
                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="62.5"/>
@@ -319,11 +319,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ai5-pC-GaL">
-                                                <rect key="frame" x="0.0" y="246" width="305" height="30"/>
+                                                <rect key="frame" x="0.0" y="246" width="305" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKq-gU-gBO">
-                                                        <rect key="frame" x="98" y="0.0" width="109" height="30"/>
+                                                        <rect key="frame" x="84.5" y="0.0" width="136" height="40"/>
                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                         <state key="normal" title="ATTEND EVENT">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
