@@ -22,7 +22,7 @@ struct AllEventDetails: Decodable {
     let status: String
 }
 
-class MainActivity: UIViewController {
+class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var events: [AllEventDetails] = []
     
@@ -38,6 +38,21 @@ class MainActivity: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         loadEventsData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print (self.events.count)
+        return events.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let event = events[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
+        
+        cell.setTitle(event: event)
+        
+        return cell
     }
     
     func loadEventsData() {
@@ -86,7 +101,7 @@ class MainActivity: UIViewController {
                         //print (connection)
                         //print (connection.data.count)
                         self.events = connection.data
-                        print (self.events.count)
+                        //print (self.events.count)
                         
                         if connection.message.contains("not found") {
 //                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
@@ -141,24 +156,4 @@ class MainActivity: UIViewController {
         }
     }
 }
-
-extension MainActivity: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print (self.events.count)
-        return events.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let event = events[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
-        
-        cell.setTitle(event: event)
-        
-        return cell
-    }
-    
-}
-
 

@@ -155,34 +155,37 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNf-cg-sBC">
-                                                    <rect key="frame" x="3" y="5" width="80" height="82"/>
+                                                    <rect key="frame" x="5" y="5" width="80" height="80"/>
                                                     <color key="backgroundColor" white="0.79720498002283102" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="f5x-c5-gy6"/>
+                                                        <constraint firstAttribute="width" secondItem="XNf-cg-sBC" secondAttribute="height" multiplier="1:1" id="7Vq-bg-PnV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                 </button>
                                                 <view contentMode="top" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="2" translatesAutoresizingMaskIntoConstraints="NO" id="YAY-2g-OUD" userLabel="viewLine">
-                                                    <rect key="frame" x="90" y="5" width="5" height="82"/>
+                                                    <rect key="frame" x="90" y="5" width="5" height="80"/>
                                                     <color key="backgroundColor" red="0.96862745098039216" green="0.83921568627450982" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="YAY-2g-OUD" secondAttribute="height" multiplier="1:16" id="gqX-EZ-xxV"/>
+                                                    </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VUJ-Bb-ycB">
-                                                    <rect key="frame" x="97" y="5" width="272" height="82"/>
+                                                    <rect key="frame" x="100" y="5" width="272" height="76.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TItle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stN-G9-FPb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="27.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TItle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="stN-G9-FPb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ge-DT-zbh">
-                                                            <rect key="frame" x="0.0" y="27.5" width="272" height="27"/>
+                                                            <rect key="frame" x="0.0" y="25.5" width="272" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                             <color key="textColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-BV-mSN">
-                                                            <rect key="frame" x="0.0" y="54.5" width="272" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="51" width="272" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -191,18 +194,17 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="leading" secondItem="XNf-cg-sBC" secondAttribute="trailing" constant="7" id="3NV-0H-acQ"/>
-                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="leading" secondItem="DSh-y4-oit" secondAttribute="leading" constant="90" id="6Li-mG-vlp"/>
-                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="leading" secondItem="YAY-2g-OUD" secondAttribute="trailing" constant="2" id="DuQ-Ga-GO6"/>
-                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="top" secondItem="XNf-cg-sBC" secondAttribute="top" id="MHl-N6-qvr"/>
-                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="bottom" secondItem="XNf-cg-sBC" secondAttribute="bottom" id="NhQ-MU-aeP"/>
-                                                <constraint firstAttribute="trailing" secondItem="YAY-2g-OUD" secondAttribute="trailing" constant="280" id="d87-Yx-ZuA"/>
-                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="top" secondItem="YAY-2g-OUD" secondAttribute="top" id="gNX-Hk-law"/>
-                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="top" secondItem="DSh-y4-oit" secondAttribute="topMargin" constant="-6" id="hnc-rr-b9b"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="VUJ-Bb-ycB" secondAttribute="trailing" constant="-9" id="jS1-nz-i8g"/>
-                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="centerY" secondItem="DSh-y4-oit" secondAttribute="centerY" id="jV0-Q2-VsM"/>
-                                                <constraint firstItem="XNf-cg-sBC" firstAttribute="leading" secondItem="DSh-y4-oit" secondAttribute="leadingMargin" constant="-12" id="nze-yA-1cQ"/>
-                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="bottom" secondItem="YAY-2g-OUD" secondAttribute="bottom" id="vtQ-YL-nqu"/>
+                                                <constraint firstAttribute="trailing" secondItem="YAY-2g-OUD" secondAttribute="trailing" constant="280" id="4xV-2v-xRG"/>
+                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="bottom" secondItem="XNf-cg-sBC" secondAttribute="bottom" id="5a5-el-Mkp"/>
+                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="leading" secondItem="DSh-y4-oit" secondAttribute="leading" constant="90" id="FMB-X4-COW"/>
+                                                <constraint firstItem="XNf-cg-sBC" firstAttribute="top" secondItem="DSh-y4-oit" secondAttribute="topMargin" constant="-6" id="IoF-8e-ZCo"/>
+                                                <constraint firstItem="XNf-cg-sBC" firstAttribute="leading" secondItem="DSh-y4-oit" secondAttribute="leadingMargin" constant="-10" id="P7n-dd-mc3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VUJ-Bb-ycB" secondAttribute="trailing" constant="-12" id="TaB-FJ-mu9"/>
+                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="top" secondItem="YAY-2g-OUD" secondAttribute="top" id="UWE-ML-UOZ"/>
+                                                <constraint firstItem="VUJ-Bb-ycB" firstAttribute="leading" secondItem="YAY-2g-OUD" secondAttribute="trailing" constant="5" id="g9E-Nd-20V"/>
+                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="top" secondItem="XNf-cg-sBC" secondAttribute="top" id="iCl-nv-16n"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XNf-cg-sBC" secondAttribute="bottom" constant="-4" id="tai-Nl-37j"/>
+                                                <constraint firstItem="YAY-2g-OUD" firstAttribute="leading" secondItem="XNf-cg-sBC" secondAttribute="trailing" constant="5" id="zfd-tB-JQi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
