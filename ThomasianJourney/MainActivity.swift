@@ -55,6 +55,16 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        print (event.activityName)
+        let EventDetails =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
+        EventDetails?.nameofevent = event.activityName
+        view.window?.rootViewController = EventDetails
+        view.window?.makeKeyAndVisible()
+    }
+    
     func loadEventsData() {
         let preferences = UserDefaults.standard
                         
