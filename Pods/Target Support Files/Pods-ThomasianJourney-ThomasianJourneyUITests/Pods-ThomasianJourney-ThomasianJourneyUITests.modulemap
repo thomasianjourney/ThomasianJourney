@@ -1,4 +1,4 @@
-module Pods_ThomasianJourney_ThomasianJourneyUITests {
+framework module Pods_ThomasianJourney_ThomasianJourneyUITests {
   umbrella header "Pods-ThomasianJourney-ThomasianJourneyUITests-umbrella.h"
 
   export *
