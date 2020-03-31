@@ -108,7 +108,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                     do {
                           
                         let connection = try JSONDecoder().decode(AllEventData.self, from: data)
-                        //print (connection)
+                        print (connection.message)
                         //print (connection.data.count)
                         self.events = connection.data
                         //print (self.events.count)
@@ -121,6 +121,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                         }
                         
                         if connection.message.contains("login successful.") {
+                            
                             
 //                            let currentdate = Date()
 //
@@ -166,4 +167,3 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
 }
-
