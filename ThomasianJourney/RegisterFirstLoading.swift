@@ -8,7 +8,7 @@
 
 import UIKit
 import Lottie
-
+    
 struct Connection: Decodable {
     let status: String
     let message: String

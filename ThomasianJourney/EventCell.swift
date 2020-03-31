@@ -10,7 +10,8 @@ import UIKit
 
 class EventCell: UITableViewCell {
 
-    @IBOutlet var date: UIButton!
+
+    @IBOutlet var date: UIView!
     @IBOutlet var eventTitle: UILabel!
     @IBOutlet var eventDescription: UILabel!
     @IBOutlet var eventStatus: UILabel!

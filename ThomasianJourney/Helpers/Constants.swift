@@ -23,6 +23,7 @@ struct Constants {
         static let mainActivity = "mainActivity"
         static let tabViewEvents = "tabViewEvents"
         static let EventDetails = "EventDetails"
+        static let menuPortfolio = "menuPortfolio"
     }
     
     
