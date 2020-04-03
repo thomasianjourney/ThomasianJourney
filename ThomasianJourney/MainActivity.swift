@@ -65,12 +65,11 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
             
         case "absent":
             showToast(controller: self, message: "Event no longer available", seconds: 3)
-        case "upcoming":
-            showToast(controller: self, message: "Event Not Yet Available", seconds: 3)
-        case "available":
+        case "upcoming",
+             "available":
             let EventDetails =
             storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
-            EventDetails?.nameofevent = event.activityName
+            EventDetails?.eventid = event.activityId
             view.window?.rootViewController = EventDetails
             view.window?.makeKeyAndVisible()
         case "cancelled":
@@ -124,28 +123,19 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                     do {
                           
                         let connection = try JSONDecoder().decode(AllEventData.self, from: data)
-                        print (connection.message)
+                        //print (connection.message)
                         //print (connection.data.count)
-                        self.events = connection.data
                         //print (self.events.count)
                         
-                        if connection.message.contains("not found") {
+                        if connection.message.contains("No Response") {
 //                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
                         }
                         
-                        if connection.message.contains("login successful.") {
-                            
-                            
-//                            let currentdate = Date()
-//
-//                            let formatter = DateFormatter()
-//                            formatter.dateFormat = "dd MMMM yyyy"
-//
-//                            let datestring = formatter.string(from: currentdate)
-
+                        if connection.message.contains("Results") {
+                            self.events = connection.data
                         }
                     }
                      
