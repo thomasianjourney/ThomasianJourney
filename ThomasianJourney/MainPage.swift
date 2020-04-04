@@ -15,44 +15,25 @@ class RoundedViews: UIView {
 
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
-        self.layer.cornerRadius = cornerRadius
-        }
-    }
-
-    @IBInspectable var borderWidth: CGFloat = 0{
-        didSet{
-            self.layer.borderWidth = borderWidth
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor = UIColor.clear{
-        didSet{
-            self.layer.borderColor = borderColor.cgColor
+            DispatchQueue.main.async {
+                self.layer.cornerRadius = self.cornerRadius
+            }
         }
     }
 }
 
-//for the rounded views
-class RoundButton: UIButton {
+@IBDesignable
+class RoundButtons: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
-        self.layer.cornerRadius = cornerRadius
-        }
-    }
-
-    @IBInspectable var borderWidth: CGFloat = 0{
-        didSet{
-            self.layer.borderWidth = borderWidth
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor = UIColor.clear{
-        didSet{
-            self.layer.borderColor = borderColor.cgColor
+            DispatchQueue.main.async {
+                self.layer.cornerRadius = self.cornerRadius
+            }
         }
     }
 }
+
 
 struct MainData: Decodable {
     let status: String
