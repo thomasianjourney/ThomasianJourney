@@ -10,8 +10,11 @@ import UIKit
 
 class AttendedTab: UIViewController {
 
+    @IBOutlet var tabBarItem1: UITabBarItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
 
         //self.tabBarItem = UITabBarItem(title: "ATTENDED", image: nil, selectedImage: nil)
     }

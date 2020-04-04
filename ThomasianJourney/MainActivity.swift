@@ -27,12 +27,13 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     var events: [AllEventDetails] = []
     
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var tabBarItem1: UITabBarItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.tabBarItem = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
-        
+        //self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
+        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
         loadEventsData()
     }
     
@@ -51,18 +52,32 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
         
         cell.setTitle(event: event)
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let event = events[indexPath.row]
-        print (event.activityName)
-        let EventDetails =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
-        EventDetails?.nameofevent = event.activityName
-        view.window?.rootViewController = EventDetails
-        view.window?.makeKeyAndVisible()
+        //print (event.activityName)
+        
+        switch event.status {
+            
+        case "absent":
+            showToast(controller: self, message: "Event no longer available", seconds: 3)
+        case "upcoming",
+             "available":
+            let EventDetails =
+            storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
+            EventDetails?.eventid = event.activityId
+            view.window?.rootViewController = EventDetails
+            view.window?.makeKeyAndVisible()
+        case "cancelled":
+            showToast(controller: self, message: "Event is Cancelled", seconds: 3)
+        default:
+            showToast(controller: self, message: "Event already attended", seconds: 3)
+        }
+        
     }
     
     func loadEventsData() {
@@ -108,28 +123,19 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                     do {
                           
                         let connection = try JSONDecoder().decode(AllEventData.self, from: data)
-                        print (connection.message)
+                        //print (connection.message)
                         //print (connection.data.count)
-                        self.events = connection.data
                         //print (self.events.count)
                         
-                        if connection.message.contains("not found") {
+                        if connection.message.contains("No Response") {
 //                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
                         }
                         
-                        if connection.message.contains("login successful.") {
-                            
-                            
-//                            let currentdate = Date()
-//
-//                            let formatter = DateFormatter()
-//                            formatter.dateFormat = "dd MMMM yyyy"
-//
-//                            let datestring = formatter.string(from: currentdate)
-
+                        if connection.message.contains("Results") {
+                            self.events = connection.data
                         }
                     }
                      
