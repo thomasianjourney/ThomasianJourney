@@ -23,7 +23,7 @@ class RoundedViews: UIView {
 }
 
 @IBDesignable
-class RoundButtons: UIView {
+class RoundButtons: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
@@ -33,19 +33,6 @@ class RoundButtons: UIView {
         }
     }
 }
-/*
-    @IBInspectable var borderWidth: CGFloat = 0{
-        didSet{
-            self.layer.borderWidth = borderWidth
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor = UIColor.clear{
-        didSet{
-            self.layer.borderColor = borderColor.cgColor
-        }
-    }*/
-
 
 
 struct MainData: Decodable {
