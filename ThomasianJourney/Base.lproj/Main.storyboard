@@ -263,7 +263,7 @@
         <!--Controller-->
         <scene sceneID="8C3-F5-Jmt">
             <objects>
-                <viewController id="SAQ-hg-Ame" customClass="GPSController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GPSController" id="SAQ-hg-Ame" customClass="GPSController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xva-hP-vJa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,7 +286,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="80O-oz-l9e" secondAttribute="height" multiplier="19:10" id="hvA-yj-DlR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -1073,38 +1073,38 @@
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dLM-ej-LAD">
-                                <rect key="frame" x="92" y="10" width="191.5" height="24"/>
+                                <rect key="frame" x="88.5" y="10" width="198" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbv-8m-vds">
-                                <rect key="frame" x="42.5" y="238.5" width="290" height="190"/>
+                                <rect key="frame" x="57" y="248" width="261" height="171"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vPH-iS-EIi">
-                                <rect key="frame" x="49.5" y="257.5" width="276" height="152"/>
+                                <rect key="frame" x="63" y="265" width="249" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Successful!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-Dv-S5c">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="34"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success! You've just verified your account." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9pV-nk-k3D">
-                                        <rect key="frame" x="0.0" y="38" width="276" height="38"/>
+                                        <rect key="frame" x="0.0" y="34" width="249" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to continue:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eST-uY-ULk">
-                                        <rect key="frame" x="0.0" y="76" width="276" height="38"/>
+                                        <rect key="frame" x="0.0" y="68.5" width="249" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCA-AG-SXo" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="276" height="38"/>
+                                        <rect key="frame" x="0.0" y="103" width="249" height="34"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                         <state key="normal" title="CONTINUE">
@@ -1125,7 +1125,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NaF-We-Ik8" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="112" y="66" width="150" height="164.5"/>
+                                <rect key="frame" x="112" y="62" width="150" height="178"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -1253,7 +1253,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="22.5" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-eg-cUr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="22.5" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-eg-cUr">
                                                 <rect key="frame" x="355" y="0.0" width="0.0" height="23"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -1625,6 +1625,7 @@
                         <viewLayoutGuide key="safeArea" id="I80-AO-BSk"/>
                     </view>
                     <connections>
+                        <outlet property="eventDate" destination="ulz-Bh-oxn" id="NzV-sn-mkG"/>
                         <outlet property="eventDescription" destination="CXg-qO-KKw" id="SNF-LN-tMu"/>
                         <outlet property="eventPoints" destination="sAP-EP-gh0" id="lXR-Zi-c2B"/>
                         <outlet property="eventTime" destination="nyB-LH-zT3" id="TzN-ss-1KI"/>

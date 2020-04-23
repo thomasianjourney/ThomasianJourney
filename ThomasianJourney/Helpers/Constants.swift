@@ -24,6 +24,7 @@ struct Constants {
         static let tabViewEvents = "tabViewEvents"
         static let EventDetails = "EventDetails"
         static let menuPortfolio = "menuPortfolio"
+        static let GPSController = "GPSController"
     }
     
     
