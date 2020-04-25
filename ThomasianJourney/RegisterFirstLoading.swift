@@ -88,15 +88,15 @@ class RegisterFirstLoading: UIViewController {
                         preferences.set(connection.data.studregId, forKey: "userid")
                         
                         if connection.message.contains("already exists") {
-                            self.showToastFirstInner(controller: self, message: "Account already exists", seconds: 3)
+                            self.showToastFirst(controller: self, message: "Account already exists", seconds: 3)
                         }
                         
-                        if connection.message.contains("entered Wrong Email/Password") {
-                            self.showToastFirstInner(controller: self, message: "Email Not Found.", seconds: 3)
+                        else if connection.message.contains("entered Wrong Email/Password") {
+                            self.showToastFirst(controller: self, message: "Email Not Found.", seconds: 3)
                         }
                         
                         else if connection.message.contains("not entered an Email/Password") {
-                            self.showToastFirstInner(controller: self, message: "Incomplete data found. Please try again", seconds: 3)
+                            self.showToastFirst(controller: self, message: "Incomplete data found. Please try again", seconds: 3)
                         }
                         
                         else {

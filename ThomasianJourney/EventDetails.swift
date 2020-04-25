@@ -268,6 +268,7 @@ class EventDetails: UIViewController {
             GPSController?.activityid = self.activityid
             view.window?.rootViewController = GPSController
             view.window?.makeKeyAndVisible()
+            
         }
     }
     

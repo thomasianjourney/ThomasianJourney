@@ -25,6 +25,9 @@ struct Constants {
         static let EventDetails = "EventDetails"
         static let menuPortfolio = "menuPortfolio"
         static let GPSController = "GPSController"
+        static let VerifyLoginCred = "VerifyLoginCred"
+        static let VerifyLoginCredSuc = "VerifyLoginCredSuc"
+        static let EventsTabController = "tabViewEvents"
     }
     
     
