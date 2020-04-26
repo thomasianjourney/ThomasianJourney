@@ -13,7 +13,6 @@
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712BD132423823F00A631CD /* UIImage+Gif.swift */; };
-		4713C53A24545EF4000F98BC /* EventsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713C53924545EF4000F98BC /* EventsTabController.swift */; };
 		47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284A9B24232AFB00DA7422 /* MainActivity.swift */; };
 		4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7552428D4C20009BC12 /* UpcomingTab.swift */; };
 		4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7572428D4DA0009BC12 /* AttendedTab.swift */; };
@@ -36,6 +35,7 @@
 		47B776872451A5FF003B7722 /* VerifyLoginCred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B776862451A5FF003B7722 /* VerifyLoginCred.swift */; };
 		47B776892451A7E4003B7722 /* VerifyLoginCredSuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B776882451A7E4003B7722 /* VerifyLoginCredSuc.swift */; };
 		47BA742F242B4E6100CA9AF8 /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BA742E242B4E6000CA9AF8 /* EventDetails.swift */; };
+		47BB0BF22455723200C7529D /* ScanQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB0BF12455723200C7529D /* ScanQRCode.swift */; };
 		47FABC24242A219500B7DC6F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FABC23242A219400B7DC6F /* EventCell.swift */; };
 		741E25A623929B6B00BFA8F7 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259423929B6600BFA8F7 /* Poppins-Light.ttf */; };
 		741E25A723929B6B00BFA8F7 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 741E259523929B6600BFA8F7 /* Poppins-LightItalic.ttf */; };
@@ -95,7 +95,6 @@
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4712BD132423823F00A631CD /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		4713C53924545EF4000F98BC /* EventsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTabController.swift; sourceTree = "<group>"; };
 		47284A9B24232AFB00DA7422 /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
 		4735C7552428D4C20009BC12 /* UpcomingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTab.swift; sourceTree = "<group>"; };
 		4735C7572428D4DA0009BC12 /* AttendedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendedTab.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		47B776862451A5FF003B7722 /* VerifyLoginCred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLoginCred.swift; sourceTree = "<group>"; };
 		47B776882451A7E4003B7722 /* VerifyLoginCredSuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLoginCredSuc.swift; sourceTree = "<group>"; };
 		47BA742E242B4E6000CA9AF8 /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
+		47BB0BF12455723200C7529D /* ScanQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCode.swift; sourceTree = "<group>"; };
 		47C220CF2452ACB00083E91C /* DummyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DummyLocation.gpx; sourceTree = "<group>"; };
 		47FABC23242A219400B7DC6F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		62972D48E01F9698DE7C1434 /* Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ThomasianJourney-ThomasianJourneyUITests/Pods-ThomasianJourney-ThomasianJourneyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -395,13 +395,13 @@
 				742B79972397B0A4000676ED /* RegisterSecondLoading.swift */,
 				742B79992397B0CE000676ED /* RegisterSuccess.swift */,
 				742B799B2397B19F000676ED /* MainPage.swift */,
-				4713C53924545EF4000F98BC /* EventsTabController.swift */,
 				47284A9B24232AFB00DA7422 /* MainActivity.swift */,
 				47FABC23242A219400B7DC6F /* EventCell.swift */,
 				47BA742E242B4E6000CA9AF8 /* EventDetails.swift */,
 				742B799F2397DEA1000676ED /* GPSController.swift */,
 				47B776862451A5FF003B7722 /* VerifyLoginCred.swift */,
 				47B776882451A7E4003B7722 /* VerifyLoginCredSuc.swift */,
+				47BB0BF12455723200C7529D /* ScanQRCode.swift */,
 				4735C7552428D4C20009BC12 /* UpcomingTab.swift */,
 				4735C7572428D4DA0009BC12 /* AttendedTab.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
@@ -1248,13 +1248,13 @@
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
 				4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
-				4713C53A24545EF4000F98BC /* EventsTabController.swift in Sources */,
 				746B1C8F23F93D7F0061CA48 /* WeekdaysView.swift in Sources */,
 				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
 				47B776892451A7E4003B7722 /* VerifyLoginCredSuc.swift in Sources */,
 				746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */,
 				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
+				47BB0BF22455723200C7529D /* ScanQRCode.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
 				4706CD042398A2320009364D /* Constants.swift in Sources */,

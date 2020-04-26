@@ -80,7 +80,9 @@ class MainPage: UIViewController {
         //print ("Check Empty Email and Number: \(preferences.string(forKey: "useremail")) \(preferences.string(forKey: "usernumber"))")
         
         if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil {
+            
             transitionToFirst()
+        
         }
         
         else {
@@ -104,7 +106,7 @@ class MainPage: UIViewController {
             data, response, error in
                   
                 if error != nil{
-                    print("Connection Error: \(String(describing: error))")
+                    //print("Connection Error: \(String(describing: error))")
                     self.showToast(controller: self, message: "Error, please try again.", seconds: 3)
                     return;
                   
@@ -121,7 +123,7 @@ class MainPage: UIViewController {
                         
                           
                         if connection.message.contains("not found") {
-                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
+                            self.showToast(controller: self, message: "Cannot find Student Details", seconds: 3)
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
