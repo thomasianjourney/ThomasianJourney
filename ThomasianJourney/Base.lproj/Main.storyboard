@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -291,7 +291,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80O-oz-l9e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80O-oz-l9e" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                 <rect key="frame" x="149.5" y="221" width="76" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -303,7 +303,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="24"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -515,7 +515,7 @@
         <!--View Events-->
         <scene sceneID="IH9-WZ-GTF">
             <objects>
-                <tabBarController storyboardIdentifier="tabViewEvents" id="aM9-fa-TX1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabViewEvents" id="aM9-fa-TX1" customClass="EventsTabController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="View Events" id="Gn8-Kf-Hse"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="d7X-Rs-frY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -552,7 +552,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dfp-Wo-3YO">
                                 <rect key="frame" x="135.5" y="228.5" width="104" height="210"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-HN-kQc" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-HN-kQc" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="FIRST YEAR">
@@ -560,14 +560,14 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="24"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="6OB-9b-SIf" kind="show" id="J0r-0f-cze"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-Lz-mmp" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-Lz-mmp" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="104" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="SECOND YEAR">
@@ -575,11 +575,11 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="24"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txf-VX-rNh" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txf-VX-rNh" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="104" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="THIRD YEAR">
@@ -587,11 +587,11 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="24"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-BS-6bo" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-BS-6bo" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="180" width="104" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="FOURTH YEAR">
@@ -599,7 +599,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="24"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -645,35 +645,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1E-ue-Xrn">
-                                <rect key="frame" x="9" y="259" width="357.5" height="149.5"/>
+                                <rect key="frame" x="9" y="236" width="357.5" height="195.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ww6-qQ-7HQ" userLabel="ScanSuccesStackView">
-                                <rect key="frame" x="25" y="268.5" width="325" height="130"/>
+                                <rect key="frame" x="25" y="248.5" width="325" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-mo-5yA">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your attendance has been recorded using" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TLZ-X0-Klo">
-                                        <rect key="frame" x="0.0" y="34" width="325" height="22"/>
+                                        <rect key="frame" x="0.0" y="33" width="325" height="21"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joshexequiel.arcaya.iics@ust.edu.ph account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nUn-G4-Lq8">
-                                        <rect key="frame" x="0.0" y="61" width="325" height="22"/>
+                                        <rect key="frame" x="0.0" y="59" width="325" height="21"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PLi-oF-LoE">
-                                        <rect key="frame" x="0.0" y="88" width="325" height="42"/>
+                                        <rect key="frame" x="0.0" y="85" width="325" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="130" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-Z0-kem" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="42"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="130" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-Z0-kem" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                 <state key="normal" title="BACK TO HOME">
@@ -681,12 +681,12 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="24"/>
+                                                        <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVk-HF-qcg" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
-                                                <rect key="frame" x="172.5" y="0.0" width="152.5" height="42"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVk-HF-qcg" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
+                                                <rect key="frame" x="172.5" y="0.0" width="152.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                 <state key="normal" title="VIEW PORTFOLIO">
@@ -694,7 +694,25 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="24"/>
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J6O-jf-jkl">
+                                        <rect key="frame" x="0.0" y="130" width="325" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="center" placeholderIntrinsicWidth="152.5" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWU-cz-yGw" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
+                                                <rect key="frame" x="86.5" y="0.0" width="152.5" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                <state key="normal" title="PRINT STICKER">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -702,7 +720,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ww6-qQ-7HQ" secondAttribute="height" multiplier="5:2" id="w2n-wj-fIj"/>
+                                    <constraint firstAttribute="width" secondItem="ww6-qQ-7HQ" secondAttribute="height" multiplier="65:34" id="lQ9-py-36B"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -729,35 +747,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOe-Xv-wD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5513" y="878"/>
-        </scene>
-        <!--ScanQR Code-->
-        <scene sceneID="P24-sW-SBS">
-            <objects>
-                <viewController storyboardIdentifier="ScanQRCode" id="Zgz-Ol-hp6" customClass="ScanQRCode" customModule="ThomasianJourney" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d8o-F4-0BK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCodeBox" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-pL-R7X">
-                                <rect key="frame" x="30" y="176" width="315" height="315"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="cwx-pL-R7X" secondAttribute="height" multiplier="1:1" id="0t4-83-LBK"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cwx-pL-R7X" firstAttribute="leading" secondItem="CLg-Qg-wad" secondAttribute="leading" constant="30" id="AZP-Yb-Evi"/>
-                            <constraint firstItem="CLg-Qg-wad" firstAttribute="trailing" secondItem="cwx-pL-R7X" secondAttribute="trailing" constant="30" id="ONA-3C-F6U"/>
-                            <constraint firstItem="cwx-pL-R7X" firstAttribute="centerX" secondItem="d8o-F4-0BK" secondAttribute="centerX" id="UWr-3x-Wk9"/>
-                            <constraint firstItem="cwx-pL-R7X" firstAttribute="centerY" secondItem="d8o-F4-0BK" secondAttribute="centerY" id="Zxo-7P-OR6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="CLg-Qg-wad"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cS-oj-arK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
             <point key="canvasLocation" x="4785" y="878"/>
         </scene>
         <!--View Calendar-->
@@ -767,14 +756,70 @@
                     <view key="view" contentMode="scaleToFill" id="sGR-0m-eRQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78q-Ck-7ex" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.97964280839999995" green="0.80257242920000005" blue="0.2822288275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="78q-Ck-7ex" secondAttribute="height" multiplier="5:4" id="FMS-nF-euc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titlePlaceholderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xu2-1l-Z9J">
+                                <rect key="frame" x="0.0" y="352" width="375" height="315"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xu2-1l-Z9J" secondAttribute="height" multiplier="25:21" id="u3c-ny-KUd"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="URh-Te-vGw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="URh-Te-vGw" id="ibs-JL-50Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xu2-1l-Z9J" firstAttribute="leading" secondItem="YEN-0R-uVx" secondAttribute="leading" id="0qD-V1-LSz"/>
+                            <constraint firstItem="xu2-1l-Z9J" firstAttribute="trailing" secondItem="YEN-0R-uVx" secondAttribute="trailing" id="9GO-R7-C9W"/>
+                            <constraint firstItem="78q-Ck-7ex" firstAttribute="top" secondItem="YEN-0R-uVx" secondAttribute="top" id="TaW-T5-KHM"/>
+                            <constraint firstItem="78q-Ck-7ex" firstAttribute="trailing" secondItem="YEN-0R-uVx" secondAttribute="trailing" id="Uqd-l3-7DC"/>
+                            <constraint firstItem="xu2-1l-Z9J" firstAttribute="top" secondItem="78q-Ck-7ex" secondAttribute="bottom" constant="8" id="d9m-t3-zdG"/>
+                            <constraint firstItem="78q-Ck-7ex" firstAttribute="leading" secondItem="YEN-0R-uVx" secondAttribute="leading" id="k1V-hP-nlo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YEN-0R-uVx"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Sn-sO-P9e"/>
+                    <connections>
+                        <outlet property="calendar" destination="78q-Ck-7ex" id="ZPo-xx-386"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQD-ol-Xh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="1622"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="1622.3388305847077"/>
         </scene>
         <!--Register First Loading-->
         <scene sceneID="uMd-Ne-lCb">
@@ -936,7 +981,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="HUh-uM-tqp">
                                         <rect key="frame" x="0.0" y="228" width="335" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-EG-HLc" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-EG-HLc" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.5" height="38"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
@@ -945,14 +990,14 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="24"/>
+                                                        <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cancelButton:" destination="0eJ-Jk-h1m" eventType="touchUpInside" id="ang-yH-2gB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kan-iI-BjD" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kan-iI-BjD" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                                 <rect key="frame" x="207.5" y="0.0" width="127.5" height="38"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
@@ -961,7 +1006,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="24"/>
+                                                        <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -1261,13 +1306,13 @@
                                 <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="327.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="327.5" y="0.0" width="27.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -1369,6 +1414,9 @@
                                                     <constraint firstAttribute="width" secondItem="hlC-DK-rE6" secondAttribute="height" multiplier="1:1" id="844-Yd-OtZ"/>
                                                 </constraints>
                                                 <state key="normal" image="viewCalendarButton"/>
+                                                <connections>
+                                                    <segue destination="WqW-NN-oUJ" kind="show" id="VAa-XK-6bK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1459,7 +1507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjB-bp-Hjh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4785" y="131"/>
+            <point key="canvasLocation" x="5607" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nQT-0w-QCH">
@@ -1582,13 +1630,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-3w-bnE">
                                                 <rect key="frame" x="0.0" y="246" width="305" height="40"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-4O-HI3">
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-4O-HI3" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
                                                         <rect key="frame" x="84.5" y="0.0" width="136" height="40"/>
                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                         <state key="normal" title="ATTEND EVENT">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="attendEvent:" destination="gXw-kA-g4H" eventType="touchUpInside" id="Rkl-PK-wLc"/>
                                                         </connections>
@@ -1697,7 +1750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aar-sR-PWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064.8" y="1622.3388305847077"/>
+            <point key="canvasLocation" x="2558" y="1623"/>
         </scene>
         <!--Verify Login Cred-->
         <scene sceneID="NLs-u0-orN">
@@ -1849,7 +1902,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Lm-Rqw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Lm-Rqw" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="338" height="38"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
@@ -1863,7 +1916,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="continueTapped:" destination="udO-2h-LaC" eventType="touchUpInside" id="6BI-ko-gr6"/>
-                                            <action selector="continueToScan:" destination="udO-2h-LaC" eventType="touchUpInside" id="Wae-X2-Np6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1903,7 +1955,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WWW-V1-Im0"/>
                     <connections>
-                        <outlet property="animationView" destination="kCg-Kt-lLv" id="VdP-yD-bBt"/>
+                        <outlet property="animationView" destination="kCg-Kt-lLv" id="8Vi-Zy-tfY"/>
                         <outlet property="continueButton" destination="9wU-Lm-Rqw" id="jhc-Xh-I5H"/>
                         <outlet property="continueScan" destination="9wU-Lm-Rqw" id="Wck-X2-IVm"/>
                     </connections>
@@ -1912,9 +1964,213 @@
             </objects>
             <point key="canvasLocation" x="4041" y="878"/>
         </scene>
+        <!--Attended Event-->
+        <scene sceneID="TlW-QU-4Pu">
+            <objects>
+                <viewController storyboardIdentifier="AttendedEvent" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6h1-pp-8al" customClass="AttendedEvent" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AxK-ct-mYu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="9nu-te-TkQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLo-VM-sCy" userLabel="viewDetails">
+                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-BO-gsS">
+                                        <rect key="frame" x="35" y="110" width="305" height="286"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-yI-khD">
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtv-XM-SPh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert venue name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-fO-VnV">
+                                                        <rect key="frame" x="0.0" y="28" width="305" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="top" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="2" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-Xg-Hlh" userLabel="viewLine">
+                                                        <rect key="frame" x="0.0" y="60.5" width="305" height="2"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OxK-qK-LSk">
+                                                <rect key="frame" x="0.0" y="82.5" width="305" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spf-SU-zMS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert time here*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-jU-Tfi">
+                                                        <rect key="frame" x="0.0" y="28" width="305" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="top" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="2" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-d9-fJt" userLabel="viewLine">
+                                                        <rect key="frame" x="0.0" y="59" width="305" height="2"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OKX-p0-51t">
+                                                <rect key="frame" x="0.0" y="163.5" width="305" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point/s:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGx-6b-fs8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert point/s*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0T-vt-t35">
+                                                        <rect key="frame" x="0.0" y="28" width="305" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="top" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="2" translatesAutoresizingMaskIntoConstraints="NO" id="XfS-yu-uG2" userLabel="viewLine">
+                                                        <rect key="frame" x="0.0" y="60.5" width="305" height="2"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Qm-Nzr">
+                                                <rect key="frame" x="0.0" y="246" width="305" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0v-8s-X8Z" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
+                                                        <rect key="frame" x="86" y="0.0" width="133" height="40"/>
+                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <state key="normal" title="PRINT STICKER">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="attendEvent:" destination="6h1-pp-8al" eventType="touchUpInside" id="C6z-mm-Nd8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="i3G-BO-gsS" firstAttribute="top" secondItem="nLo-VM-sCy" secondAttribute="top" constant="110" id="Jmg-BF-SUK"/>
+                                    <constraint firstAttribute="trailing" secondItem="i3G-BO-gsS" secondAttribute="trailing" constant="35" id="Laq-o4-lCr"/>
+                                    <constraint firstItem="i3G-BO-gsS" firstAttribute="leading" secondItem="nLo-VM-sCy" secondAttribute="leading" constant="35" id="yZF-WI-Imu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mr-F8-Di1" userLabel="viewDescription">
+                                <rect key="frame" x="32" y="100" width="311" height="165"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dDA-zk-Gqy">
+                                        <rect key="frame" x="3" y="36" width="305" height="124"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Event Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BNt-0a-guR">
+                                                <rect key="frame" x="89.5" y="0.0" width="126.5" height="51"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="295" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="amL-2R-oPj" userLabel="viewLine">
+                                                <rect key="frame" x="5" y="52" width="295" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsF-IM-vp4">
+                                                <rect key="frame" x="99" y="54" width="107.5" height="37"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-K4-CbO">
+                                                <rect key="frame" x="132.5" y="92" width="40" height="32"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dDA-zk-Gqy" secondAttribute="height" multiplier="305:124" id="MRs-l1-JCA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5mr-F8-Di1" secondAttribute="height" multiplier="311:165" id="1i5-W2-Qub"/>
+                                    <constraint firstItem="dDA-zk-Gqy" firstAttribute="leading" secondItem="5mr-F8-Di1" secondAttribute="leading" constant="3" id="Sdx-aM-e8m"/>
+                                    <constraint firstAttribute="trailing" secondItem="dDA-zk-Gqy" secondAttribute="trailing" constant="3" id="c83-tf-lgK"/>
+                                    <constraint firstAttribute="bottom" secondItem="dDA-zk-Gqy" secondAttribute="bottom" constant="5" id="mVC-51-MBA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-ns-8mp" userLabel="viewEvent">
+                                <rect key="frame" x="132.5" y="20" width="110" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-MO-bg5">
+                                        <rect key="frame" x="1" y="1" width="108" height="108"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wFO-MO-bg5" firstAttribute="leading" secondItem="wUb-ns-8mp" secondAttribute="leading" constant="1" id="0Ft-nP-P6b"/>
+                                    <constraint firstAttribute="height" constant="110" id="9gp-0U-Ps0"/>
+                                    <constraint firstItem="wFO-MO-bg5" firstAttribute="top" secondItem="wUb-ns-8mp" secondAttribute="top" constant="1" id="BYg-cb-4zD"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFO-MO-bg5" secondAttribute="trailing" constant="1" id="RRc-wU-VCK"/>
+                                    <constraint firstAttribute="width" constant="110" id="jJb-Gf-EJ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFO-MO-bg5" secondAttribute="bottom" constant="1" id="pgk-hC-1VF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9nu-te-TkQ" firstAttribute="top" secondItem="Y1q-4T-uAx" secondAttribute="top" id="1D9-yB-qie"/>
+                            <constraint firstItem="Y1q-4T-uAx" firstAttribute="trailing" secondItem="5mr-F8-Di1" secondAttribute="trailing" constant="32" id="3mC-Oo-yN3"/>
+                            <constraint firstItem="5mr-F8-Di1" firstAttribute="top" secondItem="Y1q-4T-uAx" secondAttribute="top" constant="100" id="7Yf-w2-yy4"/>
+                            <constraint firstItem="5mr-F8-Di1" firstAttribute="leading" secondItem="Y1q-4T-uAx" secondAttribute="leading" constant="32" id="BN8-0W-cMz"/>
+                            <constraint firstItem="9nu-te-TkQ" firstAttribute="leading" secondItem="Y1q-4T-uAx" secondAttribute="leading" id="DZK-44-phB"/>
+                            <constraint firstItem="wUb-ns-8mp" firstAttribute="top" secondItem="Y1q-4T-uAx" secondAttribute="top" constant="20" id="GSL-08-Hnq"/>
+                            <constraint firstItem="nLo-VM-sCy" firstAttribute="leading" secondItem="Y1q-4T-uAx" secondAttribute="leading" id="HC4-cf-g4e"/>
+                            <constraint firstItem="nLo-VM-sCy" firstAttribute="top" secondItem="Y1q-4T-uAx" secondAttribute="top" constant="180" id="czw-hC-3TB"/>
+                            <constraint firstItem="Y1q-4T-uAx" firstAttribute="bottom" secondItem="nLo-VM-sCy" secondAttribute="bottom" id="fEv-wV-R6p"/>
+                            <constraint firstItem="wUb-ns-8mp" firstAttribute="centerX" secondItem="AxK-ct-mYu" secondAttribute="centerX" id="fXg-D9-C5y"/>
+                            <constraint firstItem="Y1q-4T-uAx" firstAttribute="trailing" secondItem="9nu-te-TkQ" secondAttribute="trailing" id="lj1-qJ-c8m"/>
+                            <constraint firstItem="Y1q-4T-uAx" firstAttribute="bottom" secondItem="9nu-te-TkQ" secondAttribute="bottom" id="npZ-6K-uqh"/>
+                            <constraint firstItem="Y1q-4T-uAx" firstAttribute="trailing" secondItem="nLo-VM-sCy" secondAttribute="trailing" id="usM-Bf-sSV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y1q-4T-uAx"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventDate" destination="wFO-MO-bg5" id="vTi-9A-meZ"/>
+                        <outlet property="eventDescription" destination="ul2-K4-CbO" id="HX4-b6-F9V"/>
+                        <outlet property="eventPoints" destination="V0T-vt-t35" id="18w-TC-x6s"/>
+                        <outlet property="eventTime" destination="KJ9-jU-Tfi" id="0yP-X0-KKN"/>
+                        <outlet property="eventTitle" destination="BNt-0a-guR" id="Aw0-ZC-wj0"/>
+                        <outlet property="eventVenue" destination="ITF-fO-VnV" id="iva-Uu-Uqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5g7-iU-qvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3284" y="1623"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="QRCodeBox" width="1000" height="1000"/>
         <image name="background-gradient" width="1080" height="1920"/>
         <image name="event_timeline" width="280" height="160"/>
         <image name="tiger_rar" width="175" height="163"/>
