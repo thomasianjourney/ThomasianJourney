@@ -1,16 +1,20 @@
 PODS:
+  - FSCalendar (2.8.1)
   - lottie-ios (3.1.6)
 
 DEPENDENCIES:
+  - FSCalendar
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - FSCalendar
     - lottie-ios
 
 SPEC CHECKSUMS:
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
 
-PODFILE CHECKSUM: e7cc4b71397c1e49e2560d1b26d3d7cbf2055330
+PODFILE CHECKSUM: 97095488698def2e264435b0e503a74ad0b84a52
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.0

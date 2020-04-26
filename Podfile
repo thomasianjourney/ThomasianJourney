@@ -8,6 +8,7 @@ target 'ThomasianJourney' do
   # Pods for ThomasianJourney
   #use_modular_headers!
   pod 'lottie-ios'
+  pod 'FSCalendar'
 
   target 'ThomasianJourneyTests' do
     inherit! :search_paths

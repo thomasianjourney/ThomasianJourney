@@ -28,6 +28,7 @@ struct Constants {
         static let VerifyLoginCred = "VerifyLoginCred"
         static let VerifyLoginCredSuc = "VerifyLoginCredSuc"
         static let EventsTabController = "tabViewEvents"
+        static let AttendedEvent = "AttendedEvent"
     }
     
     
