@@ -31,5 +31,6 @@ struct Constants {
         static let EventsTabController = "tabViewEvents"
         static let AttendedEvent = "AttendedEvent"
     
+    }
     
 }

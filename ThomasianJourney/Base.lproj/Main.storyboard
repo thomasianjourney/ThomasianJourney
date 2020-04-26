@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -627,6 +627,34 @@
             </objects>
             <point key="canvasLocation" x="1812" y="878"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7OL-OW-oH9">
+            <objects>
+                <viewController id="l9C-AB-bh4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rLP-Qu-VcM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCodeBox" translatesAutoresizingMaskIntoConstraints="NO" id="fp5-nD-pG8">
+                                <rect key="frame" x="30" y="176" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fp5-nD-pG8" secondAttribute="height" multiplier="1:1" id="bYL-Z1-3AD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fp5-nD-pG8" firstAttribute="leading" secondItem="qqm-Te-C4l" secondAttribute="leading" constant="30" id="BL6-WL-kjb"/>
+                            <constraint firstItem="qqm-Te-C4l" firstAttribute="trailing" secondItem="fp5-nD-pG8" secondAttribute="trailing" constant="30" id="Dxf-Hn-Aib"/>
+                            <constraint firstItem="fp5-nD-pG8" firstAttribute="centerY" secondItem="rLP-Qu-VcM" secondAttribute="centerY" id="c3j-TU-RJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qqm-Te-C4l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CId-iF-9IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4840.8000000000002" y="877.51124437781118"/>
+        </scene>
         <!--Scan Success-->
         <scene sceneID="aSO-Go-87j">
             <objects>
@@ -747,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOe-Xv-wD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4785" y="878"/>
+            <point key="canvasLocation" x="5606" y="878"/>
         </scene>
         <!--View Calendar-->
         <scene sceneID="EUf-SJ-Ja3">
@@ -1306,13 +1334,13 @@
                                 <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
+                                        <rect key="frame" x="336.5" y="0.0" width="28" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -1350,13 +1378,13 @@
                                         <rect key="frame" x="0.0" y="25" width="355" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="747" placeholderIntrinsicWidth="239" placeholderIntrinsicHeight="22.5" text="Current accumulated point/s:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F5d-LN-ma0">
-                                                <rect key="frame" x="0.0" y="0.0" width="239" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="23"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="22.5" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-eg-cUr">
-                                                <rect key="frame" x="305" y="0.0" width="50" height="23"/>
+                                                <rect key="frame" x="355" y="0.0" width="0.0" height="23"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1902,7 +1930,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Lm-Rqw" customClass="RoundButton" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Lm-Rqw">
                                         <rect key="frame" x="0.0" y="190" width="338" height="38"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
@@ -1915,7 +1943,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="continueTapped:" destination="udO-2h-LaC" eventType="touchUpInside" id="6BI-ko-gr6"/>
+                                            <action selector="continueToScan:" destination="udO-2h-LaC" eventType="touchUpInside" id="BRx-BK-bwr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1956,8 +1984,6 @@
                     <navigationItem key="navigationItem" id="WWW-V1-Im0"/>
                     <connections>
                         <outlet property="animationView" destination="kCg-Kt-lLv" id="8Vi-Zy-tfY"/>
-                        <outlet property="continueButton" destination="9wU-Lm-Rqw" id="jhc-Xh-I5H"/>
-                        <outlet property="continueScan" destination="9wU-Lm-Rqw" id="Wck-X2-IVm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pp-5h-MTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2171,6 +2197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="QRCodeBox" width="1000" height="1000"/>
         <image name="background-gradient" width="1080" height="1920"/>
         <image name="event_timeline" width="280" height="160"/>
         <image name="tiger_rar" width="175" height="163"/>
