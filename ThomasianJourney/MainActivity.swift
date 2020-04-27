@@ -33,7 +33,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         super.viewDidLoad()
 
         self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
-        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
+        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 20) ?? ""], for: .normal)
         loadEventsData()
     }
     
@@ -178,7 +178,7 @@ extension UITabBar {
     override open func sizeThatFits(_ size: CGSize) -> CGSize {
         super.sizeThatFits(size)
         var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 71
+        sizeThatFits.height = 31
         return sizeThatFits
     }
 }

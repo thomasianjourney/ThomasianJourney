@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-QS-cXi">
-                                <rect key="frame" x="0.0" y="20" width="414" height="856"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tjicon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-GQ-s0U">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Reu-Jb-TeU"/>
-                                    <constraint firstAttribute="height" constant="200" id="lvX-JN-q10"/>
+                                    <constraint firstAttribute="width" secondItem="ZSt-GQ-s0U" secondAttribute="height" multiplier="1:1" id="qaI-IP-JL2"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Notification System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vK-Bw-XhU">
+                                <rect key="frame" x="40.5" y="433.5" width="294" height="33"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZSt-GQ-s0U" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="29F-5I-i4C"/>
-                            <constraint firstItem="t4o-QS-cXi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" symbolic="YES" id="5xv-mN-jhs"/>
                             <constraint firstItem="ZSt-GQ-s0U" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6fP-PE-67b"/>
-                            <constraint firstAttribute="bottom" secondItem="t4o-QS-cXi" secondAttribute="bottom" constant="20" symbolic="YES" id="ag0-GD-D1n"/>
+                            <constraint firstItem="ZSt-GQ-s0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Ier-Bg-tVK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSt-GQ-s0U" secondAttribute="trailing" constant="88" id="L9I-cY-3G9"/>
+                            <constraint firstItem="2vK-Bw-XhU" firstAttribute="top" secondItem="ZSt-GQ-s0U" secondAttribute="bottom" id="SJt-po-v1r"/>
+                            <constraint firstAttribute="bottom" secondItem="t4o-QS-cXi" secondAttribute="bottom" constant="-20" id="Xbw-gs-QgQ"/>
+                            <constraint firstItem="t4o-QS-cXi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bsG-c0-XHF"/>
+                            <constraint firstItem="2vK-Bw-XhU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dpW-17-Uds"/>
                             <constraint firstItem="t4o-QS-cXi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="fG2-Uz-h5s"/>
                             <constraint firstItem="t4o-QS-cXi" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="sPk-rB-Q3J"/>
                         </constraints>
@@ -41,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
     <resources>

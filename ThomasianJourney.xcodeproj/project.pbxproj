@@ -25,6 +25,7 @@
 		4797BECB24063CB60012A222 /* notif.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC824063CB60012A222 /* notif.json */; };
 		4797BECE24063D260012A222 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BECC24063D260012A222 /* check.json */; };
 		4797BECF24063D260012A222 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BECD24063D260012A222 /* load.json */; };
+		479C270124575CAC00EE977D /* UpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C270024575CAC00EE977D /* UpcomingCell.swift */; };
 		479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD75238D912700B2EC10 /* AppDelegate.swift */; };
 		479EFD78238D912700B2EC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EFD77238D912700B2EC10 /* ViewController.swift */; };
 		479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EFD79238D912700B2EC10 /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		4797BEC824063CB60012A222 /* notif.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notif.json; sourceTree = "<group>"; };
 		4797BECC24063D260012A222 /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
 		4797BECD24063D260012A222 /* load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = load.json; sourceTree = "<group>"; };
+		479C270024575CAC00EE977D /* UpcomingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCell.swift; sourceTree = "<group>"; };
 		479EFD72238D912700B2EC10 /* ThomasianJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThomasianJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EFD75238D912700B2EC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479EFD77238D912700B2EC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 				47BB0BF12455723200C7529D /* ScanQRCode.swift */,
 				742B79A32397ED04000676ED /* ScanSuccess.swift */,
 				4735C7552428D4C20009BC12 /* UpcomingTab.swift */,
+				479C270024575CAC00EE977D /* UpcomingCell.swift */,
 				4735C7572428D4DA0009BC12 /* AttendedTab.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				74D40AFB24558CF900F1FC18 /* AttendedEvent.swift */,
@@ -1250,6 +1253,7 @@
 				47BB0BF22455723200C7529D /* ScanQRCode.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
+				479C270124575CAC00EE977D /* UpcomingCell.swift in Sources */,
 				4706CD042398A2320009364D /* Constants.swift in Sources */,
 				74D40AFC24558CF900F1FC18 /* AttendedEvent.swift in Sources */,
 				476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */,

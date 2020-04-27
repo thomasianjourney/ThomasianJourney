@@ -1318,13 +1318,13 @@
                                 <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
+                                        <rect key="frame" x="327.5" y="0.0" width="27.5" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -2192,7 +2192,7 @@
                                 <rect key="frame" x="0.0" y="71" width="375" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="92" id="8Xi-wR-hNP" customClass="EventCell" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UpcomingCell" rowHeight="92" id="8Xi-wR-hNP" customClass="UpcomingCell" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Xi-wR-hNP" id="GZy-FW-a7f">
@@ -2273,8 +2273,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="m9B-jE-yvO" id="h91-Oz-xWl"/>
-                                    <outlet property="delegate" destination="m9B-jE-yvO" id="IB1-5E-Twg"/>
+                                    <outlet property="dataSource" destination="m9B-jE-yvO" id="QrW-Ey-30A"/>
+                                    <outlet property="delegate" destination="m9B-jE-yvO" id="L9S-9e-egf"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently added per month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtq-mJ-LDT">
