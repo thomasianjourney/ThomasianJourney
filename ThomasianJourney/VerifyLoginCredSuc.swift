@@ -11,9 +11,11 @@ import Lottie
 
 class VerifyLoginCredSuc: UIViewController {
     
+    @IBOutlet var emailLabel: UILabel!
     @IBOutlet var animationView: AnimationView!
     
     var activityid = ""
+    var useremail = ""
     
     func playAnimation(){
         animationView.animation = Animation.named("check")
@@ -24,7 +26,7 @@ class VerifyLoginCredSuc: UIViewController {
         super.viewDidLoad()
         playAnimation()
 
-        print (activityid)
+        emailLabel.text = "\(useremail) account."
 
     }
 

@@ -30,6 +30,7 @@ class VerifyLoginCred: UIViewController {
     @IBOutlet var animationView: AnimationView!
     
     var activityid = ""
+    var useremail = ""
     
     func playAnimation(){
         animationView.animation = Animation.named("load")
@@ -73,7 +74,7 @@ class VerifyLoginCred: UIViewController {
                   
                 if error != nil{
                     //print("Connection Error: \(String(describing: error))")
-                    self.showToast(controller: self, message: "Connection Error, please try again.", seconds: 3)
+                    self.showToastToMain(controller: self, message: "Connection Error, please try again.", seconds: 3)
                     return;
                   
                 }
@@ -89,7 +90,7 @@ class VerifyLoginCred: UIViewController {
                         //print("Testing from Connection Itself: \(connection)")
                           
                         if connection.message.contains("not found") {
-                            self.showToast(controller: self, message: "Cannot find Student Details", seconds: 3)
+                            self.showToastToMain(controller: self, message: "Cannot find Student Details", seconds: 3)
                             //DispatchQueue.main.async {
                                 //self.transitionToFirst()
                             //}
@@ -101,8 +102,9 @@ class VerifyLoginCred: UIViewController {
                             
                             DispatchQueue.main.async {
 
+                                self.useremail = connection.data.studregEmail
                                 self.transitionToVerifySuc()
-
+                                
                             }
 
                         }
@@ -118,21 +120,17 @@ class VerifyLoginCred: UIViewController {
 
             //executing the task
             task.resume()
+            
         }
     }
     
     func transitionToVerifySuc() {
         
-//        let VerifyLoginCredSuc =
-//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.VerifyLoginCredSuc) as? VerifyLoginCredSuc
-//        VerifyLoginCredSuc?.activityid = self.activityid
-//        view.window?.rootViewController = VerifyLoginCredSuc
-//        view.window?.makeKeyAndVisible()
-        
-        let ScanQRCode =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.ScanQRCode) as? ScanQRCode
-        ScanQRCode?.activityid = self.activityid
-        view.window?.rootViewController = ScanQRCode
+        let VerifyLoginCredSuc =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.VerifyLoginCredSuc) as? VerifyLoginCredSuc
+        VerifyLoginCredSuc?.activityid = self.activityid
+        VerifyLoginCredSuc?.useremail = self.useremail
+        view.window?.rootViewController = VerifyLoginCredSuc
         view.window?.makeKeyAndVisible()
         
     }

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Thomasian Journey will be using your camera to scan the QR Code.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Thomasian Journey will be using your location.</string>
 	<key>NSLocationAlwaysUsageDescription</key>

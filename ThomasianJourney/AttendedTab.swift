@@ -10,6 +10,7 @@ import UIKit
 
 class AttendedTab: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
     
     override func viewDidLoad() {

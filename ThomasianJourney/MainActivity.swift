@@ -32,7 +32,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
+        self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
         //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
         loadEventsData()
     }
@@ -171,5 +171,14 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
+    }
+}
+
+extension UITabBar {
+    override open func sizeThatFits(_ size: CGSize) -> CGSize {
+        super.sizeThatFits(size)
+        var sizeThatFits = super.sizeThatFits(size)
+        sizeThatFits.height = 71
+        return sizeThatFits
     }
 }
