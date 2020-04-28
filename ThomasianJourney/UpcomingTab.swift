@@ -31,7 +31,7 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
-        //self.tabBarItem1 = UITabBarItem(title: "UPCOMING", image: nil, selectedImage: nil)
+        self.tabBarItem1 = UITabBarItem(title: "UPCOMING", image: nil, selectedImage: nil)
         loadEventsData()
     }
     
