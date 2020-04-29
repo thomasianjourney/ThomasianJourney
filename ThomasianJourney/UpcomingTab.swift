@@ -123,6 +123,12 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
                         
                         if connection.message.contains("Results") {
                             self.events = connection.data
+                            DispatchQueue.main.async {
+                                
+                                self.tableView.reloadData()
+                                
+                            }
+                            
                         }
                     }
                      
@@ -136,7 +142,7 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
             //executing the task
             task.resume()
-            tableView.reloadData()
+            
         }
     }
     

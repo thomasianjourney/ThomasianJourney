@@ -1,30 +1,30 @@
 //
-//  MainActivity.swift
+//  FirstYearMustDo.swift
 //  ThomasianJourney
 //
-//  Created by Charmagne Adonis on 3/19/20.
+//  Created by Charmagne Adonis on 4/29/20.
 //  Copyright © 2020 Capstone Project. All rights reserved.
 //
 
 import UIKit
 
-struct AllEventData: Decodable {
+struct FirstYearMustDoData: Decodable {
     let status: String
     let message: String
-    let data: [AllEventDetails]
+    let data: [FirstYearMustDoDetails]
+//    let data: String
 }
 
-struct AllEventDetails: Decodable {
+struct FirstYearMustDoDetails: Decodable {
     let activityId: String
     let activityName: String
     let eventVenue: String
     let eventDate: String
-    let status: String
 }
 
-class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FirstYearMustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var events: [AllEventDetails] = []
+    var events: [FirstYearMustDoDetails] = []
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -32,7 +32,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
+        self.tabBarItem1 = UITabBarItem(title: "MUST-DO", image: nil, selectedImage: nil)
         //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 20) ?? ""], for: .normal)
         loadEventsData()
     }
@@ -40,6 +40,10 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidAppear(_ animated: Bool) {
         loadEventsData()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print (self.events.count)
@@ -49,58 +53,39 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstYearMustDoCell") as! FirstYearMustDoCell
         
         cell.setTitle(event: event)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let event = events[indexPath.row]
-        //print (event.activityName)
         
-        switch event.status {
-            
-        case "absent":
-            showToast(controller: self, message: "Event no longer available", seconds: 3)
-        case "upcoming",
-             "available":
-            let EventDetails =
-            storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
-            EventDetails?.eventid = event.activityId
-            view.window?.rootViewController = EventDetails
-            view.window?.makeKeyAndVisible()
-        case "cancelled":
-            showToast(controller: self, message: "Event is Cancelled", seconds: 3)
-        default:
-            showToast(controller: self, message: "Event already attended", seconds: 3)
-        }
-        
-    }
-    
     func loadEventsData() {
         let preferences = UserDefaults.standard
                         
-        if preferences.string(forKey: "mainuserid") == nil && preferences.string(forKey: "yearID") == nil && preferences.string(forKey: "collegeID") == nil {
+        if preferences.string(forKey: "mainuserid") == nil && preferences.string(forKey: "yearID") == nil {
+            
             transitionToMain()
+            
         }
         
         else {
+            
             let studregid = preferences.string(forKey: "mainuserid")
             let yearid = preferences.string(forKey: "yearID")
-            let collegeid = preferences.string(forKey: "collegeID")
+            let eventclass = "2"
             
             //creating URLRequest
-            let url = URL(string: "https://thomasianjourney.website/Register/insertEvents")!
+            let url = URL(string: "https://thomasianjourney.website/Register/portfolioInfo")!
 
             //setting the method to post
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             
             //creating the post parameter by concatenating the keys and values from text field
-            let postData = "collegeId="+collegeid!+"&yearLevel="+yearid!+"&accountId="+studregid!;
+            //let postData = "yearLevel="+yearid!+"&accountId="+studregid!+"&eventClass="+eventclass;
+            let postData = "accountId="+studregid!+"&eventClass="+eventclass+"&yearLevel="+yearid!;
 
             //adding the parameters to request body
             request.httpBody = postData.data(using: String.Encoding.utf8)
@@ -122,34 +107,35 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                      
                     do {
                           
-                        let connection = try JSONDecoder().decode(AllEventData.self, from: data)
-                        //print (connection.message)
+                        let connection = try JSONDecoder().decode(FirstYearMustDoData.self, from: data)
+                        print (connection)
                         //print (connection.data.count)
                         //print (self.events.count)
                         
-                        if connection.message.contains("No Response") {
-//                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                            //DispatchQueue.main.async {
-                                //self.transitionToFirst()
-                            //}
-                        }
-                        
-                        if connection.message.contains("Results") {
+//                        if connection.message.contains("No Response") {
+////                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
+////                            DispatchQueue.main.async {
+////                                self.transitionToFirst()
+////                            }
+//                        }
+
+                        if connection.message.contains("Results1") {
                             self.events = connection.data
                             DispatchQueue.main.async {
-                                
+
                                 self.tableView.reloadData()
-                                
+
                             }
                         }
                     }
                      
                     catch {
-                        print(error)
+                        print("This is an error: \(error)")
 //                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
                     }
                   
                 }
+                
             }
 
             //executing the task
@@ -176,14 +162,5 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
-    }
-}
-
-extension UITabBar {
-    override open func sizeThatFits(_ size: CGSize) -> CGSize {
-        super.sizeThatFits(size)
-        var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 31
-        return sizeThatFits
     }
 }

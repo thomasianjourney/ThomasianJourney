@@ -41,7 +41,7 @@ class EventDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let preferences = UserDefaults.standard
                                 
             if preferences.string(forKey: "mainuserid") == nil {

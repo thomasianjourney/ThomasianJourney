@@ -333,7 +333,7 @@
             </objects>
             <point key="canvasLocation" x="2557.5999999999999" y="877.51124437781118"/>
         </scene>
-        <!--GOOD  TO DO-->
+        <!--GOOD TO DO-->
         <scene sceneID="Tae-uE-gle">
             <objects>
                 <viewController id="F9c-yA-1YA" sceneMemberID="viewController">
@@ -343,7 +343,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KjI-3u-yRl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="GOOD  TO DO" id="keD-qW-8kW"/>
+                    <tabBarItem key="tabBarItem" title="GOOD TO DO" id="keD-qW-8kW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5k-vr-ENL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -386,7 +386,7 @@
         <!--MUST-DO-->
         <scene sceneID="4jJ-fN-JLt">
             <objects>
-                <viewController id="igE-1d-DI0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstYearMustDo" id="igE-1d-DI0" customClass="FirstYearMustDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJF-D5-OYg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,7 +395,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="188" id="OBH-Pm-CLU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstYearMustDoCell" rowHeight="188" id="OBH-Pm-CLU" customClass="FirstYearMustDoCell" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBH-Pm-CLU" id="L9q-ZI-jYE">
@@ -405,24 +405,24 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event_timeline" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-HI-k1E">
                                                     <rect key="frame" x="0.0" y="0.0" width="360" height="188"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yGy-pf-2hT">
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yGy-pf-2hT">
                                                     <rect key="frame" x="70" y="50" width="245" height="97"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-lX-9S7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="23"/>
-                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="24.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Event Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R2I-JJ-01h">
-                                                            <rect key="frame" x="0.0" y="26" width="245" height="23"/>
-                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="24.5" width="245" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is a sample sub title or content." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NX9-w1-lTc">
-                                                            <rect key="frame" x="0.0" y="52" width="245" height="45"/>
-                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="48.5" width="245" height="48.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -442,30 +442,43 @@
                                                 <constraint firstItem="7yY-HI-k1E" firstAttribute="top" secondItem="L9q-ZI-jYE" secondAttribute="top" id="ygM-yh-mt9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="R2I-JJ-01h" id="rSi-d6-g3g"/>
+                                            <outlet property="eventTitle" destination="uGC-lX-9S7" id="twz-qF-PpE"/>
+                                            <outlet property="subtitleContents" destination="NX9-w1-lTc" id="vNe-Sx-aHl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="igE-1d-DI0" id="bDj-2c-zHe"/>
+                                    <outlet property="delegate" destination="igE-1d-DI0" id="ZJg-4f-uVQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="leading" secondItem="zbC-w7-I8c" secondAttribute="leading" id="Ay8-2y-n5U"/>
-                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="bottom" secondItem="zbC-w7-I8c" secondAttribute="bottom" id="VIY-UU-VWm"/>
-                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="trailing" secondItem="zbC-w7-I8c" secondAttribute="trailing" id="VvG-0S-1K1"/>
-                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="top" secondItem="zbC-w7-I8c" secondAttribute="top" id="mpd-P9-a2X"/>
+                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="bottom" secondItem="zbC-w7-I8c" secondAttribute="bottom" id="0MJ-Rj-mIk"/>
+                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="trailing" secondItem="zbC-w7-I8c" secondAttribute="trailing" id="GvT-vY-fMn"/>
+                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="top" secondItem="zbC-w7-I8c" secondAttribute="top" id="bsM-7F-o0A"/>
+                            <constraint firstItem="vR0-Ys-vwm" firstAttribute="leading" secondItem="zbC-w7-I8c" secondAttribute="leading" id="r0R-7H-0y8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zbC-w7-I8c"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MUST-DO" id="b6g-Sr-M9Q"/>
+                    <connections>
+                        <outlet property="tabBarItem1" destination="b6g-Sr-M9Q" id="fbA-Y0-VTp"/>
+                        <outlet property="tableView" destination="vR0-Ys-vwm" id="PfC-dY-8O9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSB-sO-M4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="2488.6056971514245"/>
+            <point key="canvasLocation" x="1812" y="2489"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--View Portfolio-->
         <scene sceneID="Zvf-iz-kZ9">
             <objects>
                 <tabBarController id="6OB-9b-SIf" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="zhe-9k-og0"/>
+                    <navigationItem key="navigationItem" title="View Portfolio" id="zhe-9k-og0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQJ-Id-3vd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -474,10 +487,10 @@
                         <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="igE-1d-DI0" kind="relationship" relationship="viewControllers" id="9Bu-zV-YQb"/>
-                        <segue destination="F9c-yA-1YA" kind="relationship" relationship="viewControllers" id="vZE-2g-JZm"/>
-                        <segue destination="eVo-Z8-IRY" kind="relationship" relationship="viewControllers" id="0Ss-x7-a62"/>
-                        <segue destination="FQv-ZJ-Lj7" kind="relationship" relationship="viewControllers" id="cgn-1i-B9z"/>
+                        <segue destination="igE-1d-DI0" kind="relationship" relationship="viewControllers" id="Ym3-Lf-Wtn"/>
+                        <segue destination="F9c-yA-1YA" kind="relationship" relationship="viewControllers" id="Pzg-w5-IGL"/>
+                        <segue destination="eVo-Z8-IRY" kind="relationship" relationship="viewControllers" id="tw6-UJ-utr"/>
+                        <segue destination="FQv-ZJ-Lj7" kind="relationship" relationship="viewControllers" id="wWA-lf-3Ht"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6g-fK-zhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -506,7 +519,7 @@
             </objects>
             <point key="canvasLocation" x="129" y="1625"/>
         </scene>
-        <!--Menu Portfolio-->
+        <!--View Portfolio-->
         <scene sceneID="b6v-a0-74F">
             <objects>
                 <viewController storyboardIdentifier="menuPortfolio" id="E7a-b0-8Xo" customClass="MenuPortfolio" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -522,11 +535,12 @@
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dfp-Wo-3YO">
-                                <rect key="frame" x="135.5" y="228.5" width="104" height="210"/>
+                                <rect key="frame" x="115" y="208.5" width="145" height="250"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-HN-kQc" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-HN-kQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <state key="normal" title="FIRST YEAR">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -536,12 +550,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="6OB-9b-SIf" kind="show" id="J0r-0f-cze"/>
+                                            <segue destination="6OB-9b-SIf" kind="show" identifier="ToFirstYear" id="932-Tv-3fQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-Lz-mmp" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="104" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-Lz-mmp">
+                                        <rect key="frame" x="0.0" y="70" width="145" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <state key="normal" title="SECOND YEAR">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -551,9 +566,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txf-VX-rNh" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="104" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txf-VX-rNh">
+                                        <rect key="frame" x="0.0" y="140" width="145" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <state key="normal" title="THIRD YEAR">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -563,9 +579,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-BS-6bo" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="104" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-BS-6bo">
+                                        <rect key="frame" x="0.0" y="210" width="145" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <state key="normal" title="FOURTH YEAR">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -577,7 +594,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Dfp-Wo-3YO" secondAttribute="height" multiplier="52:105" id="vBH-LZ-ehk"/>
+                                    <constraint firstAttribute="width" secondItem="Dfp-Wo-3YO" secondAttribute="height" multiplier="133:230" id="s55-zY-A5e"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -592,7 +609,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bPg-MG-52Z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wPu-4J-HAC"/>
+                    <navigationItem key="navigationItem" title="View Portfolio" id="wPu-4J-HAC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDB-Lh-WwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="cgh-Al-ZVp"/>
@@ -1315,16 +1332,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3ll-e2-yh7" userLabel="WelcomeStackView">
-                                <rect key="frame" x="10" y="244" width="0.0" height="28"/>
+                                <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="336.5" y="0.0" width="18.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -1368,7 +1385,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="22.5" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-eg-cUr">
-                                                <rect key="frame" x="355" y="0.0" width="0.0" height="23"/>
+                                                <rect key="frame" x="305" y="0.0" width="50" height="23"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2432,7 +2449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJ4-B7-F6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="2498"/>
+            <point key="canvasLocation" x="1068" y="2489"/>
         </scene>
     </scenes>
     <resources>

@@ -17,6 +17,8 @@
 		4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7552428D4C20009BC12 /* UpcomingTab.swift */; };
 		4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C7572428D4DA0009BC12 /* AttendedTab.swift */; };
 		476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */; };
+		4787D68724589EE800E1E4E9 /* FirstYearMustDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787D68624589EE800E1E4E9 /* FirstYearMustDo.swift */; };
+		4787D68924589F1000E1E4E9 /* FirstYearMustDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787D68824589F1000E1E4E9 /* FirstYearMustDoCell.swift */; };
 		4797BEC224063C720012A222 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC024063C710012A222 /* reload.json */; };
 		4797BEC324063C720012A222 /* scansuc.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC124063C720012A222 /* scansuc.json */; };
 		4797BEC524063C960012A222 /* qr.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC424063C960012A222 /* qr.json */; };
@@ -99,6 +101,8 @@
 		4735C7552428D4C20009BC12 /* UpcomingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTab.swift; sourceTree = "<group>"; };
 		4735C7572428D4DA0009BC12 /* AttendedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendedTab.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
+		4787D68624589EE800E1E4E9 /* FirstYearMustDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstYearMustDo.swift; sourceTree = "<group>"; };
+		4787D68824589F1000E1E4E9 /* FirstYearMustDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstYearMustDoCell.swift; sourceTree = "<group>"; };
 		4797BEC024063C710012A222 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reload.json; sourceTree = "<group>"; };
 		4797BEC124063C720012A222 /* scansuc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scansuc.json; sourceTree = "<group>"; };
 		4797BEC424063C960012A222 /* qr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qr.json; sourceTree = "<group>"; };
@@ -408,8 +412,10 @@
 				4735C7572428D4DA0009BC12 /* AttendedTab.swift */,
 				4799B4972458036D00713D32 /* AttendedCell.swift */,
 				74D40AFB24558CF900F1FC18 /* AttendedEvent.swift */,
-				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				742B79A12397E419000676ED /* MenuPortfolio.swift */,
+				4787D68624589EE800E1E4E9 /* FirstYearMustDo.swift */,
+				4787D68824589F1000E1E4E9 /* FirstYearMustDoCell.swift */,
+				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
 				47C220CF2452ACB00083E91C /* DummyLocation.gpx */,
@@ -1250,10 +1256,12 @@
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
 				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
+				4787D68724589EE800E1E4E9 /* FirstYearMustDo.swift in Sources */,
 				47B776892451A7E4003B7722 /* VerifyLoginCredSuc.swift in Sources */,
 				746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */,
 				742B79A22397E419000676ED /* MenuPortfolio.swift in Sources */,
 				47BB0BF22455723200C7529D /* ScanQRCode.swift in Sources */,
+				4787D68924589F1000E1E4E9 /* FirstYearMustDoCell.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
 				479C270124575CAC00EE977D /* UpcomingCell.swift in Sources */,
