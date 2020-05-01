@@ -386,7 +386,7 @@
         <!--MUST-DO-->
         <scene sceneID="4jJ-fN-JLt">
             <objects>
-                <viewController storyboardIdentifier="FirstYearMustDo" id="igE-1d-DI0" customClass="FirstYearMustDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MustDo" id="igE-1d-DI0" customClass="MustDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJF-D5-OYg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,7 +395,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstYearMustDoCell" rowHeight="188" id="OBH-Pm-CLU" customClass="FirstYearMustDoCell" customModule="ThomasianJourney" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MustDoCell" rowHeight="188" id="OBH-Pm-CLU" customClass="MustDoCell" customModule="ThomasianJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBH-Pm-CLU" id="L9q-ZI-jYE">
@@ -752,27 +752,38 @@
                                     <constraint firstAttribute="width" secondItem="ww6-qQ-7HQ" secondAttribute="height" multiplier="65:34" id="lQ9-py-36B"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-oV-IFk" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="112" y="74" width="150" height="154"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nGf-ME-4Dv" firstAttribute="bottom" secondItem="j3D-yw-UKr" secondAttribute="bottom" id="2uE-gj-JdM"/>
                             <constraint firstItem="ww6-qQ-7HQ" firstAttribute="centerX" secondItem="Krm-hb-UZS" secondAttribute="centerX" id="BfK-EV-6gF"/>
+                            <constraint firstItem="kQA-oV-IFk" firstAttribute="top" secondItem="CXA-7X-Z2g" secondAttribute="bottom" constant="40" id="Bis-WU-maI"/>
                             <constraint firstItem="W1E-ue-Xrn" firstAttribute="centerX" secondItem="Krm-hb-UZS" secondAttribute="centerX" id="EuM-Jy-XMr"/>
                             <constraint firstItem="W1E-ue-Xrn" firstAttribute="centerX" secondItem="Krm-hb-UZS" secondAttribute="centerX" id="KYz-17-jav"/>
                             <constraint firstItem="W1E-ue-Xrn" firstAttribute="width" secondItem="ww6-qQ-7HQ" secondAttribute="width" multiplier="1.1" id="Knl-X4-4aP"/>
                             <constraint firstItem="W1E-ue-Xrn" firstAttribute="centerY" secondItem="Krm-hb-UZS" secondAttribute="centerY" id="Kp3-mB-SPq"/>
+                            <constraint firstItem="kQA-oV-IFk" firstAttribute="leading" secondItem="nGf-ME-4Dv" secondAttribute="leading" constant="112" id="MWb-ig-SrI"/>
                             <constraint firstItem="nGf-ME-4Dv" firstAttribute="trailing" secondItem="ww6-qQ-7HQ" secondAttribute="trailing" constant="25" id="RZN-YO-Ech"/>
                             <constraint firstItem="W1E-ue-Xrn" firstAttribute="height" secondItem="ww6-qQ-7HQ" secondAttribute="height" multiplier="1.15" id="bRG-kT-SgT"/>
                             <constraint firstItem="CXA-7X-Z2g" firstAttribute="centerX" secondItem="Krm-hb-UZS" secondAttribute="centerX" id="c8W-d6-prk"/>
                             <constraint firstItem="ww6-qQ-7HQ" firstAttribute="centerY" secondItem="Krm-hb-UZS" secondAttribute="centerY" id="dgf-bz-Cfj"/>
+                            <constraint firstItem="W1E-ue-Xrn" firstAttribute="top" secondItem="kQA-oV-IFk" secondAttribute="bottom" constant="8" id="fUy-cw-d3V"/>
                             <constraint firstItem="j3D-yw-UKr" firstAttribute="trailing" secondItem="nGf-ME-4Dv" secondAttribute="trailing" id="jJt-iq-Fz1"/>
                             <constraint firstItem="j3D-yw-UKr" firstAttribute="top" secondItem="nGf-ME-4Dv" secondAttribute="top" id="kdT-2g-jiy"/>
                             <constraint firstItem="ww6-qQ-7HQ" firstAttribute="centerX" secondItem="Krm-hb-UZS" secondAttribute="centerX" id="lLs-mm-3N7"/>
                             <constraint firstItem="j3D-yw-UKr" firstAttribute="leading" secondItem="nGf-ME-4Dv" secondAttribute="leading" id="ncs-d2-zAJ"/>
+                            <constraint firstItem="nGf-ME-4Dv" firstAttribute="trailing" secondItem="kQA-oV-IFk" secondAttribute="trailing" constant="113" id="vR3-8M-Uit"/>
                             <constraint firstItem="CXA-7X-Z2g" firstAttribute="top" secondItem="nGf-ME-4Dv" secondAttribute="top" constant="10" id="wpD-cE-fDZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nGf-ME-4Dv"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="kQA-oV-IFk" id="Cuw-3N-M2P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOe-Xv-wD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1335,13 +1346,13 @@
                                 <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
+                                        <rect key="frame" x="327.5" y="0.0" width="27.5" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="?">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>

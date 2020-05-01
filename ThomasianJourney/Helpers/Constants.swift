@@ -31,8 +31,7 @@ struct Constants {
         static let ScanSuccess = "ScanSuccess"
         static let EventsTabController = "tabViewEvents"
         static let AttendedEvent = "AttendedEvent"
-        static let FirstYearTabs = "FirstYearTabs"
-        static let FirstYearMustDo = "FirstYearMustDo"
+        static let MustDo = "MustDo"
     
     }
     

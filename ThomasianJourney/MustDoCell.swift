@@ -1,5 +1,5 @@
 //
-//  FirstYearMustDoCell.swift
+//  MustDoCell.swift
 //  ThomasianJourney
 //
 //  Created by Charmagne Adonis on 4/29/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class FirstYearMustDoCell: UITableViewCell {
+class MustDoCell: UITableViewCell {
 
     @IBOutlet var eventTitle: UILabel!
     @IBOutlet var eventDate: UILabel!
     @IBOutlet var subtitleContents: UILabel!
     
-    func setTitle (event: FirstYearMustDoDetails) {
+    func setTitle (event: MustDoDetails) {
         
         eventTitle.text = event.activityName
         eventDate.text = event.eventDate

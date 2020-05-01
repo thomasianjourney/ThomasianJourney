@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import Lottie
 
 class ScanSuccess: UIViewController {
 
+    @IBOutlet var animationView: AnimationView!
+    
+    func playAnimation(){
+        animationView.animation = Animation.named("qr")
+        animationView.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        playAnimation()
     }
 
     @IBAction func backToHome(_ sender: Any) {
