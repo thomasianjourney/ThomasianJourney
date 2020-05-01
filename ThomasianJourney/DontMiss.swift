@@ -1,29 +1,29 @@
 //
-//  MustDo.swift
+//  DontMiss.swift
 //  ThomasianJourney
 //
-//  Created by Charmagne Adonis on 4/29/20.
+//  Created by Charmagne Adonis on 5/1/20.
 //  Copyright © 2020 Capstone Project. All rights reserved.
 //
 
 import UIKit
 
-struct MustDoData: Decodable {
+struct DontMissData: Decodable {
     let status: String
     let message: String
-    let data: [MustDoDetails]
+    let data: [DontMissDetails]
 }
 
-struct MustDoDetails: Decodable {
+struct DontMissDetails: Decodable {
     let activityId: String
     let activityName: String
     let eventVenue: String
     let eventDate: String
 }
 
-class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DontMiss: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var events: [MustDoDetails] = []
+    var events: [DontMissDetails] = []
     var emptytab1: [String] = []
     var emptytab2: [String] = []
     var emptytab3: [String] = []
@@ -57,7 +57,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MustDoCell") as! MustDoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DontMissCell") as! DontMissCell
         
         cell.setTitle(event: event)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
@@ -79,7 +79,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             let studregid = preferences.string(forKey: "mainuserid")
             let yearid = preferences.string(forKey: "yearID")
-            let eventclass = "1"
+            let eventclass = "3"
             
             if yearid == "1" {
                 
@@ -105,7 +105,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
             }
             
-            if tabs[0] == "false" {
+            if tabs[2] == "false" {
                 
                 //creating URLRequest
                 let url = URL(string: "https://thomasianjourney.website/Register/portfolioInfo")!
@@ -137,7 +137,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
                          
                         do {
                               
-                            let connection = try JSONDecoder().decode(MustDoData.self, from: data)
+                            let connection = try JSONDecoder().decode(DontMissData.self, from: data)
                             //print (connection)
                             //print (connection.data.count)
                             //print (self.events.count)

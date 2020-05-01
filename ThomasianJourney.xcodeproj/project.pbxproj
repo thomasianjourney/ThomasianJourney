@@ -20,6 +20,12 @@
 		47852E1F245C200600A4B1A7 /* MenuPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A12397E419000676ED /* MenuPortfolio.swift */; };
 		47852E20245C289200A4B1A7 /* ScanSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B79A32397ED04000676ED /* ScanSuccess.swift */; };
 		47852E21245C2C5B00A4B1A7 /* ScanQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB0BF12455723200C7529D /* ScanQRCode.swift */; };
+		47852E23245C339500A4B1A7 /* GoodToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E22245C339500A4B1A7 /* GoodToDo.swift */; };
+		47852E25245C340600A4B1A7 /* DontMiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E24245C340500A4B1A7 /* DontMiss.swift */; };
+		47852E27245C343100A4B1A7 /* GoodToBecome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E26245C343100A4B1A7 /* GoodToBecome.swift */; };
+		47852E29245C39C900A4B1A7 /* GoodToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E28245C39C900A4B1A7 /* GoodToDoCell.swift */; };
+		47852E2B245C39E100A4B1A7 /* DontMissCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E2A245C39E100A4B1A7 /* DontMissCell.swift */; };
+		47852E2D245C39F500A4B1A7 /* GoodToBecomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852E2C245C39F500A4B1A7 /* GoodToBecomeCell.swift */; };
 		4787D68724589EE800E1E4E9 /* MustDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787D68624589EE800E1E4E9 /* MustDo.swift */; };
 		4787D68924589F1000E1E4E9 /* MustDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787D68824589F1000E1E4E9 /* MustDoCell.swift */; };
 		4797BEC224063C720012A222 /* reload.json in Resources */ = {isa = PBXBuildFile; fileRef = 4797BEC024063C710012A222 /* reload.json */; };
@@ -101,6 +107,12 @@
 		4735C7552428D4C20009BC12 /* UpcomingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTab.swift; sourceTree = "<group>"; };
 		4735C7572428D4DA0009BC12 /* AttendedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendedTab.swift; sourceTree = "<group>"; };
 		476ABCFB23F9778F002BDE3F /* RegisterFirstLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstLoading.swift; sourceTree = "<group>"; };
+		47852E22245C339500A4B1A7 /* GoodToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodToDo.swift; sourceTree = "<group>"; };
+		47852E24245C340500A4B1A7 /* DontMiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontMiss.swift; sourceTree = "<group>"; };
+		47852E26245C343100A4B1A7 /* GoodToBecome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodToBecome.swift; sourceTree = "<group>"; };
+		47852E28245C39C900A4B1A7 /* GoodToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodToDoCell.swift; sourceTree = "<group>"; };
+		47852E2A245C39E100A4B1A7 /* DontMissCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontMissCell.swift; sourceTree = "<group>"; };
+		47852E2C245C39F500A4B1A7 /* GoodToBecomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodToBecomeCell.swift; sourceTree = "<group>"; };
 		4787D68624589EE800E1E4E9 /* MustDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustDo.swift; sourceTree = "<group>"; };
 		4787D68824589F1000E1E4E9 /* MustDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustDoCell.swift; sourceTree = "<group>"; };
 		4797BEC024063C710012A222 /* reload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reload.json; sourceTree = "<group>"; };
@@ -415,6 +427,12 @@
 				742B79A12397E419000676ED /* MenuPortfolio.swift */,
 				4787D68624589EE800E1E4E9 /* MustDo.swift */,
 				4787D68824589F1000E1E4E9 /* MustDoCell.swift */,
+				47852E22245C339500A4B1A7 /* GoodToDo.swift */,
+				47852E28245C39C900A4B1A7 /* GoodToDoCell.swift */,
+				47852E24245C340500A4B1A7 /* DontMiss.swift */,
+				47852E2A245C39E100A4B1A7 /* DontMissCell.swift */,
+				47852E26245C343100A4B1A7 /* GoodToBecome.swift */,
+				47852E2C245C39F500A4B1A7 /* GoodToBecomeCell.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
@@ -1251,9 +1269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47852E29245C39C900A4B1A7 /* GoodToDoCell.swift in Sources */,
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
 				4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */,
+				47852E25245C340600A4B1A7 /* DontMiss.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
+				47852E27245C343100A4B1A7 /* GoodToBecome.swift in Sources */,
 				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
 				4787D68724589EE800E1E4E9 /* MustDo.swift in Sources */,
@@ -1267,17 +1288,20 @@
 				74D40AFC24558CF900F1FC18 /* AttendedEvent.swift in Sources */,
 				476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */,
 				47BA742F242B4E6100CA9AF8 /* EventDetails.swift in Sources */,
+				47852E23245C339500A4B1A7 /* GoodToDo.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
 				47B776872451A5FF003B7722 /* VerifyLoginCred.swift in Sources */,
 				4799B4982458036D00713D32 /* AttendedCell.swift in Sources */,
 				47852E21245C2C5B00A4B1A7 /* ScanQRCode.swift in Sources */,
 				47852E20245C289200A4B1A7 /* ScanSuccess.swift in Sources */,
 				742B799C2397B19F000676ED /* MainPage.swift in Sources */,
+				47852E2B245C39E100A4B1A7 /* DontMissCell.swift in Sources */,
 				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				47852E1F245C200600A4B1A7 /* MenuPortfolio.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
 				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
 				47FABC24242A219500B7DC6F /* EventCell.swift in Sources */,
+				47852E2D245C39F500A4B1A7 /* GoodToBecomeCell.swift in Sources */,
 				4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */,
 				479EFD76238D912700B2EC10 /* AppDelegate.swift in Sources */,
 			);
