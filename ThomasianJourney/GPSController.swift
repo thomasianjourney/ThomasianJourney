@@ -110,12 +110,12 @@ class GPSController: UIViewController {
         let VerifyLoginCred =
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.VerifyLoginCred) as? VerifyLoginCred
         VerifyLoginCred?.activityid = self.activityid
-//        view.window?.rootViewController = VerifyLoginCred
-//        view.window?.makeKeyAndVisible()
+        view.window?.rootViewController = VerifyLoginCred
+        view.window?.makeKeyAndVisible()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = VerifyLoginCred
-        appDelegate.window?.makeKeyAndVisible()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = VerifyLoginCred
+//        appDelegate.window?.makeKeyAndVisible()
     }
     
     func transitionToCurrent() {

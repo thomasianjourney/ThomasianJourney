@@ -32,8 +32,8 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
-        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 25) ?? ""], for: .normal)
+        self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
+        //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 20) ?? ""], for: .normal)
         loadEventsData()
     }
     
@@ -136,6 +136,11 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                         
                         if connection.message.contains("Results") {
                             self.events = connection.data
+                            DispatchQueue.main.async {
+                                
+                                self.tableView.reloadData()
+                                
+                            }
                         }
                     }
                      
@@ -149,7 +154,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
 
             //executing the task
             task.resume()
-            tableView.reloadData()
+            
         }
     }
     
@@ -171,5 +176,14 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
+    }
+}
+
+extension UITabBar {
+    override open func sizeThatFits(_ size: CGSize) -> CGSize {
+        super.sizeThatFits(size)
+        var sizeThatFits = super.sizeThatFits(size)
+        sizeThatFits.height = 31
+        return sizeThatFits
     }
 }

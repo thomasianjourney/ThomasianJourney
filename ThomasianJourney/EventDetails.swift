@@ -25,17 +25,6 @@ struct EventDetailsData: Decodable {
     let attend: String
 }
 
-/*struct EventTimeData: Decodable {
-    let status: String
-    let message: String
-    let data: EventTimeDetails
-}
-
-struct EventTimeDetails: Decodable {
-    let startDate: String
-    let endDate: String
-}*/
-
 class EventDetails: UIViewController {
     
     @IBOutlet var eventDate: UILabel!
@@ -52,7 +41,7 @@ class EventDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let preferences = UserDefaults.standard
                                 
             if preferences.string(forKey: "mainuserid") == nil {
@@ -173,69 +162,7 @@ class EventDetails: UIViewController {
 
                 //executing the task
                 task.resume()
-                
-                // FOR EVENT TIME
-                /*
-                //creating URLRequest
-                let eventurl = URL(string: "https://thomasianjourney.website/Register/eventTime")!
 
-                //setting the method to post
-                var eventrequest = URLRequest(url: eventurl)
-                eventrequest.httpMethod = "POST"
-                
-                //creating the post parameter by concatenating the keys and values from text field
-                let eventpostData = "activityId="+eventid;
-
-                //adding the parameters to request body
-                eventrequest.httpBody = eventpostData.data(using: String.Encoding.utf8)
-                  
-                //creating a task to send the post request
-                let eventask = URLSession.shared.dataTask(with: eventrequest as URLRequest) {
-                eventdata, eventresponse, eventerror in
-                      
-                    if eventerror != nil{
-                        print("Connection Error: \(String(describing: eventerror))")
-                        self.showToast(controller: self, message: "Error, please try again.", seconds: 3)
-                        return;
-                      
-                    }
-                  
-                    else {
-                  
-                        guard let eventdata = eventdata else { return }
-                         
-                        do {
-                              
-                            let eventconnection = try JSONDecoder().decode(EventTimeData.self, from: eventdata)
-                            //print (connection.message)
-                            print (eventconnection.data)
-                            //print (self.events.count)
-                            
-                            if eventconnection.message.contains("No Response") {
-    //                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                                //DispatchQueue.main.async {
-                                    //self.transitionToFirst()
-                                //}
-                            }
-                            
-                            if eventconnection.message.contains("Results") {
-                                
-                                DispatchQueue.main.async {
-                                    // insert code
-                                }
-                            }
-                        }
-                         
-                        catch {
-                            print(error)
-    //                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                        }
-                      
-                    }
-                }
-
-                //executing the task
-                eventask.resume()*/
             }
     }
     
@@ -256,6 +183,7 @@ class EventDetails: UIViewController {
         
         else if dateNow > eventend {
             
+            // Insert Print Sticker Code Here
             showToast(controller: self, message: "Event no longer available.", seconds: 3)
             
         }

@@ -7,24 +7,40 @@
 //
 
 import UIKit
+import Lottie
 
 class ScanSuccess: UIViewController {
 
+    @IBOutlet var animationView: AnimationView!
+    
+    func playAnimation(){
+        animationView.animation = Animation.named("qr")
+        animationView.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        playAnimation()
+    }
+
+    @IBAction func backToHome(_ sender: Any) {
+        
+        let mainPage =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.mainPage) as? MainPage
+        view.window?.rootViewController = mainPage
+        view.window?.makeKeyAndVisible()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewPortfolio(_ sender: Any) {
+        
+        let menuPortfolio =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.menuPortfolio) as? MenuPortfolio
+        view.window?.rootViewController = menuPortfolio
+        view.window?.makeKeyAndVisible()
     }
-    */
-
+    
+    @IBAction func printSticker(_ sender: Any) {
+    }
 }
