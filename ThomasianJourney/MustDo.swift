@@ -28,6 +28,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var emptytab2: [String] = []
     var emptytab3: [String] = []
     var emptytab4: [String] = []
+    var yearclicked = ""
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -78,28 +79,29 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         else {
             
             let studregid = preferences.string(forKey: "mainuserid")
-            let yearid = preferences.string(forKey: "yearID")
             let eventclass = "1"
             
-            if yearid == "1" {
+            //print ("Must Do Year Clicked: \(yearclicked)")
+            
+            if yearclicked == "1" {
                 
                 tabs = emptytab1
                 
             }
             
-            else if yearid == "2" {
+            else if yearclicked == "2" {
                 
                 tabs = emptytab2
                 
             }
             
-            else if yearid == "3" {
+            else if yearclicked == "3" {
                 
                 tabs = emptytab3
                 
             }
             
-            else if yearid == "4" {
+            else if yearclicked == "4" {
                 
                 tabs = emptytab4
                 
@@ -115,7 +117,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 request.httpMethod = "POST"
                 
                 //creating the post parameter by concatenating the keys and values from text field
-                let postData = "accountId="+studregid!+"&eventClass="+eventclass+"&yearLevel="+yearid!;
+                let postData = "accountId="+studregid!+"&eventClass="+eventclass+"&yearLevel="+yearclicked;
 
                 //adding the parameters to request body
                 request.httpBody = postData.data(using: String.Encoding.utf8)

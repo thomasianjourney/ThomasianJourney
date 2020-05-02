@@ -187,6 +187,42 @@ class MenuPortfolio: UIViewController {
         GoodToBecome.emptytab3 =  year3
         GoodToBecome.emptytab4 =  year4
         
+        if segue.identifier == "ToFirstYear" {
+            
+            MustDo.yearclicked = "1"
+            GoodToDo.yearclicked = "1"
+            DontMiss.yearclicked = "1"
+            GoodToBecome.yearclicked = "1"
+            
+        }
+        
+        else if segue.identifier == "ToSecondYear" {
+            
+            MustDo.yearclicked = "2"
+            GoodToDo.yearclicked = "2"
+            DontMiss.yearclicked = "2"
+            GoodToBecome.yearclicked = "2"
+            
+        }
+        
+        else if segue.identifier == "ToThirdYear" {
+            
+            MustDo.yearclicked = "3"
+            GoodToDo.yearclicked = "3"
+            DontMiss.yearclicked = "3"
+            GoodToBecome.yearclicked = "3"
+            
+        }
+        
+        else if segue.identifier == "ToFourthYear" {
+            
+            MustDo.yearclicked = "4"
+            GoodToDo.yearclicked = "4"
+            DontMiss.yearclicked = "4"
+            GoodToBecome.yearclicked = "4"
+            
+        }
+        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

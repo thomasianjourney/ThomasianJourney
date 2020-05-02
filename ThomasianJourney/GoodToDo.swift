@@ -28,6 +28,7 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var emptytab2: [String] = []
     var emptytab3: [String] = []
     var emptytab4: [String] = []
+    var yearclicked = ""
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -81,29 +82,31 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let yearid = preferences.string(forKey: "yearID")
             let eventclass = "2"
             
-            if yearid == "1" {
+            if yearclicked == "1" {
                 
                 tabs = emptytab1
                 
             }
             
-            else if yearid == "2" {
+            else if yearclicked == "2" {
                 
                 tabs = emptytab2
                 
             }
             
-            else if yearid == "3" {
+            else if yearclicked == "3" {
                 
                 tabs = emptytab3
                 
             }
             
-            else if yearid == "4" {
+            else if yearclicked == "4" {
                 
                 tabs = emptytab4
                 
             }
+            
+            //print ("Good To Do Tabs: \(tabs)")
             
             if tabs[1] == "false" {
                 
@@ -115,7 +118,7 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 request.httpMethod = "POST"
                 
                 //creating the post parameter by concatenating the keys and values from text field
-                let postData = "accountId="+studregid!+"&eventClass="+eventclass+"&yearLevel="+yearid!;
+                let postData = "accountId="+studregid!+"&eventClass="+eventclass+"&yearLevel="+yearclicked;
 
                 //adding the parameters to request body
                 request.httpBody = postData.data(using: String.Encoding.utf8)
@@ -160,8 +163,10 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         }
                          
                         catch {
+                            
                             print("This is an error: \(error)")
                             self.showToast(controller: self, message: "No events found.", seconds: 3)
+                                
                         }
                       
                     }
