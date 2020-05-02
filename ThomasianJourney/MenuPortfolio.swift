@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 struct MenuPortfolioData: Decodable {
     let status: String
     let message: String
@@ -15,6 +17,14 @@ struct MenuPortfolioData: Decodable {
 }
 
 class MenuPortfolio: UIViewController {
+    
+    @IBAction func viewHelpTapped(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let showViewHelp =
+        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
+        
+        present(showViewHelp, animated: true, completion: nil)
+    }
     
     var yearlevel = ""
     var studregid = ""

@@ -13,6 +13,14 @@ class ViewCalendar: UIViewController, FSCalendarDelegate {
     
     @IBOutlet var calendar: FSCalendar!
     
+    @IBAction func viewHelpTapped(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let showViewHelp =
+        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
+        
+        present(showViewHelp, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.delegate = self
