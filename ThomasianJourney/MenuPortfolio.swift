@@ -156,51 +156,83 @@ class MenuPortfolio: UIViewController {
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
+        // get a reference to the second view controller
+        let tabCtrl: UITabBarController = segue.destination as! UITabBarController
+        let MustDo = tabCtrl.viewControllers![0] as! MustDo
+        
+        // set a variable in the second view controller with the String to pass
+        MustDo.emptytab1 =  year1
+        MustDo.emptytab2 =  year2
+        MustDo.emptytab3 =  year3
+        MustDo.emptytab4 =  year4
+        
+        // get a reference to the second view controller
+        let tabCtrl1: UITabBarController = segue.destination as! UITabBarController
+        let GoodToDo = tabCtrl1.viewControllers![1] as! GoodToDo
+        
+        // set a variable in the second view controller with the String to pass
+        GoodToDo.emptytab1 =  year1
+        GoodToDo.emptytab2 =  year2
+        GoodToDo.emptytab3 =  year3
+        GoodToDo.emptytab4 =  year4
+        
+        // get a reference to the second view controller
+        let tabCtrl2: UITabBarController = segue.destination as! UITabBarController
+        let DontMiss = tabCtrl2.viewControllers![2] as! DontMiss
+        
+        // set a variable in the second view controller with the String to pass
+        DontMiss.emptytab1 =  year1
+        DontMiss.emptytab2 =  year2
+        DontMiss.emptytab3 =  year3
+        DontMiss.emptytab4 =  year4
+        
+        // get a reference to the second view controller
+        let tabCtrl3: UITabBarController = segue.destination as! UITabBarController
+        let GoodToBecome = tabCtrl3.viewControllers![3] as! GoodToBecome
+        
+        // set a variable in the second view controller with the String to pass
+        GoodToBecome.emptytab1 =  year1
+        GoodToBecome.emptytab2 =  year2
+        GoodToBecome.emptytab3 =  year3
+        GoodToBecome.emptytab4 =  year4
+        
         if segue.identifier == "ToFirstYear" {
-                        
-            // get a reference to the second view controller
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let MustDo = tabCtrl.viewControllers![0] as! MustDo
             
-            // set a variable in the second view controller with the String to pass
-            MustDo.emptytab1 =  year1
+            MustDo.yearclicked = "1"
+            GoodToDo.yearclicked = "1"
+            DontMiss.yearclicked = "1"
+            GoodToBecome.yearclicked = "1"
             
         }
         
-        
-        if segue.identifier == "ToSecondYear" {
-                        
-            // get a reference to the second view controller
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let MustDo = tabCtrl.viewControllers![0] as! MustDo
+        else if segue.identifier == "ToSecondYear" {
             
-            // set a variable in the second view controller with the String to pass
-            MustDo.emptytab2 =  year2
+            MustDo.yearclicked = "2"
+            GoodToDo.yearclicked = "2"
+            DontMiss.yearclicked = "2"
+            GoodToBecome.yearclicked = "2"
             
         }
         
-        if segue.identifier == "ToThirdYear" {
-                        
-            // get a reference to the second view controller
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let MustDo = tabCtrl.viewControllers![0] as! MustDo
+        else if segue.identifier == "ToThirdYear" {
             
-            // set a variable in the second view controller with the String to pass
-            MustDo.emptytab3 =  year3
+            MustDo.yearclicked = "3"
+            GoodToDo.yearclicked = "3"
+            DontMiss.yearclicked = "3"
+            GoodToBecome.yearclicked = "3"
             
         }
         
-        if segue.identifier == "ToFourthYear" {
-                        
-            // get a reference to the second view controller
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let MustDo = tabCtrl.viewControllers![0] as! MustDo
+        else if segue.identifier == "ToFourthYear" {
             
-            // set a variable in the second view controller with the String to pass
-            MustDo.emptytab4 =  year4
+            MustDo.yearclicked = "4"
+            GoodToDo.yearclicked = "4"
+            DontMiss.yearclicked = "4"
+            GoodToBecome.yearclicked = "4"
             
         }
+        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

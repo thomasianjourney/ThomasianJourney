@@ -33,6 +33,9 @@ struct Constants {
         static let EventsTabController = "tabViewEvents"
         static let AttendedEvent = "AttendedEvent"
         static let MustDo = "MustDo"
+        static let GoodToDo = "GoodToDo"
+        static let DontMiss = "DontMiss"
+        static let GoodToBecome = "GoodToBecome"
     
     }
     
