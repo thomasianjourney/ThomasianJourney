@@ -24,6 +24,7 @@ struct UpcomingEventDetails: Decodable {
 class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var events: [UpcomingEventDetails] = []
+    var activityId = ""
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -59,11 +60,9 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let event = events[indexPath.row]
         //print (event.activityName)
         
-        let EventDetails =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
-        EventDetails?.eventid = event.activityId
-        view.window?.rootViewController = EventDetails
-        view.window?.makeKeyAndVisible()
+        activityId = event.activityId
+        
+        performSegue(withIdentifier: "UpcomingEventDetails", sender: nil)
         
     }
     
@@ -165,4 +164,18 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
             alert.dismiss(animated: true)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+        let EventDetails = segue.destination as? EventDetails
+        EventDetails?.eventid = activityId
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+            return false
+
+    }
+    
 }

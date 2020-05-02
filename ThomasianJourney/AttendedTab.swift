@@ -24,6 +24,7 @@ struct AttendedEventDetails: Decodable {
 class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var events: [AttendedEventDetails] = []
+    var activityId = ""
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -31,7 +32,7 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarItem1 = UITabBarItem(title: "EVENTS", image: nil, selectedImage: nil)
+        self.tabBarItem1 = UITabBarItem(title: "ATTENDED", image: nil, selectedImage: nil)
         //tabBarItem1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Poppins", size: 20) ?? ""], for: .normal)
         loadEventsData()
     }
@@ -60,11 +61,9 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let event = events[indexPath.row]
         //print (event.activityName)
         
-        let AttendedEvent =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.AttendedEvent) as? AttendedEvent
-        AttendedEvent?.eventid = event.activityId
-        view.window?.rootViewController = AttendedEvent
-        view.window?.makeKeyAndVisible()
+        activityId = event.activityId
+        
+        performSegue(withIdentifier: "AttendedEventDetails", sender: nil)
     
     }
     
@@ -168,6 +167,19 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+        let AttendedEvent = segue.destination as? AttendedEvent
+        AttendedEvent?.eventid = activityId
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+            return false
+
     }
 }
 

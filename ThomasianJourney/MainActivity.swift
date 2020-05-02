@@ -25,6 +25,7 @@ struct AllEventDetails: Decodable {
 class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var events: [AllEventDetails] = []
+    var activityId = ""
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tabBarItem1: UITabBarItem!
@@ -60,18 +61,17 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let event = events[indexPath.row]
         //print (event.activityName)
+        activityId = event.activityId
+        
+        //print ("Table View")
         
         switch event.status {
-            
+
         case "absent":
             showToast(controller: self, message: "Event no longer available", seconds: 3)
         case "upcoming",
              "available":
-            let EventDetails =
-            storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EventDetails) as? EventDetails
-            EventDetails?.eventid = event.activityId
-            view.window?.rootViewController = EventDetails
-            view.window?.makeKeyAndVisible()
+            performSegue(withIdentifier: "ToEventDetails", sender: nil)
         case "cancelled":
             showToast(controller: self, message: "Event is Cancelled", seconds: 3)
         default:
@@ -176,6 +176,19 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+        let EventDetails = segue.destination as? EventDetails
+        EventDetails?.eventid = activityId
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+            return false
+
     }
 }
 
