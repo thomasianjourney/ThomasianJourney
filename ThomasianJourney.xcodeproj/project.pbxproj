@@ -74,6 +74,7 @@
 		742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799D2397DBB4000676ED /* NoEventsTab.swift */; };
 		742B79A02397DEA1000676ED /* GPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799F2397DEA1000676ED /* GPSController.swift */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
+		7468F28E245D4F9B00069B1E /* ViewHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7468F28D245D4F9B00069B1E /* ViewHelpController.swift */; };
 		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
 		74D40AFC24558CF900F1FC18 /* AttendedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D40AFB24558CF900F1FC18 /* AttendedEvent.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
@@ -172,6 +173,7 @@
 		742B79A12397E419000676ED /* MenuPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPortfolio.swift; sourceTree = "<group>"; };
 		742B79A32397ED04000676ED /* ScanSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSuccess.swift; sourceTree = "<group>"; };
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
+		7468F28D245D4F9B00069B1E /* ViewHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpController.swift; sourceTree = "<group>"; };
 		746B1C8823F939090061CA48 /* ViewCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCalendar.swift; sourceTree = "<group>"; };
 		74AEDCA62406112100F4283B /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AEDCAB2406116800F4283B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
 				47C220CF2452ACB00083E91C /* DummyLocation.gpx */,
+				7468F28D245D4F9B00069B1E /* ViewHelpController.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -1299,6 +1302,7 @@
 				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				47852E1F245C200600A4B1A7 /* MenuPortfolio.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
+				7468F28E245D4F9B00069B1E /* ViewHelpController.swift in Sources */,
 				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
 				47FABC24242A219500B7DC6F /* EventCell.swift in Sources */,
 				47852E2D245C39F500A4B1A7 /* GoodToBecomeCell.swift in Sources */,

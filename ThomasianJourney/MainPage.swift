@@ -182,6 +182,14 @@ class MainPage: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    @IBAction func viewHelpTapped(_ sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let showViewHelp =
+        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
+        
+        present(showViewHelp, animated: true, completion: nil)
+    }
+    
     func transitionToFirst() {
         
         let registerFirst =
