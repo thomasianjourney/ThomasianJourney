@@ -174,7 +174,13 @@ class UpcomingTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
+        if identifier == "UpcomingEventDetails" {
+            
             return false
+            
+        }
+        
+        return true
 
     }
     

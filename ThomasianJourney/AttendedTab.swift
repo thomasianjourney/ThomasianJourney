@@ -178,7 +178,14 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
-            return false
+        if identifier == "AttendedEventDetails" {
+                
+                return false
+                
+            }
+            
+        return true
+
 
     }
 }

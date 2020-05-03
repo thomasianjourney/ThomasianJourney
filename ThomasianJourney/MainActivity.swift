@@ -187,7 +187,13 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
+        if identifier == "ToEventDetails" {
+            
             return false
+            
+        }
+        
+        return true
 
     }
 }
