@@ -17,14 +17,14 @@ struct MenuPortfolioData: Decodable {
 }
 
 class MenuPortfolio: UIViewController {
-    
+    /*
     @IBAction func viewHelpTapped(_ sender: UIButton) {
         let main = UIStoryboard(name: "Main", bundle: nil)
         let showViewHelp =
         main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
         
         present(showViewHelp, animated: true, completion: nil)
-    }
+    }*/
     
     var yearlevel = ""
     var studregid = ""
@@ -35,6 +35,8 @@ class MenuPortfolio: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_help_white_small"), style: .plain, target: self, action: #selector(goToViewHelp))
         
         let preferences = UserDefaults.standard
 
@@ -53,6 +55,14 @@ class MenuPortfolio: UIViewController {
         
         }
         
+    }
+    
+    @objc func goToViewHelp() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let showViewHelp =
+        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
+        
+        present(showViewHelp, animated: true, completion: nil)
     }
     
     func loadData() {

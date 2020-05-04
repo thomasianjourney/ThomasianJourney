@@ -437,7 +437,7 @@
         <!--View Portfolio-->
         <scene sceneID="Zvf-iz-kZ9">
             <objects>
-                <tabBarController id="6OB-9b-SIf" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="6OB-9b-SIf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="View Portfolio" id="zhe-9k-og0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQJ-Id-3vd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -480,11 +480,8 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="6" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dD3-iI-mdY">
-                                        <rect key="frame" x="5" y="69" width="230" height="229"/>
+                                        <rect key="frame" x="5" y="69" width="230" height="226"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="dD3-iI-mdY" secondAttribute="height" multiplier="224:223" id="A6B-PO-lGK"/>
-                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="jG9-B8-70k" style="IBUITableViewCellStyleDefault" id="ZwT-pC-ALJ">
                                                 <rect key="frame" x="0.0" y="28" width="230" height="44.5"/>
@@ -545,6 +542,7 @@
                                     <constraint firstItem="XQQ-2q-JTr" firstAttribute="top" secondItem="fOf-6Y-FrM" secondAttribute="top" constant="37" id="ZmX-6a-pcz"/>
                                     <constraint firstAttribute="trailing" secondItem="dD3-iI-mdY" secondAttribute="trailing" constant="5" id="ZzS-Ad-OXf"/>
                                     <constraint firstAttribute="width" secondItem="fOf-6Y-FrM" secondAttribute="height" multiplier="4:5" id="fvX-Qb-UDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="dD3-iI-mdY" secondAttribute="bottom" constant="5" id="rS9-3J-sIi"/>
                                     <constraint firstItem="XqJ-f4-day" firstAttribute="top" secondItem="fOf-6Y-FrM" secondAttribute="top" constant="8" id="vz4-xm-JsZ"/>
                                     <constraint firstItem="dD3-iI-mdY" firstAttribute="top" secondItem="XQQ-2q-JTr" secondAttribute="bottom" constant="8" id="yBd-l4-emR"/>
                                 </constraints>
@@ -575,7 +573,7 @@
         <!--View Events-->
         <scene sceneID="IH9-WZ-GTF">
             <objects>
-                <tabBarController storyboardIdentifier="tabViewEvents" id="aM9-fa-TX1" customClass="EventsTabController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabViewEvents" modalPresentationStyle="fullScreen" id="aM9-fa-TX1" customClass="EventsTabController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="View Events" id="Gn8-Kf-Hse"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="d7X-Rs-frY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -913,7 +911,7 @@
         <!--View Calendar-->
         <scene sceneID="EUf-SJ-Ja3">
             <objects>
-                <viewController storyboardIdentifier="viewCalendar" id="WqW-NN-oUJ" customClass="ViewCalendar" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewCalendar" modalPresentationStyle="fullScreen" id="WqW-NN-oUJ" customClass="ViewCalendar" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sGR-0m-eRQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -973,7 +971,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YEN-0R-uVx"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Sn-sO-P9e"/>
+                    <navigationItem key="navigationItem" title="View Calendar" id="7Sn-sO-P9e"/>
                     <connections>
                         <outlet property="calendar" destination="78q-Ck-7ex" id="ZPo-xx-386"/>
                     </connections>
@@ -1430,6 +1428,7 @@
                         <constraints>
                             <constraint firstItem="upx-wF-qJc" firstAttribute="height" secondItem="fHv-pk-foq" secondAttribute="height" multiplier="0.5" id="69n-MP-qzU"/>
                             <constraint firstItem="Nbv-8m-vds" firstAttribute="centerX" secondItem="fHv-pk-foq" secondAttribute="centerX" id="Ahn-Xo-JL7"/>
+                            <constraint firstItem="iIh-uw-ugf" firstAttribute="trailing" secondItem="vPH-iS-EIi" secondAttribute="trailing" constant="15" id="Aiw-a4-kbu"/>
                             <constraint firstItem="Nbv-8m-vds" firstAttribute="height" secondItem="vPH-iS-EIi" secondAttribute="height" multiplier="1.25" id="BgN-sR-EEg"/>
                             <constraint firstItem="NaF-We-Ik8" firstAttribute="leading" secondItem="iIh-uw-ugf" secondAttribute="leading" constant="112" id="EPg-x4-4v2"/>
                             <constraint firstAttribute="bottom" secondItem="upx-wF-qJc" secondAttribute="bottom" id="FKb-Lk-6z5"/>
@@ -1444,6 +1443,7 @@
                             <constraint firstAttribute="bottom" secondItem="bbT-Jw-HFX" secondAttribute="bottom" id="Q73-xV-B26"/>
                             <constraint firstItem="Nbv-8m-vds" firstAttribute="centerY" secondItem="fHv-pk-foq" secondAttribute="centerY" id="Rpe-zV-8NY"/>
                             <constraint firstItem="NaF-We-Ik8" firstAttribute="top" secondItem="dLM-ej-LAD" secondAttribute="bottom" constant="32" id="TCz-KG-f8Z"/>
+                            <constraint firstItem="vPH-iS-EIi" firstAttribute="leading" secondItem="iIh-uw-ugf" secondAttribute="leading" constant="15" id="URK-Tj-yef"/>
                             <constraint firstItem="bbT-Jw-HFX" firstAttribute="leading" secondItem="fHv-pk-foq" secondAttribute="leading" id="Vzm-Rf-PDO"/>
                             <constraint firstItem="bbT-Jw-HFX" firstAttribute="top" secondItem="fHv-pk-foq" secondAttribute="top" id="Xm5-oE-eCR"/>
                             <constraint firstItem="vPH-iS-EIi" firstAttribute="centerX" secondItem="fHv-pk-foq" secondAttribute="centerX" id="YWc-gj-M32"/>
@@ -1505,17 +1505,15 @@
                                 <rect key="frame" x="10" y="244" width="355" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Thomasian!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-s3-Re1">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
-                                        <rect key="frame" x="332" y="0.0" width="23" height="28"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
+                                        <rect key="frame" x="327.5" y="0.0" width="27.5" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="questionmark.circle.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                        </state>
+                                        <state key="normal" image="icon_help_white_small"/>
                                         <connections>
                                             <action selector="viewHelpTapped:" destination="jeb-lc-OJM" eventType="touchUpInside" id="BTF-Nf-ycL"/>
                                         </connections>
@@ -1633,11 +1631,12 @@
                             <constraint firstItem="ykY-YG-pPj" firstAttribute="top" secondItem="hSS-y4-e3x" secondAttribute="top" id="0N5-jh-TeL"/>
                             <constraint firstItem="3ll-e2-yh7" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="10" id="2vY-2z-GxC"/>
                             <constraint firstAttribute="bottom" secondItem="hT1-LJ-FsW" secondAttribute="bottom" id="7XD-bY-XZH"/>
+                            <constraint firstItem="6MO-rC-Tbv" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="77" id="9de-Uz-Jxe"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="top" secondItem="3ll-e2-yh7" secondAttribute="bottom" constant="25" id="D4X-hp-ipu"/>
-                            <constraint firstAttribute="bottom" secondItem="6MO-rC-Tbv" secondAttribute="bottom" constant="35" id="IhR-CO-rUj"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="top" secondItem="ykY-YG-pPj" secondAttribute="bottom" constant="20" id="Knd-N2-qzV"/>
                             <constraint firstItem="6MO-rC-Tbv" firstAttribute="top" secondItem="j0H-XH-Dkx" secondAttribute="bottom" constant="35" id="Lbp-vw-m4L"/>
                             <constraint firstItem="3ll-e2-yh7" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="10" id="P7W-1j-dv1"/>
+                            <constraint firstItem="hSS-y4-e3x" firstAttribute="trailing" secondItem="6MO-rC-Tbv" secondAttribute="trailing" constant="77" id="PNw-mT-DLx"/>
                             <constraint firstItem="AQe-tJ-iWN" firstAttribute="leading" secondItem="hSS-y4-e3x" secondAttribute="leading" constant="10" id="RVz-sE-jVF"/>
                             <constraint firstItem="hSS-y4-e3x" firstAttribute="trailing" secondItem="ykY-YG-pPj" secondAttribute="trailing" id="T7m-i7-lwh"/>
                             <constraint firstItem="j0H-XH-Dkx" firstAttribute="top" secondItem="ykY-YG-pPj" secondAttribute="bottom" constant="18" id="VSv-Lg-ekR"/>
@@ -1802,11 +1801,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZv-Me-NTL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OWf-m9-7uJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MZg-Fx-T1P">
+                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MZg-Fx-T1P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.97964280839999995" green="0.80257242920000005" blue="0.2822288275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -2973,17 +2978,17 @@
     <inferredMetricsTieBreakers>
         <segue reference="y2d-kZ-EKR"/>
         <segue reference="X8h-wr-7PD"/>
-        <segue reference="AfD-Ip-SRN"/>
+        <segue reference="932-Tv-3fQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="QRBox" width="1500" height="1500"/>
         <image name="background-gradient" width="1080" height="1920"/>
         <image name="event_timeline" width="280" height="160"/>
+        <image name="icon_help_white_small" width="20" height="20"/>
         <image name="progressbar1" width="250" height="40"/>
         <image name="progressbar2" width="250" height="40"/>
         <image name="progressbar3" width="250" height="40"/>
         <image name="progressbar4" width="250" height="40"/>
-        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="tiger_rar" width="175" height="163"/>
         <image name="tjicon" width="100" height="100"/>
         <image name="viewCalendarButton" width="200" height="200"/>
