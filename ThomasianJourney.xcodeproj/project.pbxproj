@@ -76,6 +76,9 @@
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
 		7468F28E245D4F9B00069B1E /* ViewHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7468F28D245D4F9B00069B1E /* ViewHelpController.swift */; };
 		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
+		748BD94524603D060016B8EE /* Onboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748BD94424603D060016B8EE /* Onboards.swift */; };
+		748BD94724603D1D0016B8EE /* Onboards.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748BD94624603D1D0016B8EE /* Onboards.xib */; };
+		748BD94924603D8C0016B8EE /* OnboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748BD94824603D8C0016B8EE /* OnboardsViewController.swift */; };
 		74D40AFC24558CF900F1FC18 /* AttendedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D40AFB24558CF900F1FC18 /* AttendedEvent.swift */; };
 		74E64F7C23966390006D0BBA /* tjmov.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E64F7B23966390006D0BBA /* tjmov.gif */; };
 /* End PBXBuildFile section */
@@ -175,6 +178,9 @@
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
 		7468F28D245D4F9B00069B1E /* ViewHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpController.swift; sourceTree = "<group>"; };
 		746B1C8823F939090061CA48 /* ViewCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCalendar.swift; sourceTree = "<group>"; };
+		748BD94424603D060016B8EE /* Onboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboards.swift; sourceTree = "<group>"; };
+		748BD94624603D1D0016B8EE /* Onboards.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Onboards.xib; sourceTree = "<group>"; };
+		748BD94824603D8C0016B8EE /* OnboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardsViewController.swift; sourceTree = "<group>"; };
 		74AEDCA62406112100F4283B /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AEDCAB2406116800F4283B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		74AEDCAC2406116800F4283B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -402,6 +408,8 @@
 				479EFD75238D912700B2EC10 /* AppDelegate.swift */,
 				479EFD77238D912700B2EC10 /* ViewController.swift */,
 				479EFD79238D912700B2EC10 /* Main.storyboard */,
+				748BD94424603D060016B8EE /* Onboards.swift */,
+				748BD94624603D1D0016B8EE /* Onboards.xib */,
 				74329EF52393564300CBEDAE /* SMPinView.swift */,
 				479EFD7C238D912D00B2EC10 /* Assets.xcassets */,
 				479EFD7E238D912D00B2EC10 /* LaunchScreen.storyboard */,
@@ -440,6 +448,7 @@
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
 				47C220CF2452ACB00083E91C /* DummyLocation.gpx */,
 				7468F28D245D4F9B00069B1E /* ViewHelpController.swift */,
+				748BD94824603D8C0016B8EE /* OnboardsViewController.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -1128,6 +1137,7 @@
 				479EFD7D238D912D00B2EC10 /* Assets.xcassets in Resources */,
 				741E25A723929B6B00BFA8F7 /* Poppins-LightItalic.ttf in Resources */,
 				741E25A623929B6B00BFA8F7 /* Poppins-Light.ttf in Resources */,
+				748BD94724603D1D0016B8EE /* Onboards.xib in Resources */,
 				479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */,
 				4797BEC924063CB60012A222 /* mail.json in Resources */,
 				741E25B223929B6B00BFA8F7 /* Poppins-BlackItalic.ttf in Resources */,
@@ -1293,6 +1303,7 @@
 				47BA742F242B4E6100CA9AF8 /* EventDetails.swift in Sources */,
 				47852E23245C339500A4B1A7 /* GoodToDo.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
+				748BD94924603D8C0016B8EE /* OnboardsViewController.swift in Sources */,
 				47B776872451A5FF003B7722 /* VerifyLoginCred.swift in Sources */,
 				4799B4982458036D00713D32 /* AttendedCell.swift in Sources */,
 				47852E21245C2C5B00A4B1A7 /* ScanQRCode.swift in Sources */,
@@ -1302,6 +1313,7 @@
 				742B79922397AF7C000676ED /* RegisterFirst.swift in Sources */,
 				47852E1F245C200600A4B1A7 /* MenuPortfolio.swift in Sources */,
 				74329EF62393564300CBEDAE /* SMPinView.swift in Sources */,
+				748BD94524603D060016B8EE /* Onboards.swift in Sources */,
 				7468F28E245D4F9B00069B1E /* ViewHelpController.swift in Sources */,
 				742B79982397B0A4000676ED /* RegisterSecondLoading.swift in Sources */,
 				47FABC24242A219500B7DC6F /* EventCell.swift in Sources */,

@@ -36,6 +36,7 @@ struct Constants {
         static let GoodToDo = "GoodToDo"
         static let DontMiss = "DontMiss"
         static let GoodToBecome = "GoodToBecome"
+        static let ViewPolicy = "viewPolicy"
     
     }
     
