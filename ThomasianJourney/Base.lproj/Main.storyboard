@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j5O-qF-927">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -348,11 +348,11 @@
             <objects>
                 <viewController storyboardIdentifier="MustDo" id="igE-1d-DI0" customClass="MustDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJF-D5-OYg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vR0-Ys-vwm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MustDoCell" rowHeight="188" id="OBH-Pm-CLU" customClass="MustDoCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -437,7 +437,7 @@
         <!--View Portfolio-->
         <scene sceneID="Zvf-iz-kZ9">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="6OB-9b-SIf" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="6OB-9b-SIf" customClass="PortfolioTabController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="View Portfolio" id="zhe-9k-og0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQJ-Id-3vd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -596,18 +596,18 @@
             <objects>
                 <viewController storyboardIdentifier="menuPortfolio" id="E7a-b0-8Xo" customClass="MenuPortfolio" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jS4-cw-p1R">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-DJ-zIT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cgh-Al-ZVp" appends="YES" id="Ule-LD-3y5"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dfp-Wo-3YO">
-                                <rect key="frame" x="115" y="208.5" width="145" height="250"/>
+                                <rect key="frame" x="115" y="198.5" width="145" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-HN-kQc">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
@@ -1544,7 +1544,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
+                                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-Pf-dM9" userLabel="viewHelpBtn">
                                         <rect key="frame" x="327.5" y="0.0" width="27.5" height="28"/>
                                         <color key="tintColor" red="0.9512292742729187" green="0.90504080057144165" blue="0.97027891874313354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="icon_help_white_small"/>
@@ -2060,7 +2060,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aar-sR-PWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="1623"/>
+            <point key="canvasLocation" x="-346" y="3269"/>
         </scene>
         <!--Verify Login Cred-->
         <scene sceneID="NLs-u0-orN">
@@ -2477,7 +2477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g7-iU-qvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3284" y="1623"/>
+            <point key="canvasLocation" x="1068" y="3269"/>
         </scene>
         <!--UPCOMING-->
         <scene sceneID="doh-oS-CbW">
@@ -2740,11 +2740,11 @@
             <objects>
                 <viewController storyboardIdentifier="GoodToDo" id="iTY-p7-8j9" customClass="GoodToDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzF-GY-olg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-TF-TsL">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodToDoCell" rowHeight="188" id="seu-x6-RXg" customClass="GoodToDoCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -2831,11 +2831,11 @@
             <objects>
                 <viewController storyboardIdentifier="DontMiss" id="Uw9-V5-7LG" customClass="DontMiss" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOn-6Z-2pT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-5G-w75">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DontMissCell" rowHeight="188" id="Hp7-0P-yaW" customClass="DontMissCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -2922,11 +2922,11 @@
             <objects>
                 <viewController storyboardIdentifier="GoodToBecome" id="B4Q-jW-Yb2" customClass="GoodToBecome" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ab-5P-Bo0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4G3-fd-tc0">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodToBecomeCell" rowHeight="188" id="DOE-U3-ZVp" customClass="GoodToBecomeCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -3009,11 +3009,6 @@
             <point key="canvasLocation" x="4002" y="2489"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="y2d-kZ-EKR"/>
-        <segue reference="X8h-wr-7PD"/>
-        <segue reference="932-Tv-3fQ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="QRBox" width="1500" height="1500"/>
         <image name="background-gradient" width="1080" height="1920"/>
@@ -3028,6 +3023,11 @@
         <image name="viewCalendarButton" width="200" height="200"/>
         <image name="viewEventsButton" width="200" height="200"/>
         <image name="viewPortfolioButton" width="200" height="200"/>
-        <image name="x.circle" catalog="system" width="128" height="121"/>
+        <image name="x.circle" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Jw-bH-pSU"/>
+        <segue reference="Ogc-sh-BGN"/>
+        <segue reference="932-Tv-3fQ"/>
+    </inferredMetricsTieBreakers>
 </document>
