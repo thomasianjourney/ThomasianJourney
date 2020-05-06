@@ -12,6 +12,7 @@ import Lottie
 class ScanSuccess: UIViewController {
 
     @IBOutlet var animationView: AnimationView!
+    var activityid = ""
     
     func playAnimation(){
         animationView.animation = Animation.named("qr")
@@ -33,6 +34,14 @@ class ScanSuccess: UIViewController {
         
     }
     
-    @IBAction func printSticker(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToPreview" {
+            if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
+                PDFPreviewViewController.activityid = self.activityid
+            }
+        }
+        
     }
+
 }

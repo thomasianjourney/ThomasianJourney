@@ -305,6 +305,7 @@ class ScanQRCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
          
         let ScanSuccess =
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.ScanSuccess) as? ScanSuccess
+        ScanSuccess?.activityid = self.activityid
         view.window?.rootViewController = ScanSuccess
         view.window?.makeKeyAndVisible()
         

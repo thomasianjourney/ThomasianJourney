@@ -40,14 +40,6 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
         loadEventsData()
     }
     
-//    @objc func goToViewHelp() {
-//        let main = UIStoryboard(name: "Main", bundle: nil)
-//        let showViewHelp =
-//        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
-//        
-//        present(showViewHelp, animated: true, completion: nil)
-//    }
-    
     override func viewDidAppear(_ animated: Bool) {
         loadEventsData()
     }

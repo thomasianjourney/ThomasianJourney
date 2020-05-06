@@ -166,10 +166,14 @@ class AttendedEvent: UIViewController {
             }
     }
     
-    @IBAction func attendEvent(_ sender: Any) {
-
-            showToast(controller: self, message: "Event no longer available.", seconds: 3)
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "PrintSticker" {
+            if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
+                PDFPreviewViewController.activityid = self.activityid
+            }
+        }
+        
     }
     
     func transitionToMain() {

@@ -79,14 +79,14 @@ class MainPage: UIViewController {
         
         //print ("Check Empty Email and Number: \(preferences.string(forKey: "useremail")) \(preferences.string(forKey: "usernumber"))")
         
-        if preferences.bool(forKey: "First Launch") == false {
+        if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil && preferences.bool(forKey: "First Launch") == false {
             
             preferences.set(true, forKey: "First Launch")
             transitionToOnboards()
             
         }
         
-        if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil && preferences.bool(forKey: "First Launch") == true {
+        else if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil && preferences.bool(forKey: "First Launch") == true {
             
             preferences.set(true, forKey: "First Launch")
             transitionToFirst()
