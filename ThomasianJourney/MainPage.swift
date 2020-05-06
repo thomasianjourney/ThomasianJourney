@@ -79,8 +79,16 @@ class MainPage: UIViewController {
         
         //print ("Check Empty Email and Number: \(preferences.string(forKey: "useremail")) \(preferences.string(forKey: "usernumber"))")
         
-        if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil {
+        if preferences.bool(forKey: "First Launch") == false {
             
+            preferences.set(true, forKey: "First Launch")
+            transitionToOnboards()
+            
+        }
+        
+        if preferences.string(forKey: "mainuseremail") == nil && preferences.string(forKey: "mainusernumber") == nil && preferences.string(forKey: "mainuserid") == nil && preferences.bool(forKey: "First Launch") == true {
+            
+            preferences.set(true, forKey: "First Launch")
             transitionToFirst()
         
         }
@@ -196,6 +204,15 @@ class MainPage: UIViewController {
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.registerFirst) as? RegisterFirst
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = registerFirst
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToOnboards() {
+        
+        let OnboardsViewController =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.OnboardsViewController) as? OnboardsViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = OnboardsViewController
         appDelegate.window?.makeKeyAndVisible()
     }
     

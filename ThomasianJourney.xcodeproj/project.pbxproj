@@ -13,6 +13,8 @@
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712BD132423823F00A631CD /* UIImage+Gif.swift */; };
+		47153C122462D3F800C80E92 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */; };
+		47153C142462D46200C80E92 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47153C132462D46200C80E92 /* PDFCreator.swift */; };
 		47201197246080FA00CEB34B /* EventsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47201196246080FA00CEB34B /* EventsTabController.swift */; };
 		472011992460841A00CEB34B /* PortfolioTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472011982460841A00CEB34B /* PortfolioTabController.swift */; };
 		47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284A9B24232AFB00DA7422 /* MainActivity.swift */; };
@@ -109,6 +111,8 @@
 		4706CD0023985A1D0009364D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4706CD032398A2320009364D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4712BD132423823F00A631CD /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
+		47153C132462D46200C80E92 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
 		47201196246080FA00CEB34B /* EventsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTabController.swift; sourceTree = "<group>"; };
 		472011982460841A00CEB34B /* PortfolioTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTabController.swift; sourceTree = "<group>"; };
 		47284A9B24232AFB00DA7422 /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 				47852E26245C343100A4B1A7 /* GoodToBecome.swift */,
 				47852E2C245C39F500A4B1A7 /* GoodToBecomeCell.swift */,
 				742B799D2397DBB4000676ED /* NoEventsTab.swift */,
+				47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */,
+				47153C132462D46200C80E92 /* PDFCreator.swift */,
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
 				47C220CF2452ACB00083E91C /* DummyLocation.gpx */,
@@ -1296,6 +1302,7 @@
 				47852E27245C343100A4B1A7 /* GoodToBecome.swift in Sources */,
 				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
+				47153C122462D3F800C80E92 /* PDFPreviewViewController.swift in Sources */,
 				472011992460841A00CEB34B /* PortfolioTabController.swift in Sources */,
 				4787D68724589EE800E1E4E9 /* MustDo.swift in Sources */,
 				47201197246080FA00CEB34B /* EventsTabController.swift in Sources */,
@@ -1304,6 +1311,7 @@
 				4787D68924589F1000E1E4E9 /* MustDoCell.swift in Sources */,
 				742B79962397AFEF000676ED /* RegisterSecond.swift in Sources */,
 				479EFD78238D912700B2EC10 /* ViewController.swift in Sources */,
+				47153C142462D46200C80E92 /* PDFCreator.swift in Sources */,
 				479C270124575CAC00EE977D /* UpcomingCell.swift in Sources */,
 				4706CD042398A2320009364D /* Constants.swift in Sources */,
 				74D40AFC24558CF900F1FC18 /* AttendedEvent.swift in Sources */,

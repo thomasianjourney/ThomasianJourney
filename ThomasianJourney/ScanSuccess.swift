@@ -33,15 +33,6 @@ class ScanSuccess: UIViewController {
         
     }
     
-    @IBAction func viewPortfolio(_ sender: Any) {
-        
-//        let menuPortfolio =
-//        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.menuPortfolio) as? MenuPortfolio
-//        view.window?.rootViewController = menuPortfolio
-//        view.window?.makeKeyAndVisible()
-        performSegue(withIdentifier: "ToPortfolio", sender: sender)
-    }
-    
     @IBAction func printSticker(_ sender: Any) {
     }
 }

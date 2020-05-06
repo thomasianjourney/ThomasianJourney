@@ -37,6 +37,7 @@ struct Constants {
         static let DontMiss = "DontMiss"
         static let GoodToBecome = "GoodToBecome"
         static let ViewPolicy = "viewPolicy"
+        static let OnboardsViewController = "OnboardsViewController"
     
     }
     
