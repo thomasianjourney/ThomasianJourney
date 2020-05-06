@@ -70,7 +70,7 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let preferences = UserDefaults.standard
         var tabs: [String] = []
                         
-        if preferences.string(forKey: "mainuserid") == nil && preferences.string(forKey: "yearID") == nil {
+        if preferences.string(forKey: "mainuserid") == nil {
             
             transitionToMain()
             
@@ -79,7 +79,6 @@ class GoodToDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         else {
             
             let studregid = preferences.string(forKey: "mainuserid")
-            let yearid = preferences.string(forKey: "yearID")
             let eventclass = "2"
             
             if yearclicked == "1" {

@@ -70,7 +70,7 @@ class DontMiss: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let preferences = UserDefaults.standard
         var tabs: [String] = []
                         
-        if preferences.string(forKey: "mainuserid") == nil && preferences.string(forKey: "yearID") == nil {
+        if preferences.string(forKey: "mainuserid") == nil {
             
             transitionToMain()
             
@@ -79,7 +79,6 @@ class DontMiss: UIViewController, UITableViewDataSource, UITableViewDelegate {
         else {
             
             let studregid = preferences.string(forKey: "mainuserid")
-            let yearid = preferences.string(forKey: "yearID")
             let eventclass = "3"
             
             if yearclicked == "1" {

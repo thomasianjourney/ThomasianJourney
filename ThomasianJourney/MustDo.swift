@@ -70,7 +70,7 @@ class MustDo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let preferences = UserDefaults.standard
         var tabs: [String] = []
                         
-        if preferences.string(forKey: "mainuserid") == nil && preferences.string(forKey: "yearID") == nil {
+        if preferences.string(forKey: "mainuserid") == nil {
             
             transitionToMain()
             
