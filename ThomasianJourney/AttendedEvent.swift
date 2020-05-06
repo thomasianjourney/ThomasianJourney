@@ -38,6 +38,8 @@ class AttendedEvent: UIViewController {
     var eventdatetime = ""
     var endeventdate = ""
     var activityid = ""
+    var studregid = ""
+    var continueSegue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,8 @@ class AttendedEvent: UIViewController {
             }
             
             else {
-                let studregid = preferences.string(forKey: "mainuserid")
+                studregid = preferences.string(forKey: "mainuserid")!
+                loadData()
                 
                 //creating URLRequest
                 let url = URL(string: "https://thomasianjourney.website/Register/eventDetails")!
@@ -59,7 +62,7 @@ class AttendedEvent: UIViewController {
                 request.httpMethod = "POST"
                 
                 //creating the post parameter by concatenating the keys and values from text field
-                let postData = "activityId="+eventid+"&accountId="+studregid!;
+                let postData = "activityId="+eventid+"&accountId="+studregid;
 
                 //adding the parameters to request body
                 request.httpBody = postData.data(using: String.Encoding.utf8)
@@ -166,14 +169,104 @@ class AttendedEvent: UIViewController {
             }
     }
     
+    func loadData() {
+                    
+        //creating URLRequest
+        let url = URL(string: "https://thomasianjourney.website/Register/printSticker")!
+
+        //setting the method to post
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        //creating the post parameter by concatenating the keys and values from text field
+        let postData = "activityId="+activityid+"&accountId="+studregid;
+
+        //adding the parameters to request body
+        request.httpBody = postData.data(using: String.Encoding.utf8)
+          
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+        data, response, error in
+              
+            if error != nil{
+                print("Connection Error: \(String(describing: error))")
+                self.showToast(controller: self, message: "Error, please try again.", seconds: 3)
+                return;
+              
+            }
+          
+            else {
+          
+                guard let data = data else { return }
+                 
+                do {
+                      
+                    let connection = try JSONDecoder().decode(StickerData.self, from: data)
+                    //print (connection.message)
+                    print (connection.data)
+                    //print (self.events.count)
+                    
+    //                    let image = UIImage(named: self.imagename)
+                    
+                    if connection.message.contains("No Response") {
+                        self.showToastMainActivity(controller: self, message: "No Activity Found", seconds: 3)
+                        //DispatchQueue.main.async {
+                            //self.transitionToFirst()
+                        //}
+                    }
+                    
+                    if connection.message.contains("Success") {
+                        
+                    }
+                }
+                 
+                catch {
+                    print(error)
+    //                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
+                }
+              
+            }
+        }
+
+        //executing the task
+        task.resume()
+                
+        }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "PrintSticker" {
-            if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
-                PDFPreviewViewController.activityid = self.activityid
+            if #available(iOS 11.0, *) {
+                if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
+                    PDFPreviewViewController.activityid = self.activityid
+                }
+            }
+            
+            else {
+            
+                showToast(controller: self, message: "This feature is only available on iOS 11 and above.", seconds: 3)
+                
             }
         }
         
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "PrintSticker" {
+         
+            if continueSegue == true {
+                return true
+            }
+            
+            else {
+                showToast(controller: self, message: "You have already downloaded the sticker for this event.", seconds: 3)
+                return false
+            }
+            
+        }
+        
+        return true
     }
     
     func transitionToMain() {

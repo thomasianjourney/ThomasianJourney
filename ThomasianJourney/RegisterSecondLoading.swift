@@ -119,10 +119,9 @@ class RegisterSecondLoading: UIViewController {
                         
                         if connection.message.contains("login successful.") {
                             //print("Login Successful")
-                        
                             preferences.set(connection.data.studentDetails.studentName, forKey: "studName")
-                        preferences.set(connection.data.studentDetails.studentCollegeId, forKey: "collegeID")
-                        preferences.set(connection.data.studentDetails.studentYearLevelId, forKey: "yearID")
+                            preferences.set(connection.data.studentDetails.studentCollegeId, forKey: "collegeID")
+                            preferences.set(connection.data.studentDetails.studentYearLevelId, forKey: "yearID")
                             preferences.set(connection.data.studentDetails.studentPoints, forKey: "studPoints")
                             
                             DispatchQueue.main.async {

@@ -13,8 +13,9 @@
 		4706CD0123985A1E0009364D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4706CD0023985A1D0009364D /* GoogleService-Info.plist */; };
 		4706CD042398A2320009364D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706CD032398A2320009364D /* Constants.swift */; };
 		4712BD142423824000A631CD /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712BD132423823F00A631CD /* UIImage+Gif.swift */; };
-		47153C122462D3F800C80E92 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */; };
 		47153C142462D46200C80E92 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47153C132462D46200C80E92 /* PDFCreator.swift */; };
+		47153C1624630A4300C80E92 /* sticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 47153C1524630A4200C80E92 /* sticker.png */; };
+		47153C1724630EDE00C80E92 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */; };
 		47201197246080FA00CEB34B /* EventsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47201196246080FA00CEB34B /* EventsTabController.swift */; };
 		472011992460841A00CEB34B /* PortfolioTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472011982460841A00CEB34B /* PortfolioTabController.swift */; };
 		47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284A9B24232AFB00DA7422 /* MainActivity.swift */; };
@@ -113,6 +114,7 @@
 		4712BD132423823F00A631CD /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
 		47153C132462D46200C80E92 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		47153C1524630A4200C80E92 /* sticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker.png; sourceTree = "<group>"; };
 		47201196246080FA00CEB34B /* EventsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTabController.swift; sourceTree = "<group>"; };
 		472011982460841A00CEB34B /* PortfolioTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTabController.swift; sourceTree = "<group>"; };
 		47284A9B24232AFB00DA7422 /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				4797BEC024063C710012A222 /* reload.json */,
 				4797BEC124063C720012A222 /* scansuc.json */,
 				74E64F7B23966390006D0BBA /* tjmov.gif */,
+				47153C1524630A4200C80E92 /* sticker.png */,
 				479EFD75238D912700B2EC10 /* AppDelegate.swift */,
 				479EFD77238D912700B2EC10 /* ViewController.swift */,
 				479EFD79238D912700B2EC10 /* Main.storyboard */,
@@ -1155,6 +1158,7 @@
 				741E25B223929B6B00BFA8F7 /* Poppins-BlackItalic.ttf in Resources */,
 				741E25A823929B6B00BFA8F7 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				4797BECB24063CB60012A222 /* notif.json in Resources */,
+				47153C1624630A4300C80E92 /* sticker.png in Resources */,
 				741E25B323929B6B00BFA8F7 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				741E25B623929B6B00BFA8F7 /* Poppins-BoldItalic.ttf in Resources */,
 				741E25AA23929B6B00BFA8F7 /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -1296,13 +1300,13 @@
 			files = (
 				47852E29245C39C900A4B1A7 /* GoodToDoCell.swift in Sources */,
 				742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */,
+				47153C1724630EDE00C80E92 /* PDFPreviewViewController.swift in Sources */,
 				4735C7562428D4C30009BC12 /* UpcomingTab.swift in Sources */,
 				47852E25245C340600A4B1A7 /* DontMiss.swift in Sources */,
 				742B799A2397B0CE000676ED /* RegisterSuccess.swift in Sources */,
 				47852E27245C343100A4B1A7 /* GoodToBecome.swift in Sources */,
 				4735C7582428D4DA0009BC12 /* AttendedTab.swift in Sources */,
 				47284A9C24232AFC00DA7422 /* MainActivity.swift in Sources */,
-				47153C122462D3F800C80E92 /* PDFPreviewViewController.swift in Sources */,
 				472011992460841A00CEB34B /* PortfolioTabController.swift in Sources */,
 				4787D68724589EE800E1E4E9 /* MustDo.swift in Sources */,
 				47201197246080FA00CEB34B /* EventsTabController.swift in Sources */,

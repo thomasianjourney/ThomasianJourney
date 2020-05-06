@@ -145,6 +145,8 @@ class MainPage: UIViewController {
                             formatter.dateFormat = "dd MMMM yyyy"
                             
                             let datestring = formatter.string(from: currentdate)
+                            
+                            preferences.set(connection.data.studNumber, forKey: "mainstudentno")
 
                             DispatchQueue.main.async {
                                 self.welcome.text = "Welcome, \(connection.data.studregName)!"
