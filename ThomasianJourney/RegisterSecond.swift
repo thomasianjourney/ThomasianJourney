@@ -10,9 +10,19 @@ import UIKit
 import Lottie
 
 class RegisterSecond: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var verifyCode: UITextField!
-        
+    
+    @IBOutlet var code1: UITextField!
+    
+    @IBOutlet var code2: UITextField!
+    
+    @IBOutlet var code3: UITextField!
+    
+    @IBOutlet var code4: UITextField!
+    
+    @IBOutlet var code5: UITextField!
+    
+    @IBOutlet var code6: UITextField!
+    
     @IBOutlet weak var verificationLabel: UILabel!
     
     @IBOutlet var animationView: AnimationView!
@@ -27,10 +37,68 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
         animationView.play()
     }
     
+    @objc func textFieldDidChange(textField: UITextField){
+        let text = textField.text
+        if  text?.count == 1 {
+            switch textField{
+            case code1:
+                code2.becomeFirstResponder()
+            case code2:
+                code3.becomeFirstResponder()
+            case code3:
+                code4.becomeFirstResponder()
+            case code4:
+                code5.becomeFirstResponder()
+            case code5:
+                code6.becomeFirstResponder()
+            case code6:
+                code6.resignFirstResponder()
+            default:
+                break
+            }
+        }
+        if  text?.count == 0 {
+            switch textField{
+            case code1:
+                code1.becomeFirstResponder()
+            case code2:
+                code1.becomeFirstResponder()
+            case code3:
+                code2.becomeFirstResponder()
+            case code4:
+                code3.becomeFirstResponder()
+            case code5:
+                code4.becomeFirstResponder()
+            case code6:
+                code5.becomeFirstResponder()
+            default:
+                break
+            }
+        }
+        else{
+
+        }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         playAnimation()
         //verifyCode.delegate = self
+        
+        code1.delegate = self
+        code2.delegate = self
+        code3.delegate = self
+        code4.delegate = self
+        code5.delegate = self
+        code6.delegate = self
+        
+        code1.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code2.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code3.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code4.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code5.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code6.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
         if preferences.string(forKey: "useremail") == nil {
             print ("User Email did not save.")
@@ -54,17 +122,18 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func verifyButton(_ sender: Any) {
+        let verifyCode = "\((code1?.text)!)\((code2?.text)!)\((code3?.text)!)\((code4?.text)!)\((code5?.text)!)\((code6?.text)!)"
         
-        if verifyCode.text! == "" {
+        if verifyCode == "" {
             self.showToast(controller: self, message: "Code is empty.", seconds: 3)
         }
         
-        if verifyCode.text!.count != 6 {
+        if verifyCode.count != 6 {
             self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
         }
         
         else {
-            preferences.set(verifyCode.text, forKey: "verifyCode")
+            preferences.set(verifyCode, forKey: "verifyCode")
 
             //  Save to disk
             let didSave = preferences.synchronize()
