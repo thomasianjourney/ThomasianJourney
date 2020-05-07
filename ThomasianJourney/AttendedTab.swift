@@ -180,12 +180,11 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
         if identifier == "AttendedEventDetails" {
                 
-                return false
+            return false
                 
-            }
+        }
             
         return true
-
 
     }
 }

@@ -30,6 +30,8 @@ class PDFPreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print (referenceNo)
+        
         let preferences = UserDefaults.standard
                                 
         if preferences.string(forKey: "mainuserid") == nil || preferences.string(forKey: "studName") == nil || preferences.string(forKey: "mainstudentno") == nil {
@@ -78,7 +80,7 @@ class PDFPreviewViewController: UIViewController {
                       
                     let connection = try JSONDecoder().decode(EventData.self, from: data)
                     //print (connection.message)
-                    print (connection.data)
+                    //print (connection.data)
                     //print (self.events.count)
                     
 //                    let image = UIImage(named: self.imagename)
@@ -140,7 +142,6 @@ class PDFPreviewViewController: UIViewController {
                         self.eventVenue = connection.data.eventVenue
                         self.eventDate = "\(month) \(day), \(year)"
                         self.eventTime = "\(starttime) - \(endtime)"
-                        self.referenceNo = ""
                         
                         DispatchQueue.main.async {
                         

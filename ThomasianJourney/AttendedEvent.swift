@@ -39,7 +39,7 @@ class AttendedEvent: UIViewController {
     var endeventdate = ""
     var activityid = ""
     var studregid = ""
-    var continueSegue = false
+    var referenceNo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,6 @@ class AttendedEvent: UIViewController {
             
             else {
                 studregid = preferences.string(forKey: "mainuserid")!
-                loadData()
                 
                 //creating URLRequest
                 let url = URL(string: "https://thomasianjourney.website/Register/eventDetails")!
@@ -179,7 +178,8 @@ class AttendedEvent: UIViewController {
         request.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
-        let postData = "activityId="+activityid+"&accountId="+studregid;
+//        let postData = "activityId="+activityid+"&accountId="+studregid;
+        let postData = "activityId="+eventid+"&accountId="+studregid;
 
         //adding the parameters to request body
         request.httpBody = postData.data(using: String.Encoding.utf8)
@@ -203,26 +203,34 @@ class AttendedEvent: UIViewController {
                       
                     let connection = try JSONDecoder().decode(StickerData.self, from: data)
                     //print (connection.message)
-                    print (connection.data)
+                    print (connection)
                     //print (self.events.count)
                     
-    //                    let image = UIImage(named: self.imagename)
-                    
-                    if connection.message.contains("No Response") {
-                        self.showToastMainActivity(controller: self, message: "No Activity Found", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
+                    if connection.message.contains("Sticker Not Generated") {
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.referenceNo = connection.data.referenceNo
+                            self.performSegue(withIdentifier: "PrintSticker", sender: nil)
+                            
+                        }
+                        
                     }
                     
-                    if connection.message.contains("Success") {
+                    else {
+                        
+                        DispatchQueue.main.async {
+
+                            self.showToast(controller: self, message: "You have already downloaded the sticker for this event.", seconds: 3)
+                            
+                        }
                         
                     }
                 }
                  
                 catch {
                     print(error)
-    //                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
+                    self.showToast(controller: self, message: "Data could not be retrieved.", seconds: 3)
                 }
               
             }
@@ -231,14 +239,22 @@ class AttendedEvent: UIViewController {
         //executing the task
         task.resume()
                 
-        }
+    }
+    
+    @IBAction func printSticker(_ sender: Any) {
+        
+        loadData()
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "PrintSticker" {
+            
             if #available(iOS 11.0, *) {
                 if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
                     PDFPreviewViewController.activityid = self.activityid
+                    PDFPreviewViewController.referenceNo = self.referenceNo
                 }
             }
             
@@ -247,6 +263,7 @@ class AttendedEvent: UIViewController {
                 showToast(controller: self, message: "This feature is only available on iOS 11 and above.", seconds: 3)
                 
             }
+            
         }
         
     }
@@ -254,15 +271,8 @@ class AttendedEvent: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if identifier == "PrintSticker" {
-         
-            if continueSegue == true {
-                return true
-            }
             
-            else {
-                showToast(controller: self, message: "You have already downloaded the sticker for this event.", seconds: 3)
-                return false
-            }
+            return false
             
         }
         

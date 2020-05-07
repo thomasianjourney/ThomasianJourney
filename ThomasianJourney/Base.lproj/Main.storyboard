@@ -348,11 +348,11 @@
             <objects>
                 <viewController storyboardIdentifier="MustDo" id="igE-1d-DI0" customClass="MustDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJF-D5-OYg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vR0-Ys-vwm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MustDoCell" rowHeight="188" id="OBH-Pm-CLU" customClass="MustDoCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -802,7 +802,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="E7a-b0-8Xo" kind="show" id="Ogc-sh-BGN"/>
+                                                    <segue destination="E7a-b0-8Xo" kind="show" identifier="" id="plP-cX-05l"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -823,7 +823,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="lmi-Wy-uam" kind="show" identifier="ToPreview" id="3Gz-H6-3hW"/>
+                                                    <action selector="printSticker:" destination="kIO-Rf-zP0" eventType="touchUpInside" id="bMN-ai-gKp"/>
+                                                    <segue destination="lmi-Wy-uam" kind="show" identifier="ToPreview" id="BsH-AO-sY0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -875,11 +876,11 @@
             <objects>
                 <viewController id="lmi-Wy-uam" customClass="PDFPreviewViewController" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P6l-TU-XyG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-Wc-y6g" customClass="RoundButtons" customModule="ThomasianJourney" customModuleProvider="target">
-                                <rect key="frame" x="112" y="567.5" width="151" height="39.5"/>
+                                <rect key="frame" x="112" y="547.5" width="151" height="39.5"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uUQ-Wc-y6g" secondAttribute="height" multiplier="19:5" id="d52-iH-DgN"/>
@@ -897,7 +898,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-Cp-lYf" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="44" width="385" height="488.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="512.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -2401,6 +2402,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="printSticker:" destination="6h1-pp-8al" eventType="touchUpInside" id="Nxk-VY-G5z"/>
                                                             <segue destination="lmi-Wy-uam" kind="show" identifier="PrintSticker" id="bGn-Ye-kzP"/>
                                                         </connections>
                                                     </button>
@@ -2772,11 +2774,11 @@
             <objects>
                 <viewController storyboardIdentifier="GoodToDo" id="iTY-p7-8j9" customClass="GoodToDo" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzF-GY-olg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-TF-TsL">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodToDoCell" rowHeight="188" id="seu-x6-RXg" customClass="GoodToDoCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -2863,11 +2865,11 @@
             <objects>
                 <viewController storyboardIdentifier="DontMiss" id="Uw9-V5-7LG" customClass="DontMiss" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOn-6Z-2pT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-5G-w75">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DontMissCell" rowHeight="188" id="Hp7-0P-yaW" customClass="DontMissCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -2954,11 +2956,11 @@
             <objects>
                 <viewController storyboardIdentifier="GoodToBecome" id="B4Q-jW-Yb2" customClass="GoodToBecome" customModule="ThomasianJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ab-5P-Bo0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4G3-fd-tc0">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodToBecomeCell" rowHeight="188" id="DOE-U3-ZVp" customClass="GoodToBecomeCell" customModule="ThomasianJourney" customModuleProvider="target">
@@ -2975,19 +2977,19 @@
                                                     <rect key="frame" x="70" y="50" width="245" height="97"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ghI-5b-s78">
-                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="32.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Event Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r7k-LO-GZI">
-                                                            <rect key="frame" x="0.0" y="32.5" width="245" height="32.5"/>
+                                                            <rect key="frame" x="0.0" y="24.5" width="245" height="24"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is a sample sub title or content." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-UI-GC9">
-                                                            <rect key="frame" x="0.0" y="65" width="245" height="32"/>
+                                                            <rect key="frame" x="0.0" y="48.5" width="245" height="48.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
@@ -3059,8 +3061,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8Jw-bH-pSU"/>
-        <segue reference="bGn-Ye-kzP"/>
-        <segue reference="X8h-wr-7PD"/>
+        <segue reference="BsH-AO-sY0"/>
+        <segue reference="plP-cX-05l"/>
         <segue reference="932-Tv-3fQ"/>
     </inferredMetricsTieBreakers>
 </document>

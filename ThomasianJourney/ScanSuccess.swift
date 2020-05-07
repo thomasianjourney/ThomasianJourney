@@ -21,6 +21,7 @@ struct StickerDetailsData: Decodable {
     let eventId: String
     let yearLevel: String
     let printSticker: String
+    let referenceNo: String
 }
 
 class ScanSuccess: UIViewController {
@@ -28,7 +29,7 @@ class ScanSuccess: UIViewController {
     @IBOutlet var animationView: AnimationView!
     var activityid = ""
     var studregid = ""
-    var continueSegue = false
+    var referenceNo = ""
     
     func playAnimation(){
         animationView.animation = Animation.named("qr")
@@ -46,8 +47,6 @@ class ScanSuccess: UIViewController {
         
         else {
             studregid = preferences.string(forKey: "mainuserid")!
-            
-            loadData()
         }
     }
 
@@ -61,7 +60,7 @@ class ScanSuccess: UIViewController {
     }
     
     func loadData() {
-                
+                        
         //creating URLRequest
         let url = URL(string: "https://thomasianjourney.website/Register/printSticker")!
 
@@ -70,6 +69,7 @@ class ScanSuccess: UIViewController {
         request.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
+//        let postData = "activityId="+activityid+"&accountId="+studregid;
         let postData = "activityId="+activityid+"&accountId="+studregid;
 
         //adding the parameters to request body
@@ -97,86 +97,31 @@ class ScanSuccess: UIViewController {
                     print (connection)
                     //print (self.events.count)
                     
-    //                    let image = UIImage(named: self.imagename)
-                    
-                    if connection.message.contains("No Response") {
-                        self.showToastToMain(controller: self, message: "No Activity Found", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
+                    if connection.message.contains("Sticker Not Generated") {
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.referenceNo = connection.data.referenceNo
+                            self.performSegue(withIdentifier: "ToPreview", sender: nil)
+                            
+                        }
+                        
                     }
                     
-                    if connection.message.contains("Success") {
+                    else {
                         
-//                        let date = connection.data.eventDate.components(separatedBy: CharacterSet(charactersIn: "-: "))
-//                        var month = date[1]
-//                        let day = date[2]
-//                        let year = date[0]
-//                        
-//                        switch month {
-//                        case "01":
-//                            month = "Jan"
-//                        case "02":
-//                            month = "Feb"
-//                            break;
-//                        case "03":
-//                            month = "Mar"
-//                        case "04":
-//                            month = "April"
-//                        case "05":
-//                            month = "May"
-//                        case "06":
-//                            month = "Jun"
-//                        case "07":
-//                            month = "Jul"
-//                        case "08":
-//                            month = "Aug"
-//                        case "09":
-//                            month = "Sep"
-//                        case "10":
-//                            month = "Oct"
-//                        case "11":
-//                            month = "Nov"
-//                        case "12":
-//                            month = "Dec"
-//                        default:
-//                            month = ""
-//                        }
-//                        
-//                        let eventstart = connection.data.eventDate.components(separatedBy: CharacterSet(charactersIn: "-: "))
-//
-//                        let starttime = eventstart[3] + ":" + eventstart[4]
-//
-//                        let eventend = connection.data.eventendDate.components(separatedBy: CharacterSet(charactersIn: "-: "))
-//
-//                        let endtime = eventend[3] + ":" + eventend[4]
-//                        
-//                        self.eventTitle = connection.data.activityName
-//                        self.eventID = connection.data.activityId
-//                        self.eventVenue = connection.data.eventVenue
-//                        self.eventDate = "\(month) \(day), \(year)"
-//                        self.eventTime = "\(starttime) - \(endtime)"
-//                        self.referenceNo = ""
-//                        
-//                        DispatchQueue.main.async {
-//                        
-//                            let pdfCreator = PDFCreator(title: self.eventTitle, image: UIImage(named: self.imagename)!, eventID: self.eventID, eventTitle: self.eventTitle, eventVenue: self.eventVenue, eventDate: self.eventDate, eventTime: self.eventTime, studentNo: self.studentNo, studentName: self.studentName, referenceNo: self.referenceNo)
-//                            self.documentData = pdfCreator.createFlyer()
-//                            
-//                            if let data = self.documentData {
-//                                self.pdfView.document = PDFDocument(data: data)
-//                                self.pdfView.autoScales = true
-//                            
-//                            }
-//
-//                        }
+                        DispatchQueue.main.async {
+
+                            self.showToast(controller: self, message: "You have already downloaded the sticker for this event.", seconds: 3)
+                            
+                        }
                         
                     }
                 }
                  
                 catch {
                     print(error)
-    //                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
+                    self.showToast(controller: self, message: "Data could not be retrieved.", seconds: 3)
                 }
               
             }
@@ -184,15 +129,23 @@ class ScanSuccess: UIViewController {
 
         //executing the task
         task.resume()
-            
+                
+    }
+    
+    @IBAction func printSticker(_ sender: Any) {
+        
+        loadData()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ToPreview" {
+            
             if #available(iOS 11.0, *) {
                 if let PDFPreviewViewController = segue.destination as? PDFPreviewViewController {
                     PDFPreviewViewController.activityid = self.activityid
+                    PDFPreviewViewController.referenceNo = self.referenceNo
                 }
             }
             
@@ -201,6 +154,7 @@ class ScanSuccess: UIViewController {
                 showToast(controller: self, message: "This feature is only available on iOS 11 and above.", seconds: 3)
                 
             }
+            
         }
         
     }
@@ -208,17 +162,12 @@ class ScanSuccess: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if identifier == "ToPreview" {
-         
-            if continueSegue == true {
-                return true
-            }
             
-            else {
-                showToast(controller: self, message: "You have already downloaded the sticker for this event.", seconds: 3)
-                return false
-            }
+            return false
             
         }
+        
+        
         
         return true
     }
