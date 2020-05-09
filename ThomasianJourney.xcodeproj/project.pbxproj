@@ -78,6 +78,8 @@
 		742B799C2397B19F000676ED /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799B2397B19F000676ED /* MainPage.swift */; };
 		742B799E2397DBB4000676ED /* NoEventsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799D2397DBB4000676ED /* NoEventsTab.swift */; };
 		742B79A02397DEA1000676ED /* GPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B799F2397DEA1000676ED /* GPSController.swift */; };
+		743248AF246728CC000F2D66 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743248AE246728CC000F2D66 /* PrivacyPolicyViewController.swift */; };
+		743248D924673CB0000F2D66 /* privacypolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743248D824673CB0000F2D66 /* privacypolicy.txt */; };
 		74329EF62393564300CBEDAE /* SMPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74329EF52393564300CBEDAE /* SMPinView.swift */; };
 		7468F28E245D4F9B00069B1E /* ViewHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7468F28D245D4F9B00069B1E /* ViewHelpController.swift */; };
 		746B1C8923F939090061CA48 /* ViewCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B1C8823F939090061CA48 /* ViewCalendar.swift */; };
@@ -185,6 +187,8 @@
 		742B799F2397DEA1000676ED /* GPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSController.swift; sourceTree = "<group>"; };
 		742B79A12397E419000676ED /* MenuPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPortfolio.swift; sourceTree = "<group>"; };
 		742B79A32397ED04000676ED /* ScanSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSuccess.swift; sourceTree = "<group>"; };
+		743248AE246728CC000F2D66 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		743248D824673CB0000F2D66 /* privacypolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacypolicy.txt; sourceTree = "<group>"; };
 		74329EF52393564300CBEDAE /* SMPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPinView.swift; sourceTree = "<group>"; };
 		7468F28D245D4F9B00069B1E /* ViewHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpController.swift; sourceTree = "<group>"; };
 		746B1C8823F939090061CA48 /* ViewCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCalendar.swift; sourceTree = "<group>"; };
@@ -460,10 +464,12 @@
 				47153C112462D3F800C80E92 /* PDFPreviewViewController.swift */,
 				47153C132462D46200C80E92 /* PDFCreator.swift */,
 				4706CD0023985A1D0009364D /* GoogleService-Info.plist */,
+				743248D824673CB0000F2D66 /* privacypolicy.txt */,
 				746B1C8823F939090061CA48 /* ViewCalendar.swift */,
 				47C220CF2452ACB00083E91C /* DummyLocation.gpx */,
 				7468F28D245D4F9B00069B1E /* ViewHelpController.swift */,
 				748BD94824603D8C0016B8EE /* OnboardsViewController.swift */,
+				743248AE246728CC000F2D66 /* PrivacyPolicyViewController.swift */,
 			);
 			path = ThomasianJourney;
 			sourceTree = "<group>";
@@ -1155,6 +1161,7 @@
 				748BD94724603D1D0016B8EE /* Onboards.xib in Resources */,
 				479EFD7B238D912700B2EC10 /* Main.storyboard in Resources */,
 				4797BEC924063CB60012A222 /* mail.json in Resources */,
+				743248D924673CB0000F2D66 /* privacypolicy.txt in Resources */,
 				741E25B223929B6B00BFA8F7 /* Poppins-BlackItalic.ttf in Resources */,
 				741E25A823929B6B00BFA8F7 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				4797BECB24063CB60012A222 /* notif.json in Resources */,
@@ -1322,6 +1329,7 @@
 				476ABCFC23F9778F002BDE3F /* RegisterFirstLoading.swift in Sources */,
 				47BA742F242B4E6100CA9AF8 /* EventDetails.swift in Sources */,
 				47852E23245C339500A4B1A7 /* GoodToDo.swift in Sources */,
+				743248AF246728CC000F2D66 /* PrivacyPolicyViewController.swift in Sources */,
 				742B79A02397DEA1000676ED /* GPSController.swift in Sources */,
 				748BD94924603D8C0016B8EE /* OnboardsViewController.swift in Sources */,
 				47B776872451A5FF003B7722 /* VerifyLoginCred.swift in Sources */,
