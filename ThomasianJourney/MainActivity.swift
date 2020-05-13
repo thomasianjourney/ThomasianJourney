@@ -125,7 +125,7 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                     do {
                           
                         let connection = try JSONDecoder().decode(AllEventData.self, from: data)
-                        print (connection.data)
+//                        print (connection.data)
                         //print (connection.data.count)
                         //print (self.events.count)
                         

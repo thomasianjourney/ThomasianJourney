@@ -25,16 +25,15 @@ class PDFPreviewViewController: UIViewController {
     var eventTime = ""
     var studentNo = ""
     var studentName = ""
+    var collegeName = ""
     var referenceNo = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print (referenceNo)
-        
         let preferences = UserDefaults.standard
                                 
-        if preferences.string(forKey: "mainuserid") == nil || preferences.string(forKey: "studName") == nil || preferences.string(forKey: "mainstudentno") == nil {
+        if preferences.string(forKey: "mainuserid") == nil || preferences.string(forKey: "studName") == nil || preferences.string(forKey: "mainstudentno") == nil || preferences.string(forKey: "collegeID") == nil {
             transitionToMain()
         }
         
@@ -42,6 +41,21 @@ class PDFPreviewViewController: UIViewController {
             studregid = preferences.string(forKey: "mainuserid")!
             studentName = preferences.string(forKey: "studName")!
             studentNo = preferences.string(forKey: "mainstudentno")!
+            collegeName = preferences.string(forKey: "collegeID")!
+            
+            switch collegeName {
+            case "1":
+                collegeName = "Commerce"
+            case "2":
+                collegeName = "IICS"
+            case "3":
+                collegeName = "Science"
+            case "7":
+                collegeName = "Graduate School"
+            default:
+                collegeName = ""
+            }
+            
             loadData()
         }
     }
@@ -145,7 +159,7 @@ class PDFPreviewViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                         
-                            let pdfCreator = PDFCreator(title: self.eventTitle, image: UIImage(named: self.imagename)!, eventID: self.eventID, eventTitle: self.eventTitle, eventVenue: self.eventVenue, eventDate: self.eventDate, eventTime: self.eventTime, studentNo: self.studentNo, studentName: self.studentName, referenceNo: self.referenceNo)
+                            let pdfCreator = PDFCreator(title: self.eventTitle, image: #imageLiteral(resourceName: "sticker"), eventID: self.eventID, eventTitle: self.eventTitle, eventVenue: self.eventVenue, eventDate: self.eventDate, eventTime: self.eventTime, studentNo: self.studentNo, studentName: self.studentName, studentCollege: self.collegeName, referenceNo: self.referenceNo)
                             self.documentData = pdfCreator.createFlyer()
                             
                             if let data = self.documentData {
@@ -215,7 +229,7 @@ class PDFPreviewViewController: UIViewController {
     
     @IBAction func downloadSticker(_ sender: Any) {
         
-        let pdfCreator = PDFCreator(title: eventTitle, image: UIImage(named: self.imagename)!, eventID: self.eventID, eventTitle: self.eventTitle, eventVenue: self.eventVenue, eventDate: self.eventDate, eventTime: self.eventTime, studentNo: self.studentNo, studentName: self.studentName, referenceNo: self.referenceNo)
+        let pdfCreator = PDFCreator(title: eventTitle, image: #imageLiteral(resourceName: "sticker"), eventID: self.eventID, eventTitle: self.eventTitle, eventVenue: self.eventVenue, eventDate: self.eventDate, eventTime: self.eventTime, studentNo: self.studentNo, studentName: self.studentName, studentCollege: self.collegeName, referenceNo: self.referenceNo)
         let pdfData = pdfCreator.createFlyer()
         let vc = UIActivityViewController(activityItems: [pdfData], applicationActivities: [])
         present(vc, animated: true, completion: nil)

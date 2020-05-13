@@ -11,18 +11,19 @@ import PDFKit
 
 class PDFCreator: NSObject {
   
-  let title: String
-  let image: UIImage
-  let eventID: String
-  let eventTitle: String
-  let eventVenue: String
-  let eventDate: String
-  let eventTime: String
-  let studentNo: String
-  let studentName: String
-  let referenceNo: String
+    let title: String
+    let image: UIImage
+    let eventID: String
+    let eventTitle: String
+    let eventVenue: String
+    let eventDate: String
+    let eventTime: String
+    let studentNo: String
+    let studentName: String
+    let studentCollege: String
+    let referenceNo: String
   
-  init(title: String, image: UIImage, eventID: String, eventTitle: String, eventVenue: String, eventDate: String, eventTime: String, studentNo: String, studentName: String, referenceNo: String) {
+    init(title: String, image: UIImage, eventID: String, eventTitle: String, eventVenue: String, eventDate: String, eventTime: String, studentNo: String, studentName: String, studentCollege: String, referenceNo: String) {
     self.title = title
     self.image = image
     self.eventID = eventID
@@ -32,6 +33,7 @@ class PDFCreator: NSObject {
     self.eventTime = eventTime
     self.studentNo = studentNo
     self.studentName = studentName
+    self.studentCollege = studentCollege
     self.referenceNo = referenceNo
   }
   
@@ -59,14 +61,15 @@ class PDFCreator: NSObject {
       // 6
       let titleBottom = addTitle(pageRect: pageRect)
       addImage(pageRect: pageRect, imageTop: titleBottom + 18.0)
-      let eventIDbottom = addEventID(pageRect: pageRect, textTop: titleBottom + 40.5)
-      let eventTitlebottom = addEventTitle(pageRect: pageRect, textTop: eventIDbottom + 3)
-      let eventVenuebottom = addEventVenue(pageRect: pageRect, textTop: eventTitlebottom + 3)
-      let eventDatebottom = addEventDate(pageRect: pageRect, textTop: eventVenuebottom + 3)
-      let eventTimebottom = addEventTime(pageRect: pageRect, textTop: eventDatebottom + 3)
-      let studentNobottom = addStudentNo(pageRect: pageRect, textTop: eventTimebottom + 11.5)
-      let studentNamebottom = addStudentName(pageRect: pageRect, textTop: studentNobottom + 3)
-      addReferenceNo(pageRect: pageRect, textTop: studentNamebottom + 9)
+        let eventIDbottom = addEventID(pageRect: pageRect, textTop: titleBottom + 60.5)
+        let eventTitlebottom = addEventTitle(pageRect: pageRect, textTop: eventIDbottom + 6.5)
+        let eventVenuebottom = addEventVenue(pageRect: pageRect, textTop: eventTitlebottom + 5.75)
+        let eventDatebottom = addEventDate(pageRect: pageRect, textTop: eventVenuebottom + 5.5)
+        let eventTimebottom = addEventTime(pageRect: pageRect, textTop: eventDatebottom + 5.5)
+        let studentNobottom = addStudentNo(pageRect: pageRect, textTop: eventTimebottom + 22.5)
+        let studentNamebottom = addStudentName(pageRect: pageRect, textTop: studentNobottom + 5.75)
+        let studentCollegebottom = addStudentCollege(pageRect: pageRect, textTop: studentNamebottom + 6)
+        addReferenceNo(pageRect: pageRect, textTop: studentCollegebottom + 10.75)
 
     }
     
@@ -94,19 +97,19 @@ class PDFCreator: NSObject {
   
   func addImage(pageRect: CGRect, imageTop: CGFloat) {
     // 1
-    let maxHeight = pageRect.height * 0.1
-    let maxWidth = pageRect.width * 0.1
-    // 2
-    let aspectWidth = maxWidth / image.size.width
-    let aspectHeight = maxHeight / image.size.height
-    let aspectRatio = min(aspectWidth, aspectHeight)
-    // 3
-    let scaledWidth = image.size.width * aspectRatio
-    let scaledHeight = image.size.height * aspectRatio
-    // 4
-    let imageX = (pageRect.width - scaledWidth) / 2.0
-    let imageRect = CGRect(x: imageX, y: imageTop,
-                           width: scaledWidth, height: scaledHeight)
+//    let maxHeight = pageRect.height * 0.1
+//    let maxWidth = pageRect.width * 0.1
+//    // 2
+//    let aspectWidth = maxWidth / image.size.width
+//    let aspectHeight = maxHeight / image.size.height
+//    let aspectRatio = min(aspectWidth, aspectHeight)
+//    // 3
+//    let scaledWidth = image.size.width * aspectRatio
+//    let scaledHeight = image.size.height * aspectRatio
+//    // 4
+//    let imageX = (pageRect.width - scaledWidth) / 2.0
+    let imageRect = CGRect(x: (pageRect.width - image.size.width) / 2.0, y: imageTop,
+                           width: image.size.width, height: image.size.height)
     // 5
     image.draw(in: imageRect)
     //return imageRect.origin.y + imageRect.size.height
@@ -114,12 +117,12 @@ class PDFCreator: NSObject {
   
   func addEventID(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+        [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: eventID, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 291.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 282, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -127,12 +130,12 @@ class PDFCreator: NSObject {
   
   func addEventTitle(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: eventTitle, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 295.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 291, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -140,12 +143,12 @@ class PDFCreator: NSObject {
   
   func addEventVenue(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: eventVenue, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 289, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 276, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -153,12 +156,12 @@ class PDFCreator: NSObject {
   
   func addEventDate(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: eventDate, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 286.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 271, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -166,12 +169,12 @@ class PDFCreator: NSObject {
   
   func addEventTime(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: eventTime, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 287.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 270, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -179,12 +182,12 @@ class PDFCreator: NSObject {
   
   func addStudentNo(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: studentNo, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 297.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 295, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
@@ -192,25 +195,38 @@ class PDFCreator: NSObject {
   
   func addStudentName(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: studentName, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 288.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 273, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
     return titleStringRect.origin.y + titleStringRect.size.height
   
   }
+    
+    func addStudentCollege(pageRect: CGRect, textTop: CGFloat) -> CGFloat {
+      
+        let titleFont = UIFont(name: "Helvetica", size: 2.5)
+      let titleAttributes: [NSAttributedString.Key: Any] =
+        [NSAttributedString.Key.font: titleFont!]
+      let attributedTitle = NSAttributedString(string: studentCollege, attributes: titleAttributes)
+      let titleStringSize = attributedTitle.size()
+      let titleStringRect = CGRect(x: 339, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+      attributedTitle.draw(in: titleStringRect)
+      return titleStringRect.origin.y + titleStringRect.size.height
+
+    }
   
   func addReferenceNo(pageRect: CGRect, textTop: CGFloat) {
     
-    let titleFont = UIFont.systemFont(ofSize: 1.5)
+    let titleFont = UIFont(name: "Helvetica", size: 3)
     let titleAttributes: [NSAttributedString.Key: Any] =
-      [NSAttributedString.Key.font: titleFont]
+      [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: referenceNo, attributes: titleAttributes)
     let titleStringSize = attributedTitle.size()
-    let titleStringRect = CGRect(x: 304.5, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
+    let titleStringRect = CGRect(x: 301, y: textTop, width: titleStringSize.width, height: titleStringSize.height)
     attributedTitle.draw(in: titleStringRect)
   
   }
