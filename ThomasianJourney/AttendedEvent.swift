@@ -203,7 +203,7 @@ class AttendedEvent: UIViewController {
                       
                     let connection = try JSONDecoder().decode(StickerData.self, from: data)
                     //print (connection.message)
-                    print (connection)
+//                    print (connection)
                     //print (self.events.count)
                     
                     if connection.message.contains("Sticker Not Generated") {
