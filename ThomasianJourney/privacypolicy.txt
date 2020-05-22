@@ -73,7 +73,7 @@ Definitions
  browser you use, unique device identifiers and other diagnostic data ("Usage
  Data").
 
- Tracking &amp; Cookies Data
+ Tracking & Cookies Data
  ************
 
  We use cookies and similar tracking technologies to track the activity on our
