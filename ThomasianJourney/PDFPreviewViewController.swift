@@ -70,7 +70,7 @@ class PDFPreviewViewController: UIViewController {
         request.httpMethod = "POST"
         
         //creating the post parameter by concatenating the keys and values from text field
-        let postData = "activityId="+activityid+"&accountId="+studregid;
+        let postData = "activityId="+activityid+"&accountId="+studregid+"&studentno"+studentNo;
 
         //adding the parameters to request body
         request.httpBody = postData.data(using: String.Encoding.utf8)

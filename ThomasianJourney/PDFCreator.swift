@@ -69,7 +69,7 @@ class PDFCreator: NSObject {
         let studentNobottom = addStudentNo(pageRect: pageRect, textTop: eventTimebottom + 23.5)
         let studentNamebottom = addStudentName(pageRect: pageRect, textTop: studentNobottom + 5.75)
         let studentCollegebottom = addStudentCollege(pageRect: pageRect, textTop: studentNamebottom + 6)
-        addReferenceNo(pageRect: pageRect, textTop: studentCollegebottom + 11.6)
+        addReferenceNo(pageRect: pageRect, textTop: studentCollegebottom + 9.75)
 
     }
     
@@ -223,7 +223,7 @@ class PDFCreator: NSObject {
   
   func addReferenceNo(pageRect: CGRect, textTop: CGFloat) {
     
-    let titleFont = UIFont(name: "Helvetica", size: 3)
+    let titleFont = UIFont(name: "Helvetica", size: 6)
     let titleAttributes: [NSAttributedString.Key: Any] =
       [NSAttributedString.Key.font: titleFont!]
     let attributedTitle = NSAttributedString(string: referenceNo, attributes: titleAttributes)
