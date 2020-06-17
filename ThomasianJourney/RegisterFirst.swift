@@ -7,9 +7,6 @@
 //
 
 import UIKit
-//import FirebaseAuth
-//import Firebase
-    
     
 class RegisterFirst: UIViewController, UITextFieldDelegate {
 
@@ -21,8 +18,6 @@ class RegisterFirst: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //transitionToLoading()
         
         let Tap:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
         

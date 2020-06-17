@@ -23,8 +23,6 @@ struct DataContents: Decodable {
 
 class RegisterFirstLoading: UIViewController {
     
-    //@IBOutlet weak var proceedButton: UIButton!
-    
     @IBOutlet var animationView: AnimationView!
     
     func playAnimation(){
@@ -42,9 +40,6 @@ class RegisterFirstLoading: UIViewController {
         if preferences.string(forKey: "useremail") == nil || preferences.string(forKey: "usernumber") == nil {
             //print ("User Email/Number did not save.")
             self.showToastFirst(controller: self, message: "Incomplete data found.", seconds: 3)
-//            DispatchQueue.main.async {
-//                self.transitionToFirst()
-//            }
         }
 
         else {
@@ -110,9 +105,7 @@ class RegisterFirstLoading: UIViewController {
                     catch {
                        //print("THIS IS THE ERROR \(error)")
                         self.showToastFirst(controller: self, message: "Email Not Found.", seconds: 3)
-//                        DispatchQueue.main.async {
-//                            self.transitionToFirst()
-//                        }
+
                     }
                 
                 }

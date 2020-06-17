@@ -141,13 +141,6 @@ class GoodToBecome: UIViewController, UITableViewDataSource, UITableViewDelegate
                             //print (connection)
                             //print (connection.data.count)
                             //print (self.events.count)
-                            
-    //                        if connection.message.contains("No Response") {
-    ////                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-    ////                            DispatchQueue.main.async {
-    ////                                self.transitionToFirst()
-    ////                            }
-    //                        }
 
                             if connection.message.contains("Results1") {
                                 self.events = connection.data

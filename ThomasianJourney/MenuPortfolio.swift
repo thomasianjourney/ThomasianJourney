@@ -17,14 +17,6 @@ struct MenuPortfolioData: Decodable {
 }
 
 class MenuPortfolio: UIViewController {
-    /*
-    @IBAction func viewHelpTapped(_ sender: UIButton) {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let showViewHelp =
-        main.instantiateViewController(withIdentifier: Constants.Storyboard.viewHelp) as! ViewHelpController
-        
-        present(showViewHelp, animated: true, completion: nil)
-    }*/
     
     var yearlevel = ""
     var studregid = ""
@@ -106,21 +98,16 @@ class MenuPortfolio: UIViewController {
                     
                     if connection.message.contains("No Response") {
                         self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
                     }
 
                     if connection.message.contains("Results") {
                        
                         for (index, item) in dataArray.enumerated() {
                             
-                            //var temp = Array(repeating: "true", count: 4)
                             var temp: [String] = []
                             for dataitem in item {
                                 
                                 temp = temp + [dataitem.description]
-                                //print("index : \(index) item: \(dataitem)")
                             }
                             
                             //print (temp)

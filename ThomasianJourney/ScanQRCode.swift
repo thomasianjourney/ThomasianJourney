@@ -204,12 +204,8 @@ class ScanQRCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
                                     //print ("Testing inside the if's")
     
-                                    //DispatchQueue.main.async {
-    
-                                        self.transitionToScanSuccess()
-    
-                                    //}
-    
+                                    self.transitionToScanSuccess()
+        
                                 }
                             }
                                 
@@ -235,9 +231,7 @@ class ScanQRCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         else {
             
             //print ("Wrong QR Code")
-            
-            //captureSession = nil
-            
+                        
             let erroralert = UIAlertController(title: "Error QR Code", message: "Please scan the right QR code for the event.", preferredStyle: .alert)
             
             //erroralert.addAction(UIAlertAction(title: "Scan Again", style: .default, handler: nil))

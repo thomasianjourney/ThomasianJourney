@@ -84,7 +84,6 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playAnimation()
-        //verifyCode.delegate = self
         
         code1.delegate = self
         code2.delegate = self
@@ -198,24 +197,7 @@ class RegisterSecond: UIViewController, UITextFieldDelegate {
                             return;
                         }
                             
-                        else {
-//                            DispatchQueue.main.async {
-//                                self.transitionToLoading()
-//                            }
-//
-//                            guard let data = data else { return }
-//
-//                            do {
-//                                let connection = try JSONDecoder().decode(Connection.self, from: data)
-//                                print (connection)
-//                                print (connection.data.studregId)
-//                                preferences.set(connection.data.studregId, forKey: "userid")
-//                            }
-//
-//                            catch {
-//                               print(error)
-//                            }
-                            
+                        else {                            
                             self.showToast(controller: self, message: "New verification sent. Please wait for a few minutes before requesting again", seconds: 3)
                         }
                     }

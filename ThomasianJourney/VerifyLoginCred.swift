@@ -91,9 +91,6 @@ class VerifyLoginCred: UIViewController {
                           
                         if connection.message.contains("not found") {
                             self.showToastToMain(controller: self, message: "Cannot find Student Details", seconds: 3)
-                            //DispatchQueue.main.async {
-                                //self.transitionToFirst()
-                            //}
                         }
                         
                         if connection.message.contains("login successful.") {

@@ -96,14 +96,9 @@ class PDFPreviewViewController: UIViewController {
                     //print (connection.message)
                     //print (connection.data)
                     //print (self.events.count)
-                    
-//                    let image = UIImage(named: self.imagename)
-                    
+                                        
                     if connection.message.contains("No Response") {
                         self.showToastToMain(controller: self, message: "No Activity Found", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
                     }
                     
                     if connection.message.contains("Results") {

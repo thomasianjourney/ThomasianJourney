@@ -119,9 +119,6 @@ class AttendedTab: UIViewController, UITableViewDataSource, UITableViewDelegate 
                         
                         if connection.message.contains("No Response") {
 //                            self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                            //DispatchQueue.main.async {
-                                //self.transitionToFirst()
-                            //}
                         }
                         
                         if connection.message.contains("Results") {

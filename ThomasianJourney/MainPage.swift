@@ -56,7 +56,6 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: self).capitalized
-        // or use capitalized(with: locale) if you want
     }
 }
 
@@ -132,9 +131,6 @@ class MainPage: UIViewController {
                           
                         if connection.message.contains("not found") {
                             self.showToast(controller: self, message: "Cannot find Student Details", seconds: 3)
-                            //DispatchQueue.main.async {
-                                //self.transitionToFirst()
-                            //}
                         }
                         
                         if connection.message.contains("login successful.") {

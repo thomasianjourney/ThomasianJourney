@@ -148,7 +148,6 @@ class MainActivity: UIViewController, UITableViewDataSource, UITableViewDelegate
                      
                     catch {
                         print(error)
-//                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
                     }
                   
                 }

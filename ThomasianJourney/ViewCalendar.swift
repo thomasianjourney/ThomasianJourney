@@ -51,7 +51,6 @@ class ViewCalendar: UIViewController, FSCalendarDelegate, FSCalendarDataSource, 
         super.viewDidLoad()
         calendar.delegate = self
         calendar.dataSource = self
-//        self.view.addSubview(calendar)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_help_white_small"), style: .plain, target: self, action: #selector(goToViewHelp))
         
@@ -98,9 +97,6 @@ class ViewCalendar: UIViewController, FSCalendarDelegate, FSCalendarDataSource, 
                 eventstart = item[3] as! String
                 eventend = item[4] as! String
                 eventstatus = item[5] as! String
-
-//                let eventcomponents = eventstart.components(separatedBy: CharacterSet(charactersIn: "-: "))
-//                let dateformat = eventcomponents[0] + "-" + eventcomponents[1] + "-" + eventcomponents[2]
 
                 if eventstart.contains(stringdate) {
 //                    print ("Event Date Match: \(eventname)")
@@ -150,12 +146,9 @@ class ViewCalendar: UIViewController, FSCalendarDelegate, FSCalendarDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
         
-        print ("Hopefully one row of events: \(event)")
+//        print ("Hopefully one row of events: \(event)")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell") as! CalendarCell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell", for: indexPath)
-        
-//        cell.setTitle(event: [String])
         
         if !event.isEmpty {
             
@@ -225,9 +218,6 @@ class ViewCalendar: UIViewController, FSCalendarDelegate, FSCalendarDataSource, 
                     
                     if connection.message.contains("No Response") {
                         self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
                     }
 
                     if connection.message.contains("Results") {

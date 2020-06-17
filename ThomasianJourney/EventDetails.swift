@@ -80,7 +80,6 @@ class EventDetails: UIViewController {
         
         else {
 
-            //showToast(controller: self, message: "Event available.", seconds: 3)
             let GPSController =
             storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.GPSController) as? GPSController
             GPSController?.activityid = self.activityid
@@ -129,9 +128,6 @@ class EventDetails: UIViewController {
                     
                     if connection.message.contains("No Response") {
                         self.showToastMainActivity(controller: self, message: "No Activity Found", seconds: 3)
-                        //DispatchQueue.main.async {
-                            //self.transitionToFirst()
-                        //}
                     }
                     
                     if connection.message.contains("Results") {
@@ -195,7 +191,6 @@ class EventDetails: UIViewController {
                  
                 catch {
                     print(error)
-//                        self.showToast(controller: self, message: "Code is incorrect.", seconds: 3)
                 }
               
             }

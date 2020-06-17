@@ -70,8 +70,6 @@ class RegisterSecondLoading: UIViewController {
         }
 
         else {
-            //let email = preferences.string(forKey: "useremail")
-            //let mobile = preferences.string(forKey: "usernumber")
             let verifyCode = preferences.string(forKey: "verifyCode")
             let studentid = preferences.string(forKey: "userid")
         
@@ -112,9 +110,6 @@ class RegisterSecondLoading: UIViewController {
                           
                         if connection.message.contains("not found") {
                             self.showToastSecond(controller: self, message: "Code is incorrect.", seconds: 3)
-                            //DispatchQueue.main.async {
-                                //self.transitionToFirst()
-                            //}
                         }
                         
                         if connection.message.contains("login successful.") {
@@ -129,10 +124,6 @@ class RegisterSecondLoading: UIViewController {
                             }
                         }
                         
-                        // remove when Register is fixed
-//                        DispatchQueue.main.async {
-//                            self.transitionToMain()
-//                        }
                     }
                      
                     catch {
